@@ -1,0 +1,39 @@
+package com.elvettorato.routine
+
+import android.app.Application
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import androidx.core.app.NotificationManagerCompat
+
+class RoutineApp : Application() {
+    companion object {
+        const val CHANNEL_ROUTINE = "routine_actions"
+        const val CHANNEL_LOCATION = "routine_location"
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        createNotificationChannels()
+    }
+
+    private fun createNotificationChannels() {
+        val channels = listOf(
+            NotificationChannel(
+                CHANNEL_ROUTINE,
+                "Routine Actions",
+                NotificationManager.IMPORTANCE_HIGH
+            ).apply {
+                description = "Notifications from routine triggers"
+            },
+            NotificationChannel(
+                CHANNEL_LOCATION,
+                "Location Service",
+                NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                description = "Foreground service for location monitoring"
+            }
+        )
+        val manager = getSystemService(NotificationManager::class.java)
+        channels.forEach { manager.createNotificationChannel(it) }
+    }
+}
