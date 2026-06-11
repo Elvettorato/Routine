@@ -19,6 +19,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -31,8 +32,8 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -51,7 +52,9 @@ import com.google.maps.android.compose.MapProperties
 import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.rememberCameraPositionState
+import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MapLocationPicker(
     initialLat: Double,
@@ -60,19 +63,18 @@ fun MapLocationPicker(
     onLocationSelected: (Double, Double, Float) -> Unit,
     onDismiss: () -> Unit
 ) {
+    val scope = rememberCoroutineScope()
     val initialPosition = LatLng(
         if (initialLat != 0.0) initialLat else 41.9028,
         if (initialLng != 0.0) initialLng else 12.4964
     )
 
-    var markerPosition by remember { mutableStateOf(initialPosition) }
+    val markerState = remember { MarkerState(position = initialPosition) }
     var currentRadius by remember { mutableFloatStateOf(initialRadius) }
 
     val cameraPositionState = rememberCameraPositionState {
         position = CameraPosition.fromLatLngZoom(initialPosition, 14f)
     }
-
-    var mapLoaded by remember { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -86,8 +88,8 @@ fun MapLocationPicker(
                 actions = {
                     IconButton(onClick = {
                         onLocationSelected(
-                            markerPosition.latitude,
-                            markerPosition.longitude,
+                            markerState.position.latitude,
+                            markerState.position.longitude,
                             currentRadius
                         )
                     }) {
@@ -112,26 +114,22 @@ fun MapLocationPicker(
             GoogleMap(
                 modifier = Modifier.fillMaxSize(),
                 cameraPositionState = cameraPositionState,
-                onMapLoaded = { mapLoaded = true },
                 onMapClick = { latLng ->
-                    markerPosition = latLng
+                    markerState.position = latLng
                 },
                 properties = MapProperties(
                     isMyLocationEnabled = true
                 )
             ) {
                 Marker(
-                    state = MarkerState(position = markerPosition),
+                    state = markerState,
                     draggable = true,
-                    onDragEnd = { latLng ->
-                        markerPosition = latLng
-                    },
                     icon = BitmapDescriptorFactory.defaultMarker(
-                        BitmapDescriptorFactory.HUE_TEAL
+                        BitmapDescriptorFactory.HUE_CYAN
                     )
                 )
                 Circle(
-                    center = markerPosition,
+                    center = markerState.position,
                     radius = currentRadius.toDouble(),
                     strokeColor = LineagePrimary.copy(alpha = 0.6f),
                     fillColor = LineagePrimary.copy(alpha = 0.15f),
@@ -158,17 +156,19 @@ fun MapLocationPicker(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            "%.5f, %.5f".format(markerPosition.latitude, markerPosition.longitude),
+                            "%.5f, %.5f".format(markerState.position.latitude, markerState.position.longitude),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         FilledTonalButton(
                             onClick = {
-                                cameraPositionState.animate(
-                                    CameraUpdateFactory.newCameraPosition(
-                                        CameraPosition.fromLatLngZoom(markerPosition, 14f)
+                                scope.launch {
+                                    cameraPositionState.animate(
+                                        CameraUpdateFactory.newCameraPosition(
+                                            CameraPosition.fromLatLngZoom(markerState.position, 14f)
+                                        )
                                     )
-                                )
+                                }
                             }
                         ) {
                             Icon(
@@ -195,8 +195,8 @@ fun MapLocationPicker(
                     Button(
                         onClick = {
                             onLocationSelected(
-                                markerPosition.latitude,
-                                markerPosition.longitude,
+                                markerState.position.latitude,
+                                markerState.position.longitude,
                                 currentRadius
                             )
                         },
