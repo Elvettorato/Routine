@@ -19,6 +19,7 @@ import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material.icons.filled.BrightnessMedium
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.DoNotDisturbAlt
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Schedule
@@ -64,6 +65,7 @@ import com.elvettorato.routine.data.model.RoutineAction
 import com.elvettorato.routine.data.model.TriggerType
 import com.elvettorato.routine.ui.components.ActionEditDialog
 import com.elvettorato.routine.ui.components.DayPicker
+import com.elvettorato.routine.ui.components.MapLocationPicker
 import com.elvettorato.routine.ui.theme.ActionBluetoothColor
 import com.elvettorato.routine.ui.theme.ActionBrightnessColor
 import com.elvettorato.routine.ui.theme.ActionDndColor
@@ -104,6 +106,7 @@ fun EditorScreen(
     }
 
     var showTimePicker by remember { mutableStateOf(false) }
+    var showMapPicker by remember { mutableStateOf(false) }
     var showActionDialog by remember { mutableStateOf(false) }
     var editingActionIndex by remember { mutableStateOf(-1) }
 
@@ -117,6 +120,21 @@ fun EditorScreen(
                 viewModel.updateTriggerMinute(m)
                 showTimePicker = false
             }
+        )
+    }
+
+    if (showMapPicker) {
+        MapLocationPicker(
+            initialLat = lat,
+            initialLng = lng,
+            initialRadius = radius,
+            onLocationSelected = { newLat, newLng, newRadius ->
+                viewModel.updateLat(newLat)
+                viewModel.updateLng(newLng)
+                viewModel.updateRadius(newRadius)
+                showMapPicker = false
+            },
+            onDismiss = { showMapPicker = false }
         )
     }
 
@@ -225,7 +243,8 @@ fun EditorScreen(
                     onLngChange = viewModel::updateLng,
                     onRadiusChange = viewModel::updateRadius,
                     onEnterChange = viewModel::updateOnEnter,
-                    onExitChange = viewModel::updateOnExit
+                    onExitChange = viewModel::updateOnExit,
+                    onShowMap = { showMapPicker = true }
                 )
             }
 
@@ -313,31 +332,53 @@ private fun LocationTriggerSection(
     onLngChange: (Double) -> Unit,
     onRadiusChange: (Float) -> Unit,
     onEnterChange: (Boolean) -> Unit,
-    onExitChange: (Boolean) -> Unit
+    onExitChange: (Boolean) -> Unit,
+    onShowMap: () -> Unit
 ) {
-    OutlinedTextField(
-        value = if (lat != 0.0) lat.toString() else "",
-        onValueChange = { it.toDoubleOrNull()?.let(onLatChange) },
-        label = { Text(stringResource(R.string.latitude)) },
-        modifier = Modifier.fillMaxWidth(),
-        singleLine = true
-    )
+    Card(
+        onClick = onShowMap,
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceContainer
+        ),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Default.LocationOn,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.size(40.dp)
+            )
+            Spacer(Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    if (lat != 0.0 && lng != 0.0) "%.5f, %.5f".format(lat, lng)
+                    else stringResource(R.string.location),
+                    style = MaterialTheme.typography.titleSmall
+                )
+                Spacer(Modifier.height(2.dp))
+                Text(
+                    stringResource(R.string.radius_format, radius.toInt()),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            Icon(
+                imageVector = Icons.Default.Edit,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(20.dp)
+            )
+        }
+    }
+
     Spacer(Modifier.height(8.dp))
-    OutlinedTextField(
-        value = if (lng != 0.0) lng.toString() else "",
-        onValueChange = { it.toDoubleOrNull()?.let(onLngChange) },
-        label = { Text(stringResource(R.string.longitude)) },
-        modifier = Modifier.fillMaxWidth(),
-        singleLine = true
-    )
-    Spacer(Modifier.height(8.dp))
-    Text(stringResource(R.string.radius_format, radius.toInt()), style = MaterialTheme.typography.bodySmall)
-    Slider(
-        value = radius,
-        onValueChange = onRadiusChange,
-        valueRange = 10f..1000f
-    )
-    Spacer(Modifier.height(8.dp))
+
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth()

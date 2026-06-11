@@ -28,6 +28,10 @@
         android:theme="@style/Theme.Routine"
         android:configChanges="uiMode|locale">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY_HERE" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
