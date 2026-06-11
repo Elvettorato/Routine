@@ -1,5 +1,8 @@
 package com.elvettorato.routine.ui.screens
 
+import android.Manifest
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -19,8 +23,7 @@ import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material.icons.filled.BrightnessMedium
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.DoNotDisturbAlt
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.VolumeUp
@@ -54,14 +57,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.RoutineAction
 import com.elvettorato.routine.ui.components.ActionEditDialog
 import com.elvettorato.routine.ui.components.DayPicker
-import com.elvettorato.routine.ui.components.MapLocationPicker
 import com.elvettorato.routine.ui.theme.ActionBluetoothColor
 import com.elvettorato.routine.ui.theme.ActionBrightnessColor
 import com.elvettorato.routine.ui.theme.ActionDndColor
@@ -101,9 +105,24 @@ fun EditorScreen(
     }
 
     var showTimePicker by remember { mutableStateOf(false) }
-    var showMapPicker by remember { mutableStateOf(false) }
     var showActionDialog by remember { mutableStateOf(false) }
     var editingActionIndex by remember { mutableStateOf(-1) }
+
+    val context = LocalContext.current
+    val locationPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+        if (permissions.all { it.value }) {
+            val fusedLocationClient =
+                com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(context)
+            fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+                location?.let {
+                    viewModel.updateLat(it.latitude)
+                    viewModel.updateLng(it.longitude)
+                }
+            }
+        }
+    }
 
     if (showTimePicker) {
         TimePickerDialog(
@@ -115,21 +134,6 @@ fun EditorScreen(
                 viewModel.updateTriggerMinute(m)
                 showTimePicker = false
             }
-        )
-    }
-
-    if (showMapPicker) {
-        MapLocationPicker(
-            initialLat = lat,
-            initialLng = lng,
-            initialRadius = radius,
-            onLocationSelected = { newLat, newLng, newRadius ->
-                viewModel.updateLat(newLat)
-                viewModel.updateLng(newLng)
-                viewModel.updateRadius(newRadius)
-                showMapPicker = false
-            },
-            onDismiss = { showMapPicker = false }
         )
     }
 
@@ -229,7 +233,14 @@ fun EditorScreen(
                 onRadiusChange = viewModel::updateRadius,
                 onEnterChange = viewModel::updateOnEnter,
                 onExitChange = viewModel::updateOnExit,
-                onShowMap = { showMapPicker = true }
+                onGetCurrentLocation = {
+                    locationPermissionLauncher.launch(
+                        arrayOf(
+                            Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.ACCESS_COARSE_LOCATION
+                        )
+                    )
+                }
             )
 
             Spacer(Modifier.height(24.dp))
@@ -317,51 +328,71 @@ private fun LocationTriggerSection(
     onRadiusChange: (Float) -> Unit,
     onEnterChange: (Boolean) -> Unit,
     onExitChange: (Boolean) -> Unit,
-    onShowMap: () -> Unit
+    onGetCurrentLocation: () -> Unit
 ) {
+    var latText by remember(lat) { mutableStateOf(if (lat != 0.0) lat.toString() else "") }
+    var lngText by remember(lng) { mutableStateOf(if (lng != 0.0) lng.toString() else "") }
+
     Card(
-        onClick = onShowMap,
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceContainer
         ),
         modifier = Modifier.fillMaxWidth()
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Icon(
-                imageVector = Icons.Default.LocationOn,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(40.dp)
-            )
-            Spacer(Modifier.width(12.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    if (lat != 0.0 && lng != 0.0) "%.5f, %.5f".format(lat, lng)
-                    else stringResource(R.string.location),
-                    style = MaterialTheme.typography.titleSmall
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                OutlinedTextField(
+                    value = latText,
+                    onValueChange = { v ->
+                        latText = v
+                        v.toDoubleOrNull()?.let { onLatChange(it) }
+                    },
+                    label = { Text("Lat") },
+                    modifier = Modifier.weight(1f),
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal)
                 )
-                Spacer(Modifier.height(2.dp))
-                Text(
-                    stringResource(R.string.radius_format, radius.toInt()),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                OutlinedTextField(
+                    value = lngText,
+                    onValueChange = { v ->
+                        lngText = v
+                        v.toDoubleOrNull()?.let { onLngChange(it) }
+                    },
+                    label = { Text("Lng") },
+                    modifier = Modifier.weight(1f),
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal)
                 )
             }
-            Icon(
-                imageVector = Icons.Default.Edit,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.size(20.dp)
-            )
+
+            Spacer(Modifier.height(8.dp))
+
+            FilledTonalButton(
+                onClick = onGetCurrentLocation,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Icon(Icons.Default.MyLocation, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(8.dp))
+                Text(stringResource(R.string.get_current_location))
+            }
         }
     }
 
-    Spacer(Modifier.height(8.dp))
+    Spacer(Modifier.height(12.dp))
+
+    Text(
+        stringResource(R.string.radius_format, radius.toInt()),
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant
+    )
+    Slider(
+        value = radius,
+        onValueChange = onRadiusChange,
+        valueRange = 10f..1000f
+    )
 
     Row(
         verticalAlignment = Alignment.CenterVertically,

@@ -73,6 +73,7 @@
     <string name="sat">Sat</string>
     <string name="sun">Sun</string>
     <string name="unnamed">Unnamed</string>
+    <string name="get_current_location">Get Current Location</string>
     <string name="permission_location">Location permission is needed for location-based routines</string>
     <string name="permission_notification">Notification permission is needed for routine notifications</string>
     <string name="permission_write_settings">Write settings permission is needed to change brightness</string>
