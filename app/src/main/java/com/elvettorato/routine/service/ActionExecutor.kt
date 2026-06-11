@@ -23,7 +23,10 @@ object ActionExecutor {
 
     fun execute(context: Context, actions: List<RoutineAction>, routineName: String) {
         actions.forEach { action -> executeSingle(context, action) }
-        sendExecutionNotification(context, routineName, actions)
+        val hasNotificationAction = actions.any { ActionType.fromValue(it.type) == ActionType.NOTIFICATION }
+        if (!hasNotificationAction) {
+            sendExecutionNotification(context, routineName, actions)
+        }
     }
 
     private fun executeSingle(context: Context, action: RoutineAction) {

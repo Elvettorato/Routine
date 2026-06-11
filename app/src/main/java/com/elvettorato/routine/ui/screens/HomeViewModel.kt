@@ -1,11 +1,13 @@
 package com.elvettorato.routine.ui.screens
 
 import android.app.Application
+import android.content.Intent
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.elvettorato.routine.data.RoutineDatabase
 import com.elvettorato.routine.data.model.Routine
 import com.elvettorato.routine.data.repository.RoutineRepository
+import com.elvettorato.routine.service.RoutineForegroundService
 import com.elvettorato.routine.service.RoutineScheduler
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -18,13 +20,25 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     val routines: StateFlow<List<Routine>>
 
     init {
-        val db = RoutineDatabase.getDatabase(application)
+        val ctx = application
+        val db = RoutineDatabase.getDatabase(ctx)
         repository = RoutineRepository(db.routineDao())
         routines = repository.allRoutines.stateIn(
             viewModelScope,
             SharingStarted.WhileSubscribed(5000),
             emptyList()
         )
+        viewModelScope.launch {
+            repository.allRoutines.collect { list ->
+                val hasEnabled = list.any { it.isEnabled }
+                val intent = Intent(ctx, RoutineForegroundService::class.java)
+                if (hasEnabled) {
+                    ctx.startForegroundService(intent)
+                } else {
+                    ctx.stopService(intent)
+                }
+            }
+        }
     }
 
     fun toggleRoutine(id: Long, enabled: Boolean) {

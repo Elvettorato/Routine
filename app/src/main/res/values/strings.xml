@@ -74,6 +74,7 @@
     <string name="sun">Sun</string>
     <string name="unnamed">Unnamed</string>
     <string name="get_current_location">Get Current Location</string>
+    <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="priority">Priority</string>
     <string name="priority_high">High</string>
     <string name="priority_default">Default</string>

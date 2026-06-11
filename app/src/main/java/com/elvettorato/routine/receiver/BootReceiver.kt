@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import com.elvettorato.routine.data.RoutineDatabase
 import com.elvettorato.routine.data.repository.RoutineRepository
+import com.elvettorato.routine.service.RoutineForegroundService
 import com.elvettorato.routine.service.RoutineScheduler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -22,6 +23,11 @@ class BootReceiver : BroadcastReceiver() {
 
             routines.forEach { routine ->
                 RoutineScheduler.schedule(context, routine)
+            }
+
+            if (routines.isNotEmpty()) {
+                val fgsIntent = Intent(context, RoutineForegroundService::class.java)
+                context.startForegroundService(fgsIntent)
             }
         }
     }
