@@ -31,7 +31,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
-import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -353,19 +352,34 @@ private fun ActionCard(
     onDelete: () -> Unit
 ) {
     val type = ActionType.fromValue(action.type)
-    val (icon, color, summary) = when (type) {
-        ActionType.DND -> Icons.Default.DoNotDisturbAlt to ActionDndColor to
-            "DND: ${action.dndMode ?: "OFF"}"
-        ActionType.VOLUME -> Icons.Default.VolumeUp to ActionVolumeColor to
-            "Vol: M${action.mediaVolume} R${action.ringVolume} A${action.alarmVolume} N${action.notificationVolume}"
-        ActionType.BRIGHTNESS -> Icons.Default.BrightnessMedium to ActionBrightnessColor to
-            "Brightness: ${action.brightnessAuto?.let { if (it) "Auto" else "${action.brightnessLevel}" } ?: "?"}"
-        ActionType.WIFI -> Icons.Default.Wifi to ActionWifiColor to
-            "WiFi: ${if (action.wifiEnabled == true) "ON" else "OFF"}"
-        ActionType.BLUETOOTH -> Icons.Default.Bluetooth to ActionBluetoothColor to
-            "Bluetooth: ${if (action.bluetoothEnabled == true) "ON" else "OFF"}"
-        ActionType.NOTIFICATION -> Icons.Default.Notifications to ActionNotificationColor to
-            "Notify: ${action.notificationTitle ?: ""}"
+    val icon: ImageVector
+    val color: Color
+    val summary: String
+    when (type) {
+        ActionType.DND -> {
+            icon = Icons.Default.DoNotDisturbAlt; color = ActionDndColor
+            summary = "DND: ${action.dndMode ?: "OFF"}"
+        }
+        ActionType.VOLUME -> {
+            icon = Icons.Default.VolumeUp; color = ActionVolumeColor
+            summary = "Vol: M${action.mediaVolume} R${action.ringVolume} A${action.alarmVolume} N${action.notificationVolume}"
+        }
+        ActionType.BRIGHTNESS -> {
+            icon = Icons.Default.BrightnessMedium; color = ActionBrightnessColor
+            summary = "Brightness: ${action.brightnessAuto?.let { if (it) "Auto" else "${action.brightnessLevel}" } ?: "?"}"
+        }
+        ActionType.WIFI -> {
+            icon = Icons.Default.Wifi; color = ActionWifiColor
+            summary = "WiFi: ${if (action.wifiEnabled == true) "ON" else "OFF"}"
+        }
+        ActionType.BLUETOOTH -> {
+            icon = Icons.Default.Bluetooth; color = ActionBluetoothColor
+            summary = "Bluetooth: ${if (action.bluetoothEnabled == true) "ON" else "OFF"}"
+        }
+        ActionType.NOTIFICATION -> {
+            icon = Icons.Default.Notifications; color = ActionNotificationColor
+            summary = "Notify: ${action.notificationTitle ?: ""}"
+        }
     }
 
     Card(

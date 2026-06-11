@@ -2,7 +2,6 @@ package com.elvettorato.routine.service
 
 import android.app.NotificationManager
 import android.content.Context
-import android.content.Intent
 import android.media.AudioManager
 import android.net.wifi.WifiManager
 import android.provider.Settings
@@ -35,40 +34,14 @@ object ActionExecutor {
 
     private fun setDndMode(context: Context, mode: String?) {
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        val policy = when (DndMode.valueOf(mode ?: "OFF")) {
-            DndMode.OFF -> NotificationManager.Policy(
-                NotificationManager.Policy.PRIORITY_CATEGORY_NONE,
-                NotificationManager.Policy.SUPPRESSED_EFFECTS_UNSET,
-                NotificationManager.Policy.SUPPRESSED_EFFECTS_UNSET
-            )
-            DndMode.PRIORITY_ONLY -> NotificationManager.Policy(
-                NotificationManager.Policy.PRIORITY_CATEGORY_ALARMS or
-                        NotificationManager.Policy.PRIORITY_CATEGORY_MEDIA or
-                        NotificationManager.Policy.PRIORITY_CATEGORY_SYSTEM,
-                NotificationManager.Policy.SUPPRESSED_EFFECTS_UNSET,
-                NotificationManager.Policy.SUPPRESSED_EFFECTS_UNSET
-            )
-            DndMode.TOTAL_SILENCE -> NotificationManager.Policy(
-                NotificationManager.Policy.PRIORITY_CATEGORY_NONE,
-                NotificationManager.Policy.SUPPRESSED_EFFECTS_SCREEN_OFF or
-                        NotificationManager.Policy.SUPPRESSED_EFFECTS_SCREEN_ON,
-                NotificationManager.Policy.SUPPRESSED_EFFECTS_SCREEN_OFF or
-                        NotificationManager.Policy.SUPPRESSED_EFFECTS_SCREEN_ON
-            )
-            DndMode.ALARMS_ONLY -> NotificationManager.Policy(
-                NotificationManager.Policy.PRIORITY_CATEGORY_ALARMS,
-                NotificationManager.Policy.SUPPRESSED_EFFECTS_UNSET,
-                NotificationManager.Policy.SUPPRESSED_EFFECTS_UNSET
-            )
+        val dnd = DndMode.valueOf(mode ?: "OFF")
+        val filter = when (dnd) {
+            DndMode.OFF -> NotificationManager.INTERRUPTION_FILTER_ALL
+            DndMode.PRIORITY_ONLY -> NotificationManager.INTERRUPTION_FILTER_PRIORITY
+            DndMode.TOTAL_SILENCE -> NotificationManager.INTERRUPTION_FILTER_NONE
+            DndMode.ALARMS_ONLY -> NotificationManager.INTERRUPTION_FILTER_ALARMS
         }
-        nm.setInterruptionFilter(
-            when (DndMode.valueOf(mode ?: "OFF")) {
-                DndMode.OFF -> NotificationManager.INTERRUPTION_FILTER_ALL
-                DndMode.PRIORITY_ONLY -> NotificationManager.INTERRUPTION_FILTER_PRIORITY
-                DndMode.TOTAL_SILENCE -> NotificationManager.INTERRUPTION_FILTER_NONE
-                DndMode.ALARMS_ONLY -> NotificationManager.INTERRUPTION_FILTER_ALARMS
-            }
-        )
+        nm.setInterruptionFilter(filter)
     }
 
     private fun setVolume(context: Context, action: RoutineAction) {
