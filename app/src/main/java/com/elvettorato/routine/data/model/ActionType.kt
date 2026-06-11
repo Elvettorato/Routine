@@ -29,3 +29,10 @@ enum class DndMode(val value: String, val labelRes: String) {
     TOTAL_SILENCE("TOTAL_SILENCE", "dnd_total"),
     ALARMS_ONLY("ALARMS_ONLY", "dnd_alarms")
 }
+
+enum class NotificationPriority(val value: String, val labelRes: String) {
+    HIGH("HIGH", "priority_high"),
+    DEFAULT("DEFAULT", "priority_default"),
+    LOW("LOW", "priority_low"),
+    MIN("MIN", "priority_min")
+}

@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.DndMode
+import com.elvettorato.routine.data.model.NotificationPriority
 import com.elvettorato.routine.data.model.RoutineAction
 import com.elvettorato.routine.ui.theme.ActionBluetoothColor
 import com.elvettorato.routine.ui.theme.ActionBrightnessColor
@@ -74,6 +75,10 @@ fun ActionEditDialog(
 
     var notificationTitle by remember { mutableStateOf(initialAction?.notificationTitle ?: "") }
     var notificationText by remember { mutableStateOf(initialAction?.notificationText ?: "") }
+    var notificationPriority by remember { mutableStateOf(
+        initialAction?.notificationPriority?.let { NotificationPriority.valueOf(it) } ?: NotificationPriority.HIGH
+    ) }
+    var priorityExpanded by remember { mutableStateOf(false) }
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -217,6 +222,40 @@ fun ActionEditDialog(
                             modifier = Modifier.fillMaxWidth(),
                             maxLines = 3
                         )
+                        Spacer(Modifier.height(12.dp))
+                        ExposedDropdownMenuBox(
+                            expanded = priorityExpanded,
+                            onExpandedChange = { priorityExpanded = it }
+                        ) {
+                            OutlinedTextField(
+                                value = notificationPriority.name,
+                                onValueChange = {},
+                                readOnly = true,
+                                label = { Text(stringResource(R.string.priority)) },
+                                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = priorityExpanded) },
+                                modifier = Modifier.fillMaxWidth().menuAnchor()
+                            )
+                            ExposedDropdownMenu(
+                                expanded = priorityExpanded,
+                                onDismissRequest = { priorityExpanded = false }
+                            ) {
+                                NotificationPriority.entries.forEach { p ->
+                                    val label = when (p) {
+                                        NotificationPriority.HIGH -> stringResource(R.string.priority_high)
+                                        NotificationPriority.DEFAULT -> stringResource(R.string.priority_default)
+                                        NotificationPriority.LOW -> stringResource(R.string.priority_low)
+                                        NotificationPriority.MIN -> stringResource(R.string.priority_min)
+                                    }
+                                    DropdownMenuItem(
+                                        text = { Text(label) },
+                                        onClick = {
+                                            notificationPriority = p
+                                            priorityExpanded = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -229,7 +268,7 @@ fun ActionEditDialog(
                     ActionType.BRIGHTNESS -> RoutineAction.createBrightness(brightnessLevel, brightnessAuto)
                     ActionType.WIFI -> RoutineAction.createWifi(wifiEnabled)
                     ActionType.BLUETOOTH -> RoutineAction.createBluetooth(bluetoothEnabled)
-                    ActionType.NOTIFICATION -> RoutineAction.createNotification(notificationTitle, notificationText)
+                    ActionType.NOTIFICATION -> RoutineAction.createNotification(notificationTitle, notificationText, notificationPriority.value)
                 }
                 onSave(action)
             }) { Text(stringResource(R.string.save)) }

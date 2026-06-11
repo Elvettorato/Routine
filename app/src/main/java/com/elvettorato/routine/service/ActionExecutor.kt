@@ -10,8 +10,13 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.elvettorato.routine.R
 import com.elvettorato.routine.RoutineApp
+import androidx.core.app.NotificationCompat.PRIORITY_DEFAULT
+import androidx.core.app.NotificationCompat.PRIORITY_HIGH
+import androidx.core.app.NotificationCompat.PRIORITY_LOW
+import androidx.core.app.NotificationCompat.PRIORITY_MIN
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.DndMode
+import com.elvettorato.routine.data.model.NotificationPriority
 import com.elvettorato.routine.data.model.RoutineAction
 
 object ActionExecutor {
@@ -100,12 +105,19 @@ object ActionExecutor {
     private fun sendActionNotification(context: Context, action: RoutineAction) {
         val title = action.notificationTitle ?: "Routine"
         val text = action.notificationText ?: ""
+        val priority = when (action.notificationPriority) {
+            NotificationPriority.HIGH.value -> PRIORITY_HIGH
+            NotificationPriority.DEFAULT.value -> PRIORITY_DEFAULT
+            NotificationPriority.LOW.value -> PRIORITY_LOW
+            NotificationPriority.MIN.value -> PRIORITY_MIN
+            else -> PRIORITY_HIGH
+        }
         NotificationCompat.Builder(context, RoutineApp.CHANNEL_ROUTINE)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentTitle(title)
             .setContentText(text)
             .setAutoCancel(true)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setPriority(priority)
             .build()
             .let { NotificationManagerCompat.from(context).notify(System.currentTimeMillis().toInt(), it) }
     }
@@ -119,7 +131,7 @@ object ActionExecutor {
             .setContentTitle("Routine: $routineName")
             .setContentText(actionSummary)
             .setAutoCancel(true)
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setPriority(PRIORITY_HIGH)
             .build()
             .let { NotificationManagerCompat.from(context).notify(Int.MIN_VALUE, it) }
     }

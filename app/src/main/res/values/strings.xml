@@ -74,6 +74,11 @@
     <string name="sun">Sun</string>
     <string name="unnamed">Unnamed</string>
     <string name="get_current_location">Get Current Location</string>
+    <string name="priority">Priority</string>
+    <string name="priority_high">High</string>
+    <string name="priority_default">Default</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_min">Min</string>
     <string name="permission_location">Location permission is needed for location-based routines</string>
     <string name="permission_notification">Notification permission is needed for routine notifications</string>
     <string name="permission_write_settings">Write settings permission is needed to change brightness</string>

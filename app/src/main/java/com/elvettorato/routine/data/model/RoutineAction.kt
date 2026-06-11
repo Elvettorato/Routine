@@ -15,7 +15,8 @@ data class RoutineAction(
     val wifiEnabled: Boolean? = null,
     val bluetoothEnabled: Boolean? = null,
     val notificationTitle: String? = null,
-    val notificationText: String? = null
+    val notificationText: String? = null,
+    val notificationPriority: String? = null
 ) {
     companion object {
         private val gson = Gson()
@@ -58,10 +59,11 @@ data class RoutineAction(
             bluetoothEnabled = enabled
         )
 
-        fun createNotification(title: String, text: String) = RoutineAction(
+        fun createNotification(title: String, text: String, priority: String = "HIGH") = RoutineAction(
             type = ActionType.NOTIFICATION.value,
             notificationTitle = title,
-            notificationText = text
+            notificationText = text,
+            notificationPriority = priority
         )
     }
 }
