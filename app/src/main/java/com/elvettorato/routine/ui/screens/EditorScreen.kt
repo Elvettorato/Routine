@@ -137,7 +137,7 @@ fun EditorScreen(
     ) { }
     val writeSettingsLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.StartActivityForResult()
-    ) { }
+    ) { if (Settings.System.canWrite(context)) viewModel.save() }
     val notificationPolicyLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { }
@@ -321,13 +321,17 @@ fun EditorScreen(
                     val hasBrightness = actions.any { ActionType.fromValue(it.type) == ActionType.BRIGHTNESS }
                     val hasDnd = actions.any { ActionType.fromValue(it.type) == ActionType.DND }
 
+                    var needsIntent = false
+
                     if (hasBluetooth && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
                         ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT) !=
                         android.content.pm.PackageManager.PERMISSION_GRANTED
                     ) {
+                        needsIntent = true
                         bluetoothPermissionLauncher.launch(Manifest.permission.BLUETOOTH_CONNECT)
                     }
                     if (hasBrightness && !Settings.System.canWrite(context)) {
+                        needsIntent = true
                         val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS).apply {
                             data = Uri.parse("package:${context.packageName}")
                         }
@@ -336,11 +340,12 @@ fun EditorScreen(
                     if (hasDnd) {
                         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as android.app.NotificationManager
                         if (!nm.isNotificationPolicyAccessGranted) {
+                            needsIntent = true
                             val intent = Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS)
                             notificationPolicyLauncher.launch(intent)
                         }
                     }
-                    viewModel.save()
+                    if (!needsIntent) viewModel.save()
                 },
                 modifier = Modifier.fillMaxWidth(),
                 enabled = !isSaving,

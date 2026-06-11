@@ -80,29 +80,27 @@ object ActionExecutor {
     }
 
     private fun setBrightness(context: Context, action: RoutineAction) {
-        if (!Settings.System.canWrite(context)) {
-            Log.w(TAG, "Brightness not granted - requires WRITE_SETTINGS")
-            return
-        }
         val brightness = action.brightnessLevel ?: 128
         val auto = action.brightnessAuto ?: false
+        val cr = context.contentResolver
         if (auto) {
             Settings.System.putInt(
-                context.contentResolver,
-                Settings.System.SCREEN_BRIGHTNESS_MODE,
+                cr, Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC
             )
         } else {
-            Settings.System.putInt(
-                context.contentResolver,
-                Settings.System.SCREEN_BRIGHTNESS_MODE,
-                Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
-            )
-            Settings.System.putInt(
-                context.contentResolver,
-                Settings.System.SCREEN_BRIGHTNESS,
-                brightness.coerceIn(0, 255)
-            )
+            try {
+                Settings.System.putInt(
+                    cr, Settings.System.SCREEN_BRIGHTNESS_MODE,
+                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
+                )
+                Settings.System.putInt(
+                    cr, Settings.System.SCREEN_BRIGHTNESS,
+                    brightness.coerceIn(0, 255)
+                )
+            } catch (e: SecurityException) {
+                Log.w(TAG, "Brightness write blocked on this Android version")
+            }
         }
     }
 
