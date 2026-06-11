@@ -1,11 +1,12 @@
 package com.elvettorato.routine.service
 
 import android.app.NotificationManager
+import android.bluetooth.BluetoothAdapter
 import android.content.Context
 import android.media.AudioManager
 import android.net.wifi.WifiManager
 import android.provider.Settings
-import android.bluetooth.BluetoothAdapter
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.elvettorato.routine.R
@@ -30,18 +31,28 @@ object ActionExecutor {
     }
 
     private fun executeSingle(context: Context, action: RoutineAction) {
-        when (ActionType.fromValue(action.type)) {
-            ActionType.DND -> setDndMode(context, action.dndMode)
-            ActionType.VOLUME -> setVolume(context, action)
-            ActionType.BRIGHTNESS -> setBrightness(context, action)
-            ActionType.WIFI -> setWifi(context, action.wifiEnabled)
-            ActionType.BLUETOOTH -> setBluetooth(context, action.bluetoothEnabled)
-            ActionType.NOTIFICATION -> sendActionNotification(context, action)
+        try {
+            when (ActionType.fromValue(action.type)) {
+                ActionType.DND -> setDndMode(context, action.dndMode)
+                ActionType.VOLUME -> setVolume(context, action)
+                ActionType.BRIGHTNESS -> setBrightness(context, action)
+                ActionType.WIFI -> setWifi(context, action.wifiEnabled)
+                ActionType.BLUETOOTH -> setBluetooth(context, action.bluetoothEnabled)
+                ActionType.NOTIFICATION -> sendActionNotification(context, action)
+            }
+        } catch (e: SecurityException) {
+            Log.w(TAG, "Permission denied for ${action.type}: ${e.message}")
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to execute ${action.type}: ${e.message}")
         }
     }
 
     private fun setDndMode(context: Context, mode: String?) {
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        if (!nm.isNotificationPolicyAccessGranted) {
+            Log.w(TAG, "DND not granted - requires notification policy access")
+            return
+        }
         val dnd = DndMode.valueOf(mode ?: "OFF")
         val filter = when (dnd) {
             DndMode.OFF -> NotificationManager.INTERRUPTION_FILTER_ALL
@@ -69,6 +80,10 @@ object ActionExecutor {
     }
 
     private fun setBrightness(context: Context, action: RoutineAction) {
+        if (!Settings.System.canWrite(context)) {
+            Log.w(TAG, "Brightness not granted - requires WRITE_SETTINGS")
+            return
+        }
         val brightness = action.brightnessLevel ?: 128
         val auto = action.brightnessAuto ?: false
         if (auto) {
@@ -104,6 +119,8 @@ object ActionExecutor {
         val btAdapter = BluetoothAdapter.getDefaultAdapter() ?: return
         if (enabled) btAdapter.enable() else btAdapter.disable()
     }
+
+    private const val TAG = "ActionExecutor"
 
     private fun sendActionNotification(context: Context, action: RoutineAction) {
         val title = action.notificationTitle ?: "Routine"

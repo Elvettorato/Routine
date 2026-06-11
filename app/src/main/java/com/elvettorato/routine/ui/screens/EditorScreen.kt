@@ -1,6 +1,10 @@
 package com.elvettorato.routine.ui.screens
 
 import android.Manifest
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.provider.Settings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
@@ -126,6 +130,15 @@ fun EditorScreen(
             }
         }
     }
+    val bluetoothPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { }
+    val writeSettingsLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { }
+    val notificationPolicyLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { }
 
     if (showTimePicker) {
         TimePickerDialog(
@@ -301,7 +314,32 @@ fun EditorScreen(
             Spacer(Modifier.height(32.dp))
 
             Button(
-                onClick = { viewModel.save() },
+                onClick = {
+                    val hasBluetooth = actions.any { ActionType.fromValue(it.type) == ActionType.BLUETOOTH }
+                    val hasBrightness = actions.any { ActionType.fromValue(it.type) == ActionType.BRIGHTNESS }
+                    val hasDnd = actions.any { ActionType.fromValue(it.type) == ActionType.DND }
+
+                    if (hasBluetooth && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
+                        ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT) !=
+                        android.content.pm.PackageManager.PERMISSION_GRANTED
+                    ) {
+                        bluetoothPermissionLauncher.launch(Manifest.permission.BLUETOOTH_CONNECT)
+                    }
+                    if (hasBrightness && !Settings.System.canWrite(context)) {
+                        val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS).apply {
+                            data = Uri.parse("package:${context.packageName}")
+                        }
+                        writeSettingsLauncher.launch(intent)
+                    }
+                    if (hasDnd) {
+                        val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as android.app.NotificationManager
+                        if (!nm.isNotificationPolicyAccessGranted) {
+                            val intent = Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS)
+                            notificationPolicyLauncher.launch(intent)
+                        }
+                    }
+                    viewModel.save()
+                },
                 modifier = Modifier.fillMaxWidth(),
                 enabled = !isSaving,
                 colors = ButtonDefaults.buttonColors(containerColor = LineagePrimary)
