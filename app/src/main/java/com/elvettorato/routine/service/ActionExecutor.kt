@@ -107,8 +107,14 @@ object ActionExecutor {
     @Suppress("DEPRECATION")
     private fun setWifi(context: Context, enabled: Boolean?) {
         if (enabled == null) return
-        val wifiManager = context.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
-        wifiManager.isWifiEnabled = enabled
+        val wifiManager = context.getSystemService(Context.WIFI_SERVICE) as WifiManager
+        try {
+            wifiManager.isWifiEnabled = enabled
+        } catch (e: SecurityException) {
+            Log.w(TAG, "WiFi toggle requires CHANGE_WIFI_STATE and location permission")
+        } catch (e: Exception) {
+            Log.w(TAG, "WiFi toggle not supported on this Android version")
+        }
     }
 
     @Suppress("DEPRECATION")
