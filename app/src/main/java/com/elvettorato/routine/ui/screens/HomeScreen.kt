@@ -1,9 +1,5 @@
 package com.elvettorato.routine.ui.screens
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -45,16 +41,16 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.Routine
 import com.elvettorato.routine.data.model.TriggerType
@@ -65,6 +61,10 @@ import com.elvettorato.routine.ui.theme.ActionNotificationColor
 import com.elvettorato.routine.ui.theme.ActionVolumeColor
 import com.elvettorato.routine.ui.theme.ActionWifiColor
 import com.elvettorato.routine.ui.theme.LineagePrimary
+import java.text.DateFormatSymbols
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -80,7 +80,7 @@ fun HomeScreen(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
             LargeTopAppBar(
-                title = { Text("Routine") },
+                title = { Text(stringResource(R.string.app_name)) },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = Color.Transparent,
                     scrolledContainerColor = MaterialTheme.colorScheme.surface
@@ -93,7 +93,7 @@ fun HomeScreen(
                 onClick = onAddRoutine,
                 containerColor = LineagePrimary
             ) {
-                Icon(Icons.Default.Add, contentDescription = "Add Routine")
+                Icon(Icons.Default.Add, contentDescription = stringResource(R.string.add_routine))
             }
         }
     ) { padding ->
@@ -135,13 +135,13 @@ private fun EmptyState(modifier: Modifier = Modifier) {
             )
             Spacer(Modifier.height(16.dp))
             Text(
-                "No routines yet",
+                stringResource(R.string.no_routines),
                 style = MaterialTheme.typography.headlineSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                "Tap + to create your first routine",
+                stringResource(R.string.tap_to_add),
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
             )
@@ -198,7 +198,7 @@ private fun RoutineCard(
                 IconButton(onClick = onDelete) {
                     Icon(
                         Icons.Default.Delete,
-                        contentDescription = "Delete",
+                        contentDescription = stringResource(R.string.delete),
                         tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
                     )
                 }
@@ -209,7 +209,35 @@ private fun RoutineCard(
 
 @Composable
 private fun TriggerSummary(routine: Routine) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
+    val triggerText = remember(routine) {
+        if (routine.triggerType == TriggerType.TIME) {
+            val hour = routine.triggerHour ?: 0
+            val minute = routine.triggerMinute ?: 0
+            val cal = Calendar.getInstance().apply {
+                set(Calendar.HOUR_OF_DAY, hour)
+                set(Calendar.MINUTE, minute)
+            }
+            val timeStr = SimpleDateFormat("h:mm a", Locale.getDefault()).format(cal.time)
+            val days = routine.triggerDaysOfWeek
+            if (days.isNullOrEmpty()) timeStr
+            else {
+                val daySymbols = DateFormatSymbols.getInstance(Locale.getDefault()).shortWeekdays
+                val dayStr = days.mapNotNull { daySymbols.getOrNull(it % 7 + 1) }
+                "$timeStr \u00B7 ${dayStr.joinToString(",")}"
+            }
+        } else {
+            val lat = routine.triggerLatitude
+            val lng = routine.triggerLongitude
+            if (lat != null && lng != null) {
+                "%.2f, %.2f".format(lat, lng)
+            } else "?"
+        }
+    }
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxWidth()
+    ) {
         Icon(
             imageVector = if (routine.triggerType == TriggerType.TIME) Icons.Default.Schedule else Icons.Default.LocationOn,
             contentDescription = null,
@@ -218,24 +246,11 @@ private fun TriggerSummary(routine: Routine) {
         )
         Spacer(Modifier.width(6.dp))
         Text(
-            text = if (routine.triggerType == TriggerType.TIME) {
-                val hour = routine.triggerHour ?: 0
-                val minute = routine.triggerMinute ?: 0
-                val amPm = if (hour < 12) "AM" else "PM"
-                val h = if (hour % 12 == 0) 12 else hour % 12
-                val m = minute.toString().padStart(2, '0')
-                val days = routine.triggerDaysOfWeek
-                if (days.isNullOrEmpty()) "$h:$m $amPm"
-                else {
-                    val dayLabels = listOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
-                    val dayStr = days.mapNotNull { dayLabels.getOrNull(it - 1) }
-                    "$h:$m $amPm \u00B7 ${dayStr.joinToString(",")}"
-                }
-            } else {
-                "Location: ${routine.triggerLatitude?.let { "%.2f".format(it) } ?: "?"}, ${routine.triggerLongitude?.let { "%.2f".format(it) } ?: "?"}"
-            },
+            text = triggerText,
             style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
         )
     }
 }

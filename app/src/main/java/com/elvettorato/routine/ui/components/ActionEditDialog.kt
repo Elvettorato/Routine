@@ -10,13 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Bluetooth
-import androidx.compose.material.icons.filled.BrightnessMedium
-import androidx.compose.material.icons.filled.DoNotDisturbAlt
-import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.VolumeUp
-import androidx.compose.material.icons.filled.Wifi
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -43,7 +36,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.DndMode
 import com.elvettorato.routine.data.model.RoutineAction
@@ -84,7 +79,7 @@ fun ActionEditDialog(
         onDismissRequest = onDismiss,
         title = {
             Text(
-                if (initialAction != null) "Edit Action" else "Add Action",
+                if (initialAction != null) stringResource(R.string.edit_action) else stringResource(R.string.add_action_dialog),
                 style = MaterialTheme.typography.headlineSmall
             )
         },
@@ -102,7 +97,7 @@ fun ActionEditDialog(
                         value = selectedType.name,
                         onValueChange = {},
                         readOnly = true,
-                        label = { Text("Action Type") },
+                        label = { Text(stringResource(R.string.action_type)) },
                         trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = typeExpanded) },
                         modifier = Modifier
                             .fillMaxWidth()
@@ -128,9 +123,15 @@ fun ActionEditDialog(
 
                 when (selectedType) {
                     ActionType.DND -> {
-                        Text("Do Not Disturb Mode", style = MaterialTheme.typography.titleSmall)
+                        Text(stringResource(R.string.dnd_mode), style = MaterialTheme.typography.titleSmall)
                         Spacer(Modifier.height(8.dp))
                         DndMode.entries.forEach { mode ->
+                            val label = when (mode) {
+                                DndMode.OFF -> stringResource(R.string.dnd_off)
+                                DndMode.PRIORITY_ONLY -> stringResource(R.string.dnd_priority)
+                                DndMode.TOTAL_SILENCE -> stringResource(R.string.dnd_total)
+                                DndMode.ALARMS_ONLY -> stringResource(R.string.dnd_alarms)
+                            }
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
@@ -138,7 +139,7 @@ fun ActionEditDialog(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Text(
-                                    mode.name,
+                                    label,
                                     style = MaterialTheme.typography.bodyMedium,
                                     modifier = Modifier.weight(1f)
                                 )
@@ -151,10 +152,10 @@ fun ActionEditDialog(
                     }
 
                     ActionType.VOLUME -> {
-                        VolumeSlider("Media", mediaVolume, 0f..15f) { mediaVolume = it.toInt() }
-                        VolumeSlider("Ring", ringVolume, 0f..15f) { ringVolume = it.toInt() }
-                        VolumeSlider("Alarm", alarmVolume, 0f..15f) { alarmVolume = it.toInt() }
-                        VolumeSlider("Notification", notificationVolume, 0f..15f) { notificationVolume = it.toInt() }
+                        VolumeSlider(stringResource(R.string.media), mediaVolume, 0f..15f) { mediaVolume = it.toInt() }
+                        VolumeSlider(stringResource(R.string.ring), ringVolume, 0f..15f) { ringVolume = it.toInt() }
+                        VolumeSlider(stringResource(R.string.alarm), alarmVolume, 0f..15f) { alarmVolume = it.toInt() }
+                        VolumeSlider(stringResource(R.string.notification), notificationVolume, 0f..15f) { notificationVolume = it.toInt() }
                     }
 
                     ActionType.BRIGHTNESS -> {
@@ -162,13 +163,13 @@ fun ActionEditDialog(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Text("Auto", style = MaterialTheme.typography.bodyMedium)
+                            Text(stringResource(R.string.auto), style = MaterialTheme.typography.bodyMedium)
                             Spacer(Modifier.weight(1f))
                             Switch(checked = brightnessAuto, onCheckedChange = { brightnessAuto = it })
                         }
                         if (!brightnessAuto) {
                             Spacer(Modifier.height(8.dp))
-                            Text("Level: ${(brightnessLevel * 100 / 255)}%", style = MaterialTheme.typography.bodySmall)
+                            Text(stringResource(R.string.level_format, (brightnessLevel * 100 / 255)), style = MaterialTheme.typography.bodySmall)
                             Slider(
                                 value = brightnessLevel.toFloat(),
                                 onValueChange = { brightnessLevel = it.toInt() },
@@ -183,7 +184,7 @@ fun ActionEditDialog(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Text("Enable WiFi", style = MaterialTheme.typography.bodyMedium)
+                            Text(stringResource(R.string.enable_wifi), style = MaterialTheme.typography.bodyMedium)
                             Spacer(Modifier.weight(1f))
                             Switch(checked = wifiEnabled, onCheckedChange = { wifiEnabled = it })
                         }
@@ -194,7 +195,7 @@ fun ActionEditDialog(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Text("Enable Bluetooth", style = MaterialTheme.typography.bodyMedium)
+                            Text(stringResource(R.string.enable_bluetooth), style = MaterialTheme.typography.bodyMedium)
                             Spacer(Modifier.weight(1f))
                             Switch(checked = bluetoothEnabled, onCheckedChange = { bluetoothEnabled = it })
                         }
@@ -204,7 +205,7 @@ fun ActionEditDialog(
                         OutlinedTextField(
                             value = notificationTitle,
                             onValueChange = { notificationTitle = it },
-                            label = { Text("Title") },
+                            label = { Text(stringResource(R.string.notification_title)) },
                             modifier = Modifier.fillMaxWidth(),
                             singleLine = true
                         )
@@ -212,7 +213,7 @@ fun ActionEditDialog(
                         OutlinedTextField(
                             value = notificationText,
                             onValueChange = { notificationText = it },
-                            label = { Text("Content") },
+                            label = { Text(stringResource(R.string.notification_content)) },
                             modifier = Modifier.fillMaxWidth(),
                             maxLines = 3
                         )
@@ -231,10 +232,10 @@ fun ActionEditDialog(
                     ActionType.NOTIFICATION -> RoutineAction.createNotification(notificationTitle, notificationText)
                 }
                 onSave(action)
-            }) { Text("Save") }
+            }) { Text(stringResource(R.string.save)) }
         },
         dismissButton = {
-            TextButton(onClick = onDismiss) { Text("Cancel") }
+            TextButton(onClick = onDismiss) { Text(stringResource(R.string.cancel)) }
         }
     )
 }

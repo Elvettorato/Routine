@@ -56,7 +56,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.RoutineAction
 import com.elvettorato.routine.data.model.TriggerType
@@ -145,10 +147,10 @@ fun EditorScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(if (routineId != null) "Edit Routine" else "New Routine") },
+                title = { Text(if (routineId != null) stringResource(R.string.edit_routine) else stringResource(R.string.new_routine)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -167,7 +169,7 @@ fun EditorScreen(
             OutlinedTextField(
                 value = name,
                 onValueChange = viewModel::updateName,
-                label = { Text("Routine Name") },
+                label = { Text(stringResource(R.string.routine_name)) },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true
             )
@@ -175,7 +177,7 @@ fun EditorScreen(
             Spacer(Modifier.height(24.dp))
 
             Text(
-                "Trigger",
+                stringResource(R.string.trigger),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -189,7 +191,7 @@ fun EditorScreen(
                 ) {
                     Icon(Icons.Default.Schedule, contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(Modifier.width(4.dp))
-                    Text("Time")
+                    Text(stringResource(R.string.time))
                 }
                 SegmentedButton(
                     selected = triggerType == TriggerType.LOCATION,
@@ -198,7 +200,7 @@ fun EditorScreen(
                 ) {
                     Icon(Icons.Default.LocationOn, contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(Modifier.width(4.dp))
-                    Text("Location")
+                    Text(stringResource(R.string.location))
                 }
             }
 
@@ -230,7 +232,7 @@ fun EditorScreen(
             Spacer(Modifier.height(24.dp))
 
             Text(
-                "Actions",
+                stringResource(R.string.actions),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -254,7 +256,7 @@ fun EditorScreen(
             ) {
                 Icon(Icons.Default.Add, contentDescription = null)
                 Spacer(Modifier.width(8.dp))
-                Text("Add Action")
+                Text(stringResource(R.string.add_action))
             }
 
             Spacer(Modifier.height(32.dp))
@@ -265,7 +267,7 @@ fun EditorScreen(
                 enabled = !isSaving,
                 colors = ButtonDefaults.buttonColors(containerColor = LineagePrimary)
             ) {
-                Text(if (isSaving) "Saving..." else "Save Routine")
+                Text(if (isSaving) stringResource(R.string.saving) else stringResource(R.string.save_routine))
             }
 
             Spacer(Modifier.height(24.dp))
@@ -281,9 +283,11 @@ private fun TimeTriggerSection(
     onTimeClick: () -> Unit,
     onDaysChanged: (List<Int>) -> Unit
 ) {
-    val amPm = if (hour < 12) "AM" else "PM"
-    val h = if (hour % 12 == 0) 12 else hour % 12
-    val m = minute.toString().padStart(2, '0')
+    val cal = java.util.Calendar.getInstance().apply {
+        set(java.util.Calendar.HOUR_OF_DAY, hour)
+        set(java.util.Calendar.MINUTE, minute)
+    }
+    val timeText = java.text.SimpleDateFormat("h:mm a", java.util.Locale.getDefault()).format(cal.time)
 
     FilledTonalButton(
         onClick = onTimeClick,
@@ -291,7 +295,7 @@ private fun TimeTriggerSection(
     ) {
         Icon(Icons.Default.Schedule, contentDescription = null)
         Spacer(Modifier.width(8.dp))
-        Text("$h:$m $amPm")
+        Text(timeText)
     }
 
     Spacer(Modifier.height(16.dp))
@@ -314,7 +318,7 @@ private fun LocationTriggerSection(
     OutlinedTextField(
         value = if (lat != 0.0) lat.toString() else "",
         onValueChange = { it.toDoubleOrNull()?.let(onLatChange) },
-        label = { Text("Latitude") },
+        label = { Text(stringResource(R.string.latitude)) },
         modifier = Modifier.fillMaxWidth(),
         singleLine = true
     )
@@ -322,12 +326,12 @@ private fun LocationTriggerSection(
     OutlinedTextField(
         value = if (lng != 0.0) lng.toString() else "",
         onValueChange = { it.toDoubleOrNull()?.let(onLngChange) },
-        label = { Text("Longitude") },
+        label = { Text(stringResource(R.string.longitude)) },
         modifier = Modifier.fillMaxWidth(),
         singleLine = true
     )
     Spacer(Modifier.height(8.dp))
-    Text("Radius: ${radius.toInt()}m", style = MaterialTheme.typography.bodySmall)
+    Text(stringResource(R.string.radius_format, radius.toInt()), style = MaterialTheme.typography.bodySmall)
     Slider(
         value = radius,
         onValueChange = onRadiusChange,
@@ -339,9 +343,9 @@ private fun LocationTriggerSection(
         modifier = Modifier.fillMaxWidth()
     ) {
         androidx.compose.material3.Checkbox(checked = onEnter, onCheckedChange = onEnterChange)
-        Text("On enter", style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+        Text(stringResource(R.string.on_enter), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
         androidx.compose.material3.Checkbox(checked = onExit, onCheckedChange = onExitChange)
-        Text("On exit", style = MaterialTheme.typography.bodyMedium)
+        Text(stringResource(R.string.on_exit), style = MaterialTheme.typography.bodyMedium)
     }
 }
 
@@ -358,27 +362,28 @@ private fun ActionCard(
     when (type) {
         ActionType.DND -> {
             icon = Icons.Default.DoNotDisturbAlt; color = ActionDndColor
-            summary = "DND: ${action.dndMode ?: "OFF"}"
+            summary = stringResource(R.string.summary_dnd, action.dndMode ?: "OFF")
         }
         ActionType.VOLUME -> {
             icon = Icons.Default.VolumeUp; color = ActionVolumeColor
-            summary = "Vol: M${action.mediaVolume} R${action.ringVolume} A${action.alarmVolume} N${action.notificationVolume}"
+            summary = stringResource(R.string.summary_volume, action.mediaVolume ?: 0, action.ringVolume ?: 0, action.alarmVolume ?: 0, action.notificationVolume ?: 0)
         }
         ActionType.BRIGHTNESS -> {
             icon = Icons.Default.BrightnessMedium; color = ActionBrightnessColor
-            summary = "Brightness: ${action.brightnessAuto?.let { if (it) "Auto" else "${action.brightnessLevel}" } ?: "?"}"
+            val brightText = if (action.brightnessAuto == true) stringResource(R.string.auto) else "${action.brightnessLevel}"
+            summary = stringResource(R.string.summary_brightness, brightText)
         }
         ActionType.WIFI -> {
             icon = Icons.Default.Wifi; color = ActionWifiColor
-            summary = "WiFi: ${if (action.wifiEnabled == true) "ON" else "OFF"}"
+            summary = stringResource(R.string.summary_wifi, if (action.wifiEnabled == true) stringResource(R.string.on) else stringResource(R.string.off))
         }
         ActionType.BLUETOOTH -> {
             icon = Icons.Default.Bluetooth; color = ActionBluetoothColor
-            summary = "Bluetooth: ${if (action.bluetoothEnabled == true) "ON" else "OFF"}"
+            summary = stringResource(R.string.summary_bluetooth, if (action.bluetoothEnabled == true) stringResource(R.string.on) else stringResource(R.string.off))
         }
         ActionType.NOTIFICATION -> {
             icon = Icons.Default.Notifications; color = ActionNotificationColor
-            summary = "Notify: ${action.notificationTitle ?: ""}"
+            summary = stringResource(R.string.summary_notification, action.notificationTitle ?: "")
         }
     }
 
@@ -404,7 +409,7 @@ private fun ActionCard(
                 Text(summary, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             IconButton(onClick = onDelete) {
-                Icon(Icons.Default.Close, contentDescription = "Remove", tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                Icon(Icons.Default.Close, contentDescription = stringResource(R.string.remove), tint = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
     }
@@ -424,7 +429,7 @@ private fun TimePickerDialog(
 
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("Select Time", style = MaterialTheme.typography.headlineSmall) },
+        title = { Text(stringResource(R.string.select_time), style = MaterialTheme.typography.headlineSmall) },
         text = {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -457,7 +462,7 @@ private fun TimePickerDialog(
                 FilledTonalButton(
                     onClick = { isPM = !isPM }
                 ) {
-                    Text(if (isPM) "PM" else "AM")
+                    Text(if (isPM) stringResource(R.string.pm) else stringResource(R.string.am))
                 }
             }
         },
@@ -465,10 +470,10 @@ private fun TimePickerDialog(
             TextButton(onClick = {
                 val h = if (isPM) (hour % 12) + 12 else hour % 12
                 onConfirm(h, minute)
-            }) { Text("OK") }
+            }) { Text(stringResource(R.string.ok)) }
         },
         dismissButton = {
-            TextButton(onClick = onDismiss) { Text("Cancel") }
+            TextButton(onClick = onDismiss) { Text(stringResource(R.string.cancel)) }
         }
     )
 }

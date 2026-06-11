@@ -12,7 +12,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.elvettorato.routine.R
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -21,11 +23,19 @@ fun DayPicker(
     onDaysChanged: (List<Int>) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val dayLabels = listOf(1 to "Mon", 2 to "Tue", 3 to "Wed", 4 to "Thu", 5 to "Fri", 6 to "Sat", 7 to "Sun")
+    val dayLabels = listOf(
+        1 to stringResource(R.string.mon),
+        2 to stringResource(R.string.tue),
+        3 to stringResource(R.string.wed),
+        4 to stringResource(R.string.thu),
+        5 to stringResource(R.string.fri),
+        6 to stringResource(R.string.sat),
+        7 to stringResource(R.string.sun)
+    )
 
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
-            text = "Repeat on",
+            text = stringResource(R.string.repeat_on),
             style = MaterialTheme.typography.labelLarge,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(bottom = 8.dp)
