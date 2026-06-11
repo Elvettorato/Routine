@@ -1,0 +1,4 @@
+-keep class com.elvettorato.routine.data.entity.** { *; }
+-keep class com.elvettorato.routine.data.model.** { *; }
+-keepclassmembers class * extends androidx.room.RoomDatabase { *; }
+-keep class * extends androidx.work.Worker { *; }
