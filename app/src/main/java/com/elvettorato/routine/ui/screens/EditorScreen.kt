@@ -38,9 +38,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SegmentedButton
-import androidx.compose.material3.SegmentedButtonDefaults
-import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -62,7 +59,6 @@ import androidx.compose.ui.unit.dp
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.RoutineAction
-import com.elvettorato.routine.data.model.TriggerType
 import com.elvettorato.routine.ui.components.ActionEditDialog
 import com.elvettorato.routine.ui.components.DayPicker
 import com.elvettorato.routine.ui.components.MapLocationPicker
@@ -82,7 +78,6 @@ fun EditorScreen(
     onNavigateBack: () -> Unit
 ) {
     val name by viewModel.routineName.collectAsState()
-    val triggerType by viewModel.triggerType.collectAsState()
     val hour by viewModel.triggerHour.collectAsState()
     val minute by viewModel.triggerMinute.collectAsState()
     val days by viewModel.triggerDays.collectAsState()
@@ -201,52 +196,41 @@ fun EditorScreen(
             )
             Spacer(Modifier.height(8.dp))
 
-            SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
-                SegmentedButton(
-                    selected = triggerType == TriggerType.TIME,
-                    onClick = { viewModel.updateTriggerType(TriggerType.TIME) },
-                    shape = SegmentedButtonDefaults.itemShape(index = 0, count = 2)
-                ) {
-                    Icon(Icons.Default.Schedule, contentDescription = null, modifier = Modifier.size(18.dp))
-                    Spacer(Modifier.width(4.dp))
-                    Text(stringResource(R.string.time))
-                }
-                SegmentedButton(
-                    selected = triggerType == TriggerType.LOCATION,
-                    onClick = { viewModel.updateTriggerType(TriggerType.LOCATION) },
-                    shape = SegmentedButtonDefaults.itemShape(index = 1, count = 2)
-                ) {
-                    Icon(Icons.Default.LocationOn, contentDescription = null, modifier = Modifier.size(18.dp))
-                    Spacer(Modifier.width(4.dp))
-                    Text(stringResource(R.string.location))
-                }
-            }
+            Text(
+                stringResource(R.string.time),
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            TimeTriggerSection(
+                hour = hour,
+                minute = minute,
+                days = days,
+                onTimeClick = { showTimePicker = true },
+                onDaysChanged = viewModel::updateTriggerDays
+            )
 
             Spacer(Modifier.height(16.dp))
 
-            if (triggerType == TriggerType.TIME) {
-                TimeTriggerSection(
-                    hour = hour,
-                    minute = minute,
-                    days = days,
-                    onTimeClick = { showTimePicker = true },
-                    onDaysChanged = viewModel::updateTriggerDays
-                )
-            } else {
-                LocationTriggerSection(
-                    lat = lat,
-                    lng = lng,
-                    radius = radius,
-                    onEnter = onEnter,
-                    onExit = onExit,
-                    onLatChange = viewModel::updateLat,
-                    onLngChange = viewModel::updateLng,
-                    onRadiusChange = viewModel::updateRadius,
-                    onEnterChange = viewModel::updateOnEnter,
-                    onExitChange = viewModel::updateOnExit,
-                    onShowMap = { showMapPicker = true }
-                )
-            }
+            Text(
+                stringResource(R.string.location),
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            LocationTriggerSection(
+                lat = lat,
+                lng = lng,
+                radius = radius,
+                onEnter = onEnter,
+                onExit = onExit,
+                onLatChange = viewModel::updateLat,
+                onLngChange = viewModel::updateLng,
+                onRadiusChange = viewModel::updateRadius,
+                onEnterChange = viewModel::updateOnEnter,
+                onExitChange = viewModel::updateOnExit,
+                onShowMap = { showMapPicker = true }
+            )
 
             Spacer(Modifier.height(24.dp))
 

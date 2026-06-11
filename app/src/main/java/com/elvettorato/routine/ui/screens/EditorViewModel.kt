@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.elvettorato.routine.data.RoutineDatabase
 import com.elvettorato.routine.data.model.Routine
 import com.elvettorato.routine.data.model.RoutineAction
-import com.elvettorato.routine.data.model.TriggerType
 import com.elvettorato.routine.data.repository.RoutineRepository
 import com.elvettorato.routine.service.RoutineScheduler
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,9 +18,6 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     private val _routineName = MutableStateFlow("")
     val routineName: StateFlow<String> = _routineName.asStateFlow()
-
-    private val _triggerType = MutableStateFlow(TriggerType.TIME)
-    val triggerType: StateFlow<TriggerType> = _triggerType.asStateFlow()
 
     private val _triggerHour = MutableStateFlow(8)
     val triggerHour: StateFlow<Int> = _triggerHour.asStateFlow()
@@ -69,7 +65,6 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             if (routine != null) {
                 editingId = routine.id
                 _routineName.value = routine.name
-                _triggerType.value = routine.triggerType
                 _triggerHour.value = routine.triggerHour ?: 8
                 _triggerMinute.value = routine.triggerMinute ?: 0
                 _triggerDays.value = routine.triggerDaysOfWeek ?: emptyList()
@@ -84,7 +79,6 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     fun updateName(name: String) { _routineName.value = name }
-    fun updateTriggerType(type: TriggerType) { _triggerType.value = type }
     fun updateTriggerHour(hour: Int) { _triggerHour.value = hour }
     fun updateTriggerMinute(minute: Int) { _triggerMinute.value = minute }
     fun updateTriggerDays(days: List<Int>) { _triggerDays.value = days }
@@ -109,13 +103,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 id = editingId ?: 0,
                 name = _routineName.value.ifBlank { "Unnamed" },
                 isEnabled = true,
-                triggerType = _triggerType.value,
-                triggerHour = if (_triggerType.value == TriggerType.TIME) _triggerHour.value else null,
-                triggerMinute = if (_triggerType.value == TriggerType.TIME) _triggerMinute.value else null,
-                triggerDaysOfWeek = if (_triggerType.value == TriggerType.TIME) _triggerDays.value.ifEmpty { null } else null,
-                triggerLatitude = if (_triggerType.value == TriggerType.LOCATION) _triggerLat.value else null,
-                triggerLongitude = if (_triggerType.value == TriggerType.LOCATION) _triggerLng.value else null,
-                triggerRadius = if (_triggerType.value == TriggerType.LOCATION) _triggerRadius.value else null,
+                triggerHour = _triggerHour.value,
+                triggerMinute = _triggerMinute.value,
+                triggerDaysOfWeek = _triggerDays.value.ifEmpty { null },
+                triggerLatitude = _triggerLat.value.takeIf { it != 0.0 },
+                triggerLongitude = _triggerLng.value.takeIf { it != 0.0 },
+                triggerRadius = _triggerRadius.value,
                 triggerOnEnter = _triggerOnEnter.value,
                 triggerOnExit = _triggerOnExit.value,
                 actions = _actions.value,
@@ -129,7 +122,11 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             } else {
                 val newId = repository.insert(routine)
                 routine.copy(id = newId).let { RoutineScheduler.schedule(ctx, it) }
+                _isSaving.value = false
+                _saveComplete.value = true
+                return@launch
             }
+            RoutineScheduler.schedule(ctx, routine)
             _isSaving.value = false
             _saveComplete.value = true
         }

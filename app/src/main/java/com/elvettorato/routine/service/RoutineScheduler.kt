@@ -6,16 +6,17 @@ import android.content.Context
 import android.content.Intent
 import androidx.work.WorkManager
 import com.elvettorato.routine.data.model.Routine
-import com.elvettorato.routine.data.model.TriggerType
 import com.elvettorato.routine.receiver.TimeBroadcastReceiver
 import java.util.Calendar
 
 object RoutineScheduler {
 
     fun schedule(context: Context, routine: Routine) {
-        when (routine.triggerType) {
-            TriggerType.TIME -> scheduleTimeBased(context, routine)
-            TriggerType.LOCATION -> scheduleLocationBased(context, routine)
+        if (routine.hasTimeTrigger) {
+            scheduleTimeBased(context, routine)
+        }
+        if (routine.hasLocationTrigger) {
+            scheduleLocationBased(context, routine)
         }
     }
 
@@ -23,6 +24,11 @@ object RoutineScheduler {
         val workName = "routine_${routine.id}"
         WorkManager.getInstance(context).cancelUniqueWork(workName)
 
+        cancelTimeAlarms(context, routine)
+        GeofenceHelper.removeGeofence(context, routine)
+    }
+
+    private fun cancelTimeAlarms(context: Context, routine: Routine) {
         val intent = Intent(context, TimeBroadcastReceiver::class.java).apply {
             putExtra("routine_id", routine.id)
         }
@@ -36,8 +42,19 @@ object RoutineScheduler {
         alarmManager.cancel(pendingIntent)
         pendingIntent.cancel()
 
-        if (routine.triggerType == TriggerType.LOCATION) {
-            GeofenceHelper.removeGeofence(context, routine)
+        routine.triggerDaysOfWeek?.forEach { day ->
+            val weeklyIntent = Intent(context, TimeBroadcastReceiver::class.java).apply {
+                putExtra("routine_id", routine.id)
+                putExtra("day_of_week", day)
+            }
+            val weeklyPending = PendingIntent.getBroadcast(
+                context,
+                (routine.id * 10 + day).toInt(),
+                weeklyIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+            alarmManager.cancel(weeklyPending)
+            weeklyPending.cancel()
         }
     }
 

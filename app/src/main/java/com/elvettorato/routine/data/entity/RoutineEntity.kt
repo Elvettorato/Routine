@@ -9,7 +9,6 @@ data class RoutineEntity(
     val id: Long = 0,
     val name: String,
     val isEnabled: Boolean = true,
-    val triggerType: String,
     val triggerHour: Int? = null,
     val triggerMinute: Int? = null,
     val triggerDaysOfWeek: String? = null,

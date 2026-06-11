@@ -6,7 +6,6 @@ data class Routine(
     val id: Long = 0,
     val name: String,
     val isEnabled: Boolean = true,
-    val triggerType: TriggerType = TriggerType.TIME,
     val triggerHour: Int? = null,
     val triggerMinute: Int? = null,
     val triggerDaysOfWeek: List<Int>? = null,
@@ -19,13 +18,12 @@ data class Routine(
     val createdAt: Long = System.currentTimeMillis(),
     val updatedAt: Long = System.currentTimeMillis()
 ) {
-    companion object {
-        val DAY_NAMES = listOf(
-            "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"
-        )
+    val hasTimeTrigger: Boolean get() = triggerHour != null && triggerMinute != null
+    val hasLocationTrigger: Boolean get() = triggerLatitude != null && triggerLongitude != null
+            && triggerLatitude != 0.0 && triggerLongitude != 0.0
 
+    companion object {
         fun fromEntity(entity: RoutineEntity): Routine {
-            val triggerType = TriggerType.fromValue(entity.triggerType)
             val daysOfWeek = entity.triggerDaysOfWeek
                 ?.split(",")
                 ?.mapNotNull { it.trim().toIntOrNull() }
@@ -34,7 +32,6 @@ data class Routine(
                 id = entity.id,
                 name = entity.name,
                 isEnabled = entity.isEnabled,
-                triggerType = triggerType,
                 triggerHour = entity.triggerHour,
                 triggerMinute = entity.triggerMinute,
                 triggerDaysOfWeek = daysOfWeek,
@@ -54,7 +51,6 @@ data class Routine(
                 id = routine.id,
                 name = routine.name,
                 isEnabled = routine.isEnabled,
-                triggerType = routine.triggerType.value,
                 triggerHour = routine.triggerHour,
                 triggerMinute = routine.triggerMinute,
                 triggerDaysOfWeek = routine.triggerDaysOfWeek?.joinToString(","),

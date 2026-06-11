@@ -53,7 +53,6 @@ import androidx.compose.ui.unit.dp
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.Routine
-import com.elvettorato.routine.data.model.TriggerType
 import com.elvettorato.routine.ui.theme.ActionBluetoothColor
 import com.elvettorato.routine.ui.theme.ActionBrightnessColor
 import com.elvettorato.routine.ui.theme.ActionDndColor
@@ -209,8 +208,8 @@ private fun RoutineCard(
 
 @Composable
 private fun TriggerSummary(routine: Routine) {
-    val triggerText = remember(routine) {
-        if (routine.triggerType == TriggerType.TIME) {
+    val timeSummary = remember(routine) {
+        if (routine.hasTimeTrigger) {
             val hour = routine.triggerHour ?: 0
             val minute = routine.triggerMinute ?: 0
             val cal = Calendar.getInstance().apply {
@@ -225,33 +224,73 @@ private fun TriggerSummary(routine: Routine) {
                 val dayStr = days.mapNotNull { daySymbols.getOrNull(it % 7 + 1) }
                 "$timeStr \u00B7 ${dayStr.joinToString(",")}"
             }
-        } else {
+        } else null
+    }
+
+    val locationSummary = remember(routine) {
+        if (routine.hasLocationTrigger) {
             val lat = routine.triggerLatitude
             val lng = routine.triggerLongitude
             if (lat != null && lng != null) {
                 "%.2f, %.2f".format(lat, lng)
-            } else "?"
-        }
+            } else null
+        } else null
     }
 
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Icon(
-            imageVector = if (routine.triggerType == TriggerType.TIME) Icons.Default.Schedule else Icons.Default.LocationOn,
-            contentDescription = null,
-            modifier = Modifier.size(16.dp),
-            tint = MaterialTheme.colorScheme.primary
-        )
-        Spacer(Modifier.width(6.dp))
-        Text(
-            text = triggerText,
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
+    Column(modifier = Modifier.fillMaxWidth()) {
+        if (timeSummary != null) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    imageVector = Icons.Default.Schedule,
+                    contentDescription = null,
+                    modifier = Modifier.size(14.dp),
+                    tint = MaterialTheme.colorScheme.primary
+                )
+                Spacer(Modifier.width(4.dp))
+                Text(
+                    text = timeSummary,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+        }
+        if (locationSummary != null) {
+            if (timeSummary != null) Spacer(Modifier.height(2.dp))
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    imageVector = Icons.Default.LocationOn,
+                    contentDescription = null,
+                    modifier = Modifier.size(14.dp),
+                    tint = MaterialTheme.colorScheme.primary
+                )
+                Spacer(Modifier.width(4.dp))
+                Text(
+                    text = locationSummary,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+        }
+        if (timeSummary == null && locationSummary == null) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    imageVector = Icons.Default.Schedule,
+                    contentDescription = null,
+                    modifier = Modifier.size(14.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f)
+                )
+                Spacer(Modifier.width(4.dp))
+                Text(
+                    text = "No triggers set",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f)
+                )
+            }
+        }
     }
 }
 
