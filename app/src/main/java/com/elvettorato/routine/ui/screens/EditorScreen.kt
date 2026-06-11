@@ -42,6 +42,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -82,9 +83,11 @@ fun EditorScreen(
     onNavigateBack: () -> Unit
 ) {
     val name by viewModel.routineName.collectAsState()
+    val hasTimeTrigger by viewModel.hasTimeTrigger.collectAsState()
     val hour by viewModel.triggerHour.collectAsState()
     val minute by viewModel.triggerMinute.collectAsState()
     val days by viewModel.triggerDays.collectAsState()
+    val hasLocationTrigger by viewModel.hasLocationTrigger.collectAsState()
     val lat by viewModel.triggerLat.collectAsState()
     val lng by viewModel.triggerLng.collectAsState()
     val radius by viewModel.triggerRadius.collectAsState()
@@ -200,48 +203,70 @@ fun EditorScreen(
             )
             Spacer(Modifier.height(8.dp))
 
-            Text(
-                stringResource(R.string.time),
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
-            TimeTriggerSection(
-                hour = hour,
-                minute = minute,
-                days = days,
-                onTimeClick = { showTimePicker = true },
-                onDaysChanged = viewModel::updateTriggerDays
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    stringResource(R.string.time),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Switch(
+                    checked = hasTimeTrigger,
+                    onCheckedChange = viewModel::updateHasTimeTrigger
+                )
+            }
+            if (hasTimeTrigger) {
+                TimeTriggerSection(
+                    hour = hour,
+                    minute = minute,
+                    days = days,
+                    onTimeClick = { showTimePicker = true },
+                    onDaysChanged = viewModel::updateTriggerDays
+                )
+            }
 
             Spacer(Modifier.height(16.dp))
 
-            Text(
-                stringResource(R.string.location),
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
-            LocationTriggerSection(
-                lat = lat,
-                lng = lng,
-                radius = radius,
-                onEnter = onEnter,
-                onExit = onExit,
-                onLatChange = viewModel::updateLat,
-                onLngChange = viewModel::updateLng,
-                onRadiusChange = viewModel::updateRadius,
-                onEnterChange = viewModel::updateOnEnter,
-                onExitChange = viewModel::updateOnExit,
-                onGetCurrentLocation = {
-                    locationPermissionLauncher.launch(
-                        arrayOf(
-                            Manifest.permission.ACCESS_FINE_LOCATION,
-                            Manifest.permission.ACCESS_COARSE_LOCATION
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    stringResource(R.string.location),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Switch(
+                    checked = hasLocationTrigger,
+                    onCheckedChange = viewModel::updateHasLocationTrigger
+                )
+            }
+            if (hasLocationTrigger) {
+                LocationTriggerSection(
+                    lat = lat,
+                    lng = lng,
+                    radius = radius,
+                    onEnter = onEnter,
+                    onExit = onExit,
+                    onLatChange = viewModel::updateLat,
+                    onLngChange = viewModel::updateLng,
+                    onRadiusChange = viewModel::updateRadius,
+                    onEnterChange = viewModel::updateOnEnter,
+                    onExitChange = viewModel::updateOnExit,
+                    onGetCurrentLocation = {
+                        locationPermissionLauncher.launch(
+                            arrayOf(
+                                Manifest.permission.ACCESS_FINE_LOCATION,
+                                Manifest.permission.ACCESS_COARSE_LOCATION
+                            )
                         )
-                    )
-                }
-            )
+                    }
+                )
+            }
 
             Spacer(Modifier.height(24.dp))
 

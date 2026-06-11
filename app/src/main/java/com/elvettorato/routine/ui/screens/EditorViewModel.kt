@@ -19,6 +19,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     private val _routineName = MutableStateFlow("")
     val routineName: StateFlow<String> = _routineName.asStateFlow()
 
+    private val _hasTimeTrigger = MutableStateFlow(true)
+    val hasTimeTrigger: StateFlow<Boolean> = _hasTimeTrigger.asStateFlow()
+
     private val _triggerHour = MutableStateFlow(8)
     val triggerHour: StateFlow<Int> = _triggerHour.asStateFlow()
 
@@ -27,6 +30,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     private val _triggerDays = MutableStateFlow(listOf<Int>())
     val triggerDays: StateFlow<List<Int>> = _triggerDays.asStateFlow()
+
+    private val _hasLocationTrigger = MutableStateFlow(false)
+    val hasLocationTrigger: StateFlow<Boolean> = _hasLocationTrigger.asStateFlow()
 
     private val _triggerLat = MutableStateFlow(0.0)
     val triggerLat: StateFlow<Double> = _triggerLat.asStateFlow()
@@ -65,6 +71,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             if (routine != null) {
                 editingId = routine.id
                 _routineName.value = routine.name
+                _hasTimeTrigger.value = routine.hasTimeTrigger
+                _hasLocationTrigger.value = routine.hasLocationTrigger
                 _triggerHour.value = routine.triggerHour ?: 8
                 _triggerMinute.value = routine.triggerMinute ?: 0
                 _triggerDays.value = routine.triggerDaysOfWeek ?: emptyList()
@@ -79,6 +87,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     fun updateName(name: String) { _routineName.value = name }
+    fun updateHasTimeTrigger(enabled: Boolean) { _hasTimeTrigger.value = enabled }
+    fun updateHasLocationTrigger(enabled: Boolean) { _hasLocationTrigger.value = enabled }
     fun updateTriggerHour(hour: Int) { _triggerHour.value = hour }
     fun updateTriggerMinute(minute: Int) { _triggerMinute.value = minute }
     fun updateTriggerDays(days: List<Int>) { _triggerDays.value = days }
@@ -103,12 +113,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 id = editingId ?: 0,
                 name = _routineName.value.ifBlank { "Unnamed" },
                 isEnabled = true,
-                triggerHour = _triggerHour.value,
-                triggerMinute = _triggerMinute.value,
-                triggerDaysOfWeek = _triggerDays.value.ifEmpty { null },
-                triggerLatitude = _triggerLat.value.takeIf { it != 0.0 },
-                triggerLongitude = _triggerLng.value.takeIf { it != 0.0 },
-                triggerRadius = _triggerRadius.value,
+                triggerHour = if (_hasTimeTrigger.value) _triggerHour.value else null,
+                triggerMinute = if (_hasTimeTrigger.value) _triggerMinute.value else null,
+                triggerDaysOfWeek = if (_hasTimeTrigger.value) _triggerDays.value.ifEmpty { null } else null,
+                triggerLatitude = if (_hasLocationTrigger.value) _triggerLat.value.takeIf { it != 0.0 } else null,
+                triggerLongitude = if (_hasLocationTrigger.value) _triggerLng.value.takeIf { it != 0.0 } else null,
+                triggerRadius = if (_hasLocationTrigger.value) _triggerRadius.value else null,
                 triggerOnEnter = _triggerOnEnter.value,
                 triggerOnExit = _triggerOnExit.value,
                 actions = _actions.value,
