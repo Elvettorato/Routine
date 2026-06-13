@@ -27,9 +27,7 @@
     <string name="on_exit">Při odchodu</string>
     <string name="action_type">Typ akce</string>
     <string name="edit_action">Upravit akci</string>
-    <string name="enable_wifi">Povolit WiFi</string>
-    <string name="enable_bluetooth">Povolit Bluetooth</string>
-    <string name="notification_title">Název</string>
+<string name="notification_title">Název</string>
     <string name="notification_content">Obsah</string>
     <string name="auto">Auto</string>
     <string name="level">Úroveň</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Nerušit</string>
     <string name="action_volume">Hlasitost</string>
     <string name="action_brightness">Jas</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Oznámení</string>
+<string name="action_notification">Oznámení</string>
     <string name="mon">Po</string>
     <string name="tue">Út</string>
     <string name="wed">St</string>

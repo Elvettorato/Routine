@@ -27,9 +27,7 @@
     <string name="on_exit">Poistuttaessa</string>
     <string name="action_type">Toiminnon tyyppi</string>
     <string name="edit_action">Muokkaa toimintoa</string>
-    <string name="enable_wifi">Ota WiFi käyttöön</string>
-    <string name="enable_bluetooth">Ota Bluetooth käyttöön</string>
-    <string name="notification_title">Otsikko</string>
+<string name="notification_title">Otsikko</string>
     <string name="notification_content">Sisältö</string>
     <string name="auto">Auto</string>
     <string name="level">Taso</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Älä häiritse</string>
     <string name="action_volume">Äänenvoimakkuus</string>
     <string name="action_brightness">Kirkkaus</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Ilmoitus</string>
+<string name="action_notification">Ilmoitus</string>
     <string name="mon">Ma</string>
     <string name="tue">Ti</string>
     <string name="wed">Ke</string>

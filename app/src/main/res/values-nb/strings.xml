@@ -27,9 +27,7 @@
     <string name="on_exit">Ved utgang</string>
     <string name="action_type">Handlingstype</string>
     <string name="edit_action">Rediger handling</string>
-    <string name="enable_wifi">Aktiver WiFi</string>
-    <string name="enable_bluetooth">Aktiver Bluetooth</string>
-    <string name="notification_title">Tittel</string>
+<string name="notification_title">Tittel</string>
     <string name="notification_content">Innhold</string>
     <string name="auto">Auto</string>
     <string name="level">Nivå</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Ikke forstyrr</string>
     <string name="action_volume">Volum</string>
     <string name="action_brightness">Lysstyrke</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Varsel</string>
+<string name="action_notification">Varsel</string>
     <string name="mon">Man</string>
     <string name="tue">Tir</string>
     <string name="wed">Ons</string>

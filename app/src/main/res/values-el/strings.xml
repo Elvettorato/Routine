@@ -27,9 +27,7 @@
     <string name="on_exit">Κατά την έξοδο</string>
     <string name="action_type">Τύπος ενέργειας</string>
     <string name="edit_action">Επεξεργασία ενέργειας</string>
-    <string name="enable_wifi">Ενεργοποίηση WiFi</string>
-    <string name="enable_bluetooth">Ενεργοποίηση Bluetooth</string>
-    <string name="notification_title">Τίτλος</string>
+<string name="notification_title">Τίτλος</string>
     <string name="notification_content">Περιεχόμενο</string>
     <string name="auto">Αυτόματο</string>
     <string name="level">Επίπεδο</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Μην ενοχλείτε</string>
     <string name="action_volume">Ένταση</string>
     <string name="action_brightness">Φωτεινότητα</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Ειδοποίηση</string>
+<string name="action_notification">Ειδοποίηση</string>
     <string name="mon">Δευ</string>
     <string name="tue">Τρί</string>
     <string name="wed">Τετ</string>

@@ -27,9 +27,7 @@
     <string name="on_exit">Ao saír</string>
     <string name="action_type">Tipo de Acción</string>
     <string name="edit_action">Editar Acción</string>
-    <string name="enable_wifi">Activar WiFi</string>
-    <string name="enable_bluetooth">Activar Bluetooth</string>
-    <string name="notification_title">Título</string>
+<string name="notification_title">Título</string>
     <string name="notification_content">Contido</string>
     <string name="auto">Auto</string>
     <string name="level">Nivel</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Non Molestar</string>
     <string name="action_volume">Volume</string>
     <string name="action_brightness">Brillo</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Notificación</string>
+<string name="action_notification">Notificación</string>
     <string name="mon">Lun</string>
     <string name="tue">Mar</string>
     <string name="wed">Mér</string>

@@ -27,9 +27,7 @@
     <string name="on_exit">Bij vertrek</string>
     <string name="action_type">Actietype</string>
     <string name="edit_action">Actie bewerken</string>
-    <string name="enable_wifi">WiFi inschakelen</string>
-    <string name="enable_bluetooth">Bluetooth inschakelen</string>
-    <string name="notification_title">Titel</string>
+<string name="notification_title">Titel</string>
     <string name="notification_content">Inhoud</string>
     <string name="auto">Auto</string>
     <string name="level">Niveau</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Niet storen</string>
     <string name="action_volume">Volume</string>
     <string name="action_brightness">Helderheid</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Melding</string>
+<string name="action_notification">Melding</string>
     <string name="mon">Ma</string>
     <string name="tue">Di</string>
     <string name="wed">Wo</string>

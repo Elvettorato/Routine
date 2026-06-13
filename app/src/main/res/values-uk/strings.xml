@@ -27,9 +27,7 @@
     <string name="on_exit">При виході</string>
     <string name="action_type">Тип дії</string>
     <string name="edit_action">Редагувати дію</string>
-    <string name="enable_wifi">Увімкнути WiFi</string>
-    <string name="enable_bluetooth">Увімкнути Bluetooth</string>
-    <string name="notification_title">Заголовок</string>
+<string name="notification_title">Заголовок</string>
     <string name="notification_content">Вміст</string>
     <string name="auto">Авто</string>
     <string name="level">Рівень</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Не турбувати</string>
     <string name="action_volume">Гучність</string>
     <string name="action_brightness">Яскравість</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Сповіщення</string>
+<string name="action_notification">Сповіщення</string>
     <string name="mon">Пн</string>
     <string name="tue">Вт</string>
     <string name="wed">Ср</string>

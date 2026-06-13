@@ -27,9 +27,7 @@
     <string name="on_exit">عند الخروج</string>
     <string name="action_type">نوع الإجراء</string>
     <string name="edit_action">تعديل الإجراء</string>
-    <string name="enable_wifi">تمكين WiFi</string>
-    <string name="enable_bluetooth">تمكين Bluetooth</string>
-    <string name="notification_title">العنوان</string>
+<string name="notification_title">العنوان</string>
     <string name="notification_content">المحتوى</string>
     <string name="auto">تلقائي</string>
     <string name="level">المستوى</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">عدم الإزعاج</string>
     <string name="action_volume">مستوى الصوت</string>
     <string name="action_brightness">السطوع</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">إشعار</string>
+<string name="action_notification">إشعار</string>
     <string name="mon">إثن</string>
     <string name="tue">ثلث</string>
     <string name="wed">أرب</string>

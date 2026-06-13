@@ -27,9 +27,7 @@
     <string name="on_exit">Khi ra</string>
     <string name="action_type">Loại Hành động</string>
     <string name="edit_action">Chỉnh sửa Hành động</string>
-    <string name="enable_wifi">Bật WiFi</string>
-    <string name="enable_bluetooth">Bật Bluetooth</string>
-    <string name="notification_title">Tiêu đề</string>
+<string name="notification_title">Tiêu đề</string>
     <string name="notification_content">Nội dung</string>
     <string name="auto">Tự động</string>
     <string name="level">Mức</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Không làm phiền</string>
     <string name="action_volume">Âm lượng</string>
     <string name="action_brightness">Độ sáng</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Thông báo</string>
+<string name="action_notification">Thông báo</string>
     <string name="mon">T2</string>
     <string name="tue">T3</string>
     <string name="wed">T4</string>

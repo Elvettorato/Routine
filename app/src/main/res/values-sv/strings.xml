@@ -27,9 +27,7 @@
     <string name="on_exit">Vid utgång</string>
     <string name="action_type">Åtgärdstyp</string>
     <string name="edit_action">Redigera åtgärd</string>
-    <string name="enable_wifi">Aktivera WiFi</string>
-    <string name="enable_bluetooth">Aktivera Bluetooth</string>
-    <string name="notification_title">Titel</string>
+<string name="notification_title">Titel</string>
     <string name="notification_content">Innehåll</string>
     <string name="auto">Auto</string>
     <string name="level">Nivå</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Stör ej</string>
     <string name="action_volume">Volym</string>
     <string name="action_brightness">Ljusstyrka</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Avisering</string>
+<string name="action_notification">Avisering</string>
     <string name="mon">Mån</string>
     <string name="tue">Tis</string>
     <string name="wed">Ons</string>

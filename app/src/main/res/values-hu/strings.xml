@@ -27,9 +27,7 @@
     <string name="on_exit">Kilépéskor</string>
     <string name="action_type">Művelet típusa</string>
     <string name="edit_action">Művelet szerkesztése</string>
-    <string name="enable_wifi">WiFi engedélyezése</string>
-    <string name="enable_bluetooth">Bluetooth engedélyezése</string>
-    <string name="notification_title">Cím</string>
+<string name="notification_title">Cím</string>
     <string name="notification_content">Tartalom</string>
     <string name="auto">Auto</string>
     <string name="level">Szint</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Ne zavarjanak</string>
     <string name="action_volume">Hangerő</string>
     <string name="action_brightness">Fényerő</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Értesítés</string>
+<string name="action_notification">Értesítés</string>
     <string name="mon">H</string>
     <string name="tue">K</string>
     <string name="wed">Sze</string>

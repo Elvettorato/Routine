@@ -27,9 +27,7 @@
     <string name="on_exit">Bei Verlassen</string>
     <string name="action_type">Aktionstyp</string>
     <string name="edit_action">Aktion bearbeiten</string>
-    <string name="enable_wifi">WiFi aktivieren</string>
-    <string name="enable_bluetooth">Bluetooth aktivieren</string>
-    <string name="notification_title">Titel</string>
+<string name="notification_title">Titel</string>
     <string name="notification_content">Inhalt</string>
     <string name="auto">Auto</string>
     <string name="level">Stufe</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Nicht Stören</string>
     <string name="action_volume">Lautstärke</string>
     <string name="action_brightness">Helligkeit</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Benachrichtigung</string>
+<string name="action_notification">Benachrichtigung</string>
     <string name="mon">Mo</string>
     <string name="tue">Di</string>
     <string name="wed">Mi</string>

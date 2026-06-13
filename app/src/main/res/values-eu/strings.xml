@@ -27,9 +27,7 @@
     <string name="on_exit">Irteeran</string>
     <string name="action_type">Ekintza mota</string>
     <string name="edit_action">Ekintza editatu</string>
-    <string name="enable_wifi">Gaitu WiFi</string>
-    <string name="enable_bluetooth">Gaitu Bluetooth</string>
-    <string name="notification_title">Izenburua</string>
+<string name="notification_title">Izenburua</string>
     <string name="notification_content">Edukia</string>
     <string name="auto">Auto</string>
     <string name="level">Maila</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Ez trabarik</string>
     <string name="action_volume">Bolumena</string>
     <string name="action_brightness">Distira</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Jakinarazpena</string>
+<string name="action_notification">Jakinarazpena</string>
     <string name="mon">Al</string>
     <string name="tue">Ar</string>
     <string name="wed">Az</string>

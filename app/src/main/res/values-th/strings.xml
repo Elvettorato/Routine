@@ -27,9 +27,7 @@
     <string name="on_exit">เมื่อออก</string>
     <string name="action_type">ประเภทการกระทำ</string>
     <string name="edit_action">แก้ไขการกระทำ</string>
-    <string name="enable_wifi">เปิด WiFi</string>
-    <string name="enable_bluetooth">เปิด Bluetooth</string>
-    <string name="notification_title">หัวข้อ</string>
+<string name="notification_title">หัวข้อ</string>
     <string name="notification_content">เนื้อหา</string>
     <string name="auto">อัตโนมัติ</string>
     <string name="level">ระดับ</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">ห้ามรบกวน</string>
     <string name="action_volume">ระดับเสียง</string>
     <string name="action_brightness">ความสว่าง</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">การแจ้งเตือน</string>
+<string name="action_notification">การแจ้งเตือน</string>
     <string name="mon">จ.</string>
     <string name="tue">อ.</string>
     <string name="wed">พ.</string>

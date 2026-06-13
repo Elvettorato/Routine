@@ -27,9 +27,7 @@
     <string name="on_exit">La ieșire</string>
     <string name="action_type">Tip acțiune</string>
     <string name="edit_action">Editați acțiunea</string>
-    <string name="enable_wifi">Activați WiFi</string>
-    <string name="enable_bluetooth">Activați Bluetooth</string>
-    <string name="notification_title">Titlu</string>
+<string name="notification_title">Titlu</string>
     <string name="notification_content">Conținut</string>
     <string name="auto">Auto</string>
     <string name="level">Nivel</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Nu deranjați</string>
     <string name="action_volume">Volum</string>
     <string name="action_brightness">Luminozitate</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Notificare</string>
+<string name="action_notification">Notificare</string>
     <string name="mon">Lun</string>
     <string name="tue">Mar</string>
     <string name="wed">Mie</string>

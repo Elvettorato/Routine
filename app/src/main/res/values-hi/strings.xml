@@ -27,9 +27,7 @@
     <string name="on_exit">निकास पर</string>
     <string name="action_type">क्रिया प्रकार</string>
     <string name="edit_action">क्रिया संपादित करें</string>
-    <string name="enable_wifi">WiFi सक्षम करें</string>
-    <string name="enable_bluetooth">Bluetooth सक्षम करें</string>
-    <string name="notification_title">शीर्षक</string>
+<string name="notification_title">शीर्षक</string>
     <string name="notification_content">सामग्री</string>
     <string name="auto">ऑटो</string>
     <string name="level">स्तर</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">डू नॉट डिस्टर्ब</string>
     <string name="action_volume">वॉल्यूम</string>
     <string name="action_brightness">चमक</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">सूचना</string>
+<string name="action_notification">सूचना</string>
     <string name="mon">सोम</string>
     <string name="tue">मंगल</string>
     <string name="wed">बुध</string>

@@ -27,9 +27,7 @@
     <string name="on_exit">Saat keluar</string>
     <string name="action_type">Jenis Tindakan</string>
     <string name="edit_action">Edit Tindakan</string>
-    <string name="enable_wifi">Aktifkan WiFi</string>
-    <string name="enable_bluetooth">Aktifkan Bluetooth</string>
-    <string name="notification_title">Tajuk</string>
+<string name="notification_title">Tajuk</string>
     <string name="notification_content">Kandungan</string>
     <string name="auto">Auto</string>
     <string name="level">Tahap</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Jangan Ganggu</string>
     <string name="action_volume">Kelantangan</string>
     <string name="action_brightness">Kecerahan</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Pemberitahuan</string>
+<string name="action_notification">Pemberitahuan</string>
     <string name="mon">Isn</string>
     <string name="tue">Sel</string>
     <string name="wed">Rab</string>

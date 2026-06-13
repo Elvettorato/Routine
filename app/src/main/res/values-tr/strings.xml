@@ -27,9 +27,7 @@
     <string name="on_exit">Çıkışta</string>
     <string name="action_type">Eylem Türü</string>
     <string name="edit_action">Eylemi Düzenle</string>
-    <string name="enable_wifi">WiFi\'yi Etkinleştir</string>
-    <string name="enable_bluetooth">Bluetooth\'u Etkinleştir</string>
-    <string name="notification_title">Başlık</string>
+<string name="notification_title">Başlık</string>
     <string name="notification_content">İçerik</string>
     <string name="auto">Otomatik</string>
     <string name="level">Seviye</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Rahatsız Etmeyin</string>
     <string name="action_volume">Ses Düzeyi</string>
     <string name="action_brightness">Parlaklık</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Bildirim</string>
+<string name="action_notification">Bildirim</string>
     <string name="mon">Pzt</string>
     <string name="tue">Sal</string>
     <string name="wed">Çar</string>

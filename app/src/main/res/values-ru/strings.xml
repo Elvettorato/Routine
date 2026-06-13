@@ -27,9 +27,7 @@
     <string name="on_exit">При выходе</string>
     <string name="action_type">Тип действия</string>
     <string name="edit_action">Изменить действие</string>
-    <string name="enable_wifi">Включить WiFi</string>
-    <string name="enable_bluetooth">Включить Bluetooth</string>
-    <string name="notification_title">Заголовок</string>
+<string name="notification_title">Заголовок</string>
     <string name="notification_content">Содержание</string>
     <string name="auto">Авто</string>
     <string name="level">Уровень</string>
@@ -44,9 +42,7 @@
     <string name="action_dnd">Не беспокоить</string>
     <string name="action_volume">Громкость</string>
     <string name="action_brightness">Яркость</string>
-    <string name="action_wifi">WiFi</string>
-    <string name="action_bluetooth">Bluetooth</string>
-    <string name="action_notification">Уведомление</string>
+<string name="action_notification">Уведомление</string>
     <string name="mon">Пн</string>
     <string name="tue">Вт</string>
     <string name="wed">Ср</string>
