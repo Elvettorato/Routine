@@ -50,7 +50,6 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TimePicker
-import androidx.compose.material3.TimePickerLayout
 import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -564,8 +563,7 @@ private fun TimePickerDialog(
         title = { Text(stringResource(R.string.select_time), style = MaterialTheme.typography.headlineSmall) },
         text = {
             TimePicker(
-                state = state,
-                layout = TimePickerLayout.Input
+                state = state
             )
         },
         confirmButton = {
