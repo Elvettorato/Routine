@@ -49,6 +49,9 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TimePicker
+import androidx.compose.material3.TimePickerLayout
+import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -548,53 +551,26 @@ private fun TimePickerDialog(
     onDismiss: () -> Unit,
     onConfirm: (Int, Int) -> Unit
 ) {
-    var hour by remember { mutableStateOf(initialHour) }
-    var minute by remember { mutableStateOf(initialMinute) }
-    var isPM by remember { mutableStateOf(initialHour >= 12) }
+    val context = LocalContext.current
+    val is24Hour = android.text.format.DateFormat.is24HourFormat(context)
+    val state = rememberTimePickerState(
+        initialHour = initialHour,
+        initialMinute = initialMinute,
+        is24Hour = is24Hour
+    )
 
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.select_time), style = MaterialTheme.typography.headlineSmall) },
         text = {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        TextButton(onClick = { hour = (hour + 1) % 24 }) { Text("+", style = MaterialTheme.typography.headlineMedium) }
-                        Text(
-                            text = String.format("%02d", if (isPM) (if (hour % 12 == 0) 12 else hour % 12) else hour),
-                            style = MaterialTheme.typography.displaySmall
-                        )
-                        TextButton(onClick = { hour = (hour - 1 + 24) % 24 }) { Text("-", style = MaterialTheme.typography.headlineMedium) }
-                    }
-                    Text(":", style = MaterialTheme.typography.displaySmall, modifier = Modifier.padding(horizontal = 8.dp))
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        TextButton(onClick = { minute = (minute + 1) % 60 }) { Text("+", style = MaterialTheme.typography.headlineMedium) }
-                        Text(
-                            text = String.format("%02d", minute),
-                            style = MaterialTheme.typography.displaySmall
-                        )
-                        TextButton(onClick = { minute = (minute - 1 + 60) % 60 }) { Text("-", style = MaterialTheme.typography.headlineMedium) }
-                    }
-                }
-                Spacer(Modifier.height(16.dp))
-                FilledTonalButton(
-                    onClick = { isPM = !isPM }
-                ) {
-                    Text(if (isPM) stringResource(R.string.pm) else stringResource(R.string.am))
-                }
-            }
+            TimePicker(
+                state = state,
+                layout = TimePickerLayout.Input
+            )
         },
         confirmButton = {
             TextButton(onClick = {
-                val h = if (isPM) (hour % 12) + 12 else hour % 12
-                onConfirm(h, minute)
+                onConfirm(state.hour, state.minute)
             }) { Text(stringResource(R.string.ok)) }
         },
         dismissButton = {
