@@ -162,7 +162,7 @@ fun ActionEditDialog(
                                 onExpandedChange = { dndCallsExpanded = it }
                             ) {
                                 OutlinedTextField(
-                                    value = stringResource(dndAllowCallsFrom.labelRes),
+                                    value = dndAllowFromLabel(dndAllowCallsFrom),
                                     onValueChange = {},
                                     readOnly = true,
                                     label = { Text(stringResource(R.string.dnd_allow_calls)) },
@@ -175,7 +175,7 @@ fun ActionEditDialog(
                                 ) {
                                     DndAllowFrom.entries.forEach { allow ->
                                         DropdownMenuItem(
-                                            text = { Text(stringResource(allow.labelRes)) },
+                                            text = { Text(dndAllowFromLabel(allow)) },
                                             onClick = {
                                                 dndAllowCallsFrom = allow
                                                 dndCallsExpanded = false
@@ -192,7 +192,7 @@ fun ActionEditDialog(
                                 onExpandedChange = { dndMsgsExpanded = it }
                             ) {
                                 OutlinedTextField(
-                                    value = stringResource(dndAllowMessagesFrom.labelRes),
+                                    value = dndAllowFromLabel(dndAllowMessagesFrom),
                                     onValueChange = {},
                                     readOnly = true,
                                     label = { Text(stringResource(R.string.dnd_allow_messages)) },
@@ -205,7 +205,7 @@ fun ActionEditDialog(
                                 ) {
                                     DndAllowFrom.entries.forEach { allow ->
                                         DropdownMenuItem(
-                                            text = { Text(stringResource(allow.labelRes)) },
+                                            text = { Text(dndAllowFromLabel(allow)) },
                                             onClick = {
                                                 dndAllowMessagesFrom = allow
                                                 dndMsgsExpanded = false
@@ -370,6 +370,14 @@ fun ActionEditDialog(
             TextButton(onClick = onDismiss) { Text(stringResource(R.string.cancel)) }
         }
     )
+}
+
+@Composable
+private fun dndAllowFromLabel(allow: DndAllowFrom): String = when (allow) {
+    DndAllowFrom.NONE -> stringResource(R.string.dnd_allow_none)
+    DndAllowFrom.CONTACTS -> stringResource(R.string.dnd_allow_contacts)
+    DndAllowFrom.STARRED -> stringResource(R.string.dnd_allow_starred)
+    DndAllowFrom.EVERYONE -> stringResource(R.string.dnd_allow_everyone)
 }
 
 @Composable
