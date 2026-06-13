@@ -24,15 +24,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material.icons.filled.BrightnessMedium
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.DoNotDisturbAlt
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.VolumeUp
-import androidx.compose.material.icons.filled.Wifi
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -73,12 +72,11 @@ import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.RoutineAction
 import com.elvettorato.routine.ui.components.ActionEditDialog
 import com.elvettorato.routine.ui.components.DayPicker
-import com.elvettorato.routine.ui.theme.ActionBluetoothColor
 import com.elvettorato.routine.ui.theme.ActionBrightnessColor
 import com.elvettorato.routine.ui.theme.ActionDndColor
 import com.elvettorato.routine.ui.theme.ActionNotificationColor
+import com.elvettorato.routine.ui.theme.ActionRingerColor
 import com.elvettorato.routine.ui.theme.ActionVolumeColor
-import com.elvettorato.routine.ui.theme.ActionWifiColor
 import com.elvettorato.routine.ui.theme.LineagePrimary
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -132,9 +130,6 @@ fun EditorScreen(
             }
         }
     }
-    val bluetoothPermissionLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { }
     val writeSettingsLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { if (Settings.System.canWrite(context)) viewModel.save() }
@@ -317,19 +312,11 @@ fun EditorScreen(
 
             Button(
                 onClick = {
-                    val hasBluetooth = actions.any { ActionType.fromValue(it.type) == ActionType.BLUETOOTH }
                     val hasBrightness = actions.any { ActionType.fromValue(it.type) == ActionType.BRIGHTNESS }
                     val hasDnd = actions.any { ActionType.fromValue(it.type) == ActionType.DND }
 
                     var needsIntent = false
 
-                    if (hasBluetooth && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
-                        ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT) !=
-                        android.content.pm.PackageManager.PERMISSION_GRANTED
-                    ) {
-                        needsIntent = true
-                        bluetoothPermissionLauncher.launch(Manifest.permission.BLUETOOTH_CONNECT)
-                    }
                     if (hasBrightness && !Settings.System.canWrite(context)) {
                         needsIntent = true
                         val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS).apply {
@@ -488,7 +475,15 @@ private fun ActionCard(
     when (type) {
         ActionType.DND -> {
             icon = Icons.Default.DoNotDisturbAlt; color = ActionDndColor
-            summary = stringResource(R.string.summary_dnd, action.dndMode ?: "OFF")
+            val mode = action.dndMode ?: "OFF"
+            val dndCustom = buildString {
+                append(mode)
+                val calls = action.dndAllowCallsFrom
+                val msgs = action.dndAllowMessagesFrom
+                if (calls != null && calls != "NONE") append(" · Calls:$calls")
+                if (msgs != null && msgs != "NONE") append(" · Msgs:$msgs")
+            }
+            summary = stringResource(R.string.summary_dnd, dndCustom)
         }
         ActionType.VOLUME -> {
             icon = Icons.Default.VolumeUp; color = ActionVolumeColor
@@ -499,13 +494,17 @@ private fun ActionCard(
             val brightText = if (action.brightnessAuto == true) stringResource(R.string.auto) else "${action.brightnessLevel}"
             summary = stringResource(R.string.summary_brightness, brightText)
         }
-        ActionType.WIFI -> {
-            icon = Icons.Default.Wifi; color = ActionWifiColor
-            summary = stringResource(R.string.summary_wifi, if (action.wifiEnabled == true) stringResource(R.string.on) else stringResource(R.string.off))
-        }
-        ActionType.BLUETOOTH -> {
-            icon = Icons.Default.Bluetooth; color = ActionBluetoothColor
-            summary = stringResource(R.string.summary_bluetooth, if (action.bluetoothEnabled == true) stringResource(R.string.on) else stringResource(R.string.off))
+        ActionType.RINGER_MODE -> {
+            icon = Icons.Default.NotificationsActive; color = ActionRingerColor
+            val mode = action.ringerMode?.let {
+                when (it) {
+                    "NORMAL" -> stringResource(R.string.ringer_normal)
+                    "VIBRATE" -> stringResource(R.string.ringer_vibrate)
+                    "SILENT" -> stringResource(R.string.ringer_silent)
+                    else -> it
+                }
+            } ?: stringResource(R.string.ringer_normal)
+            summary = stringResource(R.string.summary_ringer_mode, mode)
         }
         ActionType.NOTIFICATION -> {
             icon = Icons.Default.Notifications; color = ActionNotificationColor

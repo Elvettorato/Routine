@@ -37,4 +37,7 @@ interface RoutineDao {
 
     @Query("UPDATE routines SET isEnabled = :isEnabled WHERE id = :id")
     suspend fun setRoutineEnabled(id: Long, isEnabled: Boolean)
+
+    @Query("SELECT COUNT(*) FROM routines WHERE isEnabled = 1")
+    suspend fun getEnabledRoutinesCount(): Int
 }

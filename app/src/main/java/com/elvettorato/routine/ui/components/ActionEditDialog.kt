@@ -1,24 +1,19 @@
 package com.elvettorato.routine.ui.components
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilledTonalButton
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Slider
@@ -27,28 +22,20 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
+import com.elvettorato.routine.data.model.DndAllowFrom
 import com.elvettorato.routine.data.model.DndMode
 import com.elvettorato.routine.data.model.NotificationPriority
+import com.elvettorato.routine.data.model.RingerMode
 import com.elvettorato.routine.data.model.RoutineAction
-import com.elvettorato.routine.ui.theme.ActionBluetoothColor
-import com.elvettorato.routine.ui.theme.ActionBrightnessColor
-import com.elvettorato.routine.ui.theme.ActionDndColor
-import com.elvettorato.routine.ui.theme.ActionNotificationColor
-import com.elvettorato.routine.ui.theme.ActionVolumeColor
-import com.elvettorato.routine.ui.theme.ActionWifiColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,17 +48,27 @@ fun ActionEditDialog(
     var typeExpanded by remember { mutableStateOf(false) }
 
     var dndMode by remember { mutableStateOf(initialAction?.dndMode?.let { DndMode.valueOf(it) } ?: DndMode.PRIORITY_ONLY) }
+    var dndAllowCallsFrom by remember { mutableStateOf(
+        initialAction?.dndAllowCallsFrom?.let { DndAllowFrom.valueOf(it) } ?: DndAllowFrom.NONE
+    ) }
+    var dndAllowMessagesFrom by remember { mutableStateOf(
+        initialAction?.dndAllowMessagesFrom?.let { DndAllowFrom.valueOf(it) } ?: DndAllowFrom.NONE
+    ) }
+    var dndAllowAlarms by remember { mutableStateOf(initialAction?.dndAllowAlarms ?: true) }
+    var dndAllowMedia by remember { mutableStateOf(initialAction?.dndAllowMedia ?: false) }
+    var dndAllowSystem by remember { mutableStateOf(initialAction?.dndAllowSystem ?: false) }
+    var dndCallsExpanded by remember { mutableStateOf(false) }
+    var dndMsgsExpanded by remember { mutableStateOf(false) }
 
-    var mediaVolume by remember { mutableIntStateOf(initialAction?.mediaVolume ?: 7) }
-    var ringVolume by remember { mutableIntStateOf(initialAction?.ringVolume ?: 5) }
-    var alarmVolume by remember { mutableIntStateOf(initialAction?.alarmVolume ?: 10) }
-    var notificationVolume by remember { mutableIntStateOf(initialAction?.notificationVolume ?: 5) }
+    var mediaVolume by remember { mutableStateOf(initialAction?.mediaVolume ?: 7) }
+    var ringVolume by remember { mutableStateOf(initialAction?.ringVolume ?: 5) }
+    var alarmVolume by remember { mutableStateOf(initialAction?.alarmVolume ?: 10) }
+    var notificationVolume by remember { mutableStateOf(initialAction?.notificationVolume ?: 5) }
 
-    var brightnessLevel by remember { mutableIntStateOf(initialAction?.brightnessLevel ?: 128) }
+    var brightnessLevel by remember { mutableStateOf(initialAction?.brightnessLevel ?: 128) }
     var brightnessAuto by remember { mutableStateOf(initialAction?.brightnessAuto ?: false) }
 
-    var wifiEnabled by remember { mutableStateOf(initialAction?.wifiEnabled ?: true) }
-    var bluetoothEnabled by remember { mutableStateOf(initialAction?.bluetoothEnabled ?: true) }
+    var ringerMode by remember { mutableStateOf(initialAction?.ringerMode?.let { RingerMode.valueOf(it) } ?: RingerMode.NORMAL) }
 
     var notificationTitle by remember { mutableStateOf(initialAction?.notificationTitle ?: "") }
     var notificationText by remember { mutableStateOf(initialAction?.notificationText ?: "") }
@@ -154,6 +151,94 @@ fun ActionEditDialog(
                                 )
                             }
                         }
+
+                        if (dndMode == DndMode.PRIORITY_ONLY) {
+                            Spacer(Modifier.height(12.dp))
+                            Text(stringResource(R.string.dnd_customize), style = MaterialTheme.typography.titleSmall)
+                            Spacer(Modifier.height(8.dp))
+
+                            ExposedDropdownMenuBox(
+                                expanded = dndCallsExpanded,
+                                onExpandedChange = { dndCallsExpanded = it }
+                            ) {
+                                OutlinedTextField(
+                                    value = stringResource(dndAllowCallsFrom.labelRes),
+                                    onValueChange = {},
+                                    readOnly = true,
+                                    label = { Text(stringResource(R.string.dnd_allow_calls)) },
+                                    trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = dndCallsExpanded) },
+                                    modifier = Modifier.fillMaxWidth().menuAnchor()
+                                )
+                                ExposedDropdownMenu(
+                                    expanded = dndCallsExpanded,
+                                    onDismissRequest = { dndCallsExpanded = false }
+                                ) {
+                                    DndAllowFrom.entries.forEach { allow ->
+                                        DropdownMenuItem(
+                                            text = { Text(stringResource(allow.labelRes)) },
+                                            onClick = {
+                                                dndAllowCallsFrom = allow
+                                                dndCallsExpanded = false
+                                            }
+                                        )
+                                    }
+                                }
+                            }
+
+                            Spacer(Modifier.height(8.dp))
+
+                            ExposedDropdownMenuBox(
+                                expanded = dndMsgsExpanded,
+                                onExpandedChange = { dndMsgsExpanded = it }
+                            ) {
+                                OutlinedTextField(
+                                    value = stringResource(dndAllowMessagesFrom.labelRes),
+                                    onValueChange = {},
+                                    readOnly = true,
+                                    label = { Text(stringResource(R.string.dnd_allow_messages)) },
+                                    trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = dndMsgsExpanded) },
+                                    modifier = Modifier.fillMaxWidth().menuAnchor()
+                                )
+                                ExposedDropdownMenu(
+                                    expanded = dndMsgsExpanded,
+                                    onDismissRequest = { dndMsgsExpanded = false }
+                                ) {
+                                    DndAllowFrom.entries.forEach { allow ->
+                                        DropdownMenuItem(
+                                            text = { Text(stringResource(allow.labelRes)) },
+                                            onClick = {
+                                                dndAllowMessagesFrom = allow
+                                                dndMsgsExpanded = false
+                                            }
+                                        )
+                                    }
+                                }
+                            }
+
+                            Spacer(Modifier.height(8.dp))
+
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Text(stringResource(R.string.dnd_allow_alarms), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+                                Switch(checked = dndAllowAlarms, onCheckedChange = { dndAllowAlarms = it })
+                            }
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Text(stringResource(R.string.dnd_allow_media), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+                                Switch(checked = dndAllowMedia, onCheckedChange = { dndAllowMedia = it })
+                            }
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Text(stringResource(R.string.dnd_allow_system), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+                                Switch(checked = dndAllowSystem, onCheckedChange = { dndAllowSystem = it })
+                            }
+                        }
                     }
 
                     ActionType.VOLUME -> {
@@ -184,25 +269,31 @@ fun ActionEditDialog(
                         }
                     }
 
-                    ActionType.WIFI -> {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text(stringResource(R.string.enable_wifi), style = MaterialTheme.typography.bodyMedium)
-                            Spacer(Modifier.weight(1f))
-                            Switch(checked = wifiEnabled, onCheckedChange = { wifiEnabled = it })
-                        }
-                    }
-
-                    ActionType.BLUETOOTH -> {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text(stringResource(R.string.enable_bluetooth), style = MaterialTheme.typography.bodyMedium)
-                            Spacer(Modifier.weight(1f))
-                            Switch(checked = bluetoothEnabled, onCheckedChange = { bluetoothEnabled = it })
+                    ActionType.RINGER_MODE -> {
+                        Text(stringResource(R.string.ringer_mode), style = MaterialTheme.typography.titleSmall)
+                        Spacer(Modifier.height(8.dp))
+                        RingerMode.entries.forEach { mode ->
+                            val label = when (mode) {
+                                RingerMode.NORMAL -> stringResource(R.string.ringer_normal)
+                                RingerMode.VIBRATE -> stringResource(R.string.ringer_vibrate)
+                                RingerMode.SILENT -> stringResource(R.string.ringer_silent)
+                            }
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    label,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    modifier = Modifier.weight(1f)
+                                )
+                                androidx.compose.material3.RadioButton(
+                                    selected = ringerMode == mode,
+                                    onClick = { ringerMode = mode }
+                                )
+                            }
                         }
                     }
 
@@ -263,11 +354,13 @@ fun ActionEditDialog(
         confirmButton = {
             FilledTonalButton(onClick = {
                 val action = when (selectedType) {
-                    ActionType.DND -> RoutineAction.createDnd(dndMode)
+                    ActionType.DND -> RoutineAction.createDnd(
+                        dndMode, dndAllowCallsFrom, dndAllowMessagesFrom,
+                        dndAllowAlarms, dndAllowMedia, dndAllowSystem
+                    )
                     ActionType.VOLUME -> RoutineAction.createVolume(mediaVolume, ringVolume, alarmVolume, notificationVolume)
                     ActionType.BRIGHTNESS -> RoutineAction.createBrightness(brightnessLevel, brightnessAuto)
-                    ActionType.WIFI -> RoutineAction.createWifi(wifiEnabled)
-                    ActionType.BLUETOOTH -> RoutineAction.createBluetooth(bluetoothEnabled)
+                    ActionType.RINGER_MODE -> RoutineAction.createRingerMode(ringerMode)
                     ActionType.NOTIFICATION -> RoutineAction.createNotification(notificationTitle, notificationText, notificationPriority.value)
                 }
                 onSave(action)

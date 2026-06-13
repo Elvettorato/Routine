@@ -21,6 +21,9 @@ class RoutineRepository(private val dao: RoutineDao) {
     suspend fun getEnabledRoutines(): List<Routine> =
         dao.getEnabledRoutines().map { Routine.fromEntity(it) }
 
+    suspend fun getEnabledRoutinesCount(): Int =
+        dao.getEnabledRoutinesCount()
+
     suspend fun insert(routine: Routine): Long {
         val entity = Routine.toEntity(routine).copy(updatedAt = System.currentTimeMillis())
         return dao.insertRoutine(entity)

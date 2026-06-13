@@ -6,14 +6,18 @@ import com.google.gson.reflect.TypeToken
 data class RoutineAction(
     val type: String,
     val dndMode: String? = null,
+    val dndAllowCallsFrom: String? = null,
+    val dndAllowMessagesFrom: String? = null,
+    val dndAllowAlarms: Boolean? = null,
+    val dndAllowMedia: Boolean? = null,
+    val dndAllowSystem: Boolean? = null,
+    val ringerMode: String? = null,
     val mediaVolume: Int? = null,
     val ringVolume: Int? = null,
     val alarmVolume: Int? = null,
     val notificationVolume: Int? = null,
     val brightnessLevel: Int? = null,
     val brightnessAuto: Boolean? = null,
-    val wifiEnabled: Boolean? = null,
-    val bluetoothEnabled: Boolean? = null,
     val notificationTitle: String? = null,
     val notificationText: String? = null,
     val notificationPriority: String? = null
@@ -30,9 +34,21 @@ data class RoutineAction(
             return gson.toJson(actions)
         }
 
-        fun createDnd(mode: DndMode) = RoutineAction(
+        fun createDnd(
+            mode: DndMode,
+            allowCallsFrom: DndAllowFrom = DndAllowFrom.NONE,
+            allowMessagesFrom: DndAllowFrom = DndAllowFrom.NONE,
+            allowAlarms: Boolean = true,
+            allowMedia: Boolean = false,
+            allowSystem: Boolean = false
+        ) = RoutineAction(
             type = ActionType.DND.value,
-            dndMode = mode.value
+            dndMode = mode.value,
+            dndAllowCallsFrom = allowCallsFrom.value,
+            dndAllowMessagesFrom = allowMessagesFrom.value,
+            dndAllowAlarms = allowAlarms,
+            dndAllowMedia = allowMedia,
+            dndAllowSystem = allowSystem
         )
 
         fun createVolume(media: Int? = null, ring: Int? = null, alarm: Int? = null, notification: Int? = null) = RoutineAction(
@@ -49,14 +65,9 @@ data class RoutineAction(
             brightnessAuto = auto
         )
 
-        fun createWifi(enabled: Boolean) = RoutineAction(
-            type = ActionType.WIFI.value,
-            wifiEnabled = enabled
-        )
-
-        fun createBluetooth(enabled: Boolean) = RoutineAction(
-            type = ActionType.BLUETOOTH.value,
-            bluetoothEnabled = enabled
+        fun createRingerMode(mode: RingerMode) = RoutineAction(
+            type = ActionType.RINGER_MODE.value,
+            ringerMode = mode.value
         )
 
         fun createNotification(title: String, text: String, priority: String = "HIGH") = RoutineAction(

@@ -21,15 +21,14 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material.icons.filled.BrightnessMedium
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DoNotDisturbAlt
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.VolumeUp
-import androidx.compose.material.icons.filled.Wifi
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -60,12 +59,11 @@ import androidx.core.content.ContextCompat
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.Routine
-import com.elvettorato.routine.ui.theme.ActionBluetoothColor
 import com.elvettorato.routine.ui.theme.ActionBrightnessColor
 import com.elvettorato.routine.ui.theme.ActionDndColor
 import com.elvettorato.routine.ui.theme.ActionNotificationColor
+import com.elvettorato.routine.ui.theme.ActionRingerColor
 import com.elvettorato.routine.ui.theme.ActionVolumeColor
-import com.elvettorato.routine.ui.theme.ActionWifiColor
 import com.elvettorato.routine.ui.theme.LineagePrimary
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
@@ -338,8 +336,7 @@ private fun ActionIconsRow(types: List<ActionType>) {
                 ActionType.DND -> Icons.Default.DoNotDisturbAlt to ActionDndColor
                 ActionType.VOLUME -> Icons.Default.VolumeUp to ActionVolumeColor
                 ActionType.BRIGHTNESS -> Icons.Default.BrightnessMedium to ActionBrightnessColor
-                ActionType.WIFI -> Icons.Default.Wifi to ActionWifiColor
-                ActionType.BLUETOOTH -> Icons.Default.Bluetooth to ActionBluetoothColor
+                ActionType.RINGER_MODE -> Icons.Default.NotificationsActive to ActionRingerColor
                 ActionType.NOTIFICATION -> Icons.Default.Notifications to ActionNotificationColor
             }
             Icon(
