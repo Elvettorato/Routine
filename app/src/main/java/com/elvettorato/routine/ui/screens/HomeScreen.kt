@@ -27,6 +27,7 @@ import androidx.compose.material.icons.filled.DoNotDisturbAlt
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.NotificationsActive
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Card
@@ -144,6 +145,7 @@ fun HomeScreen(
                     RoutineCard(
                         routine = routine,
                         onToggle = { viewModel.toggleRoutine(routine.id, it) },
+                        onRunNow = { viewModel.runNow(routine.id) },
                         onDelete = { viewModel.deleteRoutine(routine.id) },
                         onClick = { onEditRoutine(routine.id) }
                     )
@@ -186,6 +188,7 @@ private fun EmptyState(modifier: Modifier = Modifier) {
 private fun RoutineCard(
     routine: Routine,
     onToggle: (Boolean) -> Unit,
+    onRunNow: () -> Unit,
     onDelete: () -> Unit,
     onClick: () -> Unit
 ) {
@@ -228,12 +231,21 @@ private fun RoutineCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 ActionIconsRow(routine.actions.map { ActionType.fromValue(it.type) })
-                IconButton(onClick = onDelete) {
-                    Icon(
-                        Icons.Default.Delete,
-                        contentDescription = stringResource(R.string.delete),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
-                    )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    IconButton(onClick = onRunNow) {
+                        Icon(
+                            Icons.Default.PlayArrow,
+                            contentDescription = "Run now",
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                    IconButton(onClick = onDelete) {
+                        Icon(
+                            Icons.Default.Delete,
+                            contentDescription = stringResource(R.string.delete),
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
+                        )
+                    }
                 }
             }
         }

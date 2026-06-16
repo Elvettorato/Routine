@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.util.Log
 import androidx.core.content.ContextCompat
 import com.elvettorato.routine.data.model.Routine
 import com.google.android.gms.location.Geofence
@@ -13,14 +14,17 @@ import com.google.android.gms.location.GeofencingRequest
 import com.google.android.gms.location.LocationServices
 
 object GeofenceHelper {
-    private const val GEOFENCE_RADIUS_METERS = 100f
+    private const val TAG = "GeofenceHelper"
 
     fun addGeofence(context: Context, routine: Routine) {
-        if (!hasLocationPermission(context)) return
+        if (!hasLocationPermission(context)) {
+            Log.w(TAG, "Missing location permission for routine ${routine.id}")
+            return
+        }
 
         val lat = routine.triggerLatitude ?: return
         val lng = routine.triggerLongitude ?: return
-        val radius = routine.triggerRadius ?: GEOFENCE_RADIUS_METERS
+        val radius = routine.triggerRadius ?: 100f
 
         val geofencingClient: GeofencingClient = LocationServices.getGeofencingClient(context)
 
@@ -39,21 +43,33 @@ object GeofenceHelper {
             .addGeofence(geofence)
             .build()
 
-        val pendingIntent = getGeofencePendingIntent(context)
+        val pendingIntent = getGeofencePendingIntent(context, routine.id)
 
         geofencingClient.addGeofences(geofencingRequest, pendingIntent)
+            .addOnSuccessListener {
+                Log.d(TAG, "Geofence added for routine ${routine.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.e(TAG, "Failed to add geofence for routine ${routine.id}: ${e.message}")
+            }
     }
 
     fun removeGeofence(context: Context, routine: Routine) {
         val geofencingClient: GeofencingClient = LocationServices.getGeofencingClient(context)
         geofencingClient.removeGeofences(listOf(routine.id.toString()))
+            .addOnSuccessListener {
+                Log.d(TAG, "Geofence removed for routine ${routine.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.e(TAG, "Failed to remove geofence for routine ${routine.id}: ${e.message}")
+            }
     }
 
-    private fun getGeofencePendingIntent(context: Context): PendingIntent {
+    private fun getGeofencePendingIntent(context: Context, routineId: Long): PendingIntent {
         val intent = Intent(context, GeofenceBroadcastReceiver::class.java)
         return PendingIntent.getBroadcast(
             context,
-            0,
+            routineId.toInt(),
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )

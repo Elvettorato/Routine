@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.elvettorato.routine.data.RoutineDatabase
 import com.elvettorato.routine.data.model.Routine
 import com.elvettorato.routine.data.repository.RoutineRepository
+import com.elvettorato.routine.service.ActionExecutor
 import com.elvettorato.routine.service.RoutineForegroundService
 import com.elvettorato.routine.service.RoutineScheduler
 import kotlinx.coroutines.flow.SharingStarted
@@ -62,6 +63,14 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
                 RoutineScheduler.cancel(getApplication(), routine)
                 repository.deleteById(id)
             }
+        }
+    }
+
+    fun runNow(id: Long) {
+        viewModelScope.launch {
+            val routine = repository.getRoutineByIdOnce(id) ?: return@launch
+            if (routine.actions.isEmpty()) return@launch
+            ActionExecutor.execute(getApplication(), routine.actions, routine.name)
         }
     }
 }
