@@ -56,7 +56,7 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">Aggiungi Azione</string>
 
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
@@ -70,7 +70,7 @@
     <string name="dnd_allow_system">Allow system</string>
     <string name="dnd_customize">Customize interruptions</string>
     <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
+    <string name="foreground_service_active">Monitoraggio routine in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
 
