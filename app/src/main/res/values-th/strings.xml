@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">กิจวัตรประจำวัน</string>
     <string name="no_routines">ยังไม่มีรูทีน</string>
     <string name="tap_to_add">แตะ + เพื่อสร้างรูทีนแรกของคุณ</string>
     <string name="add_routine">เพิ่มรูทีน</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">เพิ่มการดำเนินการ</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">กลับ</string>
+    <string name="dnd_allow_alarms">อนุญาตการเตือน</string>
+    <string name="dnd_allow_calls">อนุญาตการโทรจาก</string>
+    <string name="dnd_allow_contacts">รายชื่อผู้ติดต่อ</string>
+    <string name="dnd_allow_everyone">ทุกคน</string>
+    <string name="dnd_allow_media">อนุญาตให้มีสื่อ</string>
+    <string name="dnd_allow_messages">อนุญาตข้อความจาก</string>
+    <string name="dnd_allow_none">ไม่มีใคร</string>
+    <string name="dnd_allow_starred">รายชื่อติดต่อที่ติดดาว</string>
+    <string name="dnd_allow_system">อนุญาตระบบ</string>
+    <string name="dnd_customize">ปรับแต่งการหยุดชะงัก</string>
+    <string name="dnd_mode">โหมดห้ามรบกวน</string>
+    <string name="foreground_service_active">การตรวจสอบกิจวัตรในเบื้องหลัง</string>
+    <string name="get_current_location">รับตำแหน่งปัจจุบัน</string>
+    <string name="level_format">ระดับ: %d%%</string>
 
-    <string name="ok">OK</string>
+    <string name="ok">ตกลง</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
-    <string name="priority_min">Min</string>
-    <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
-    <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
-    <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="priority">ลำดับความสำคัญ</string>
+    <string name="priority_default">ค่าเริ่มต้น</string>
+    <string name="priority_high">สูง</string>
+    <string name="priority_low">ต่ำ</string>
+    <string name="priority_min">นาที</string>
+    <string name="radius_format">รัศมี: %d ม</string>
+    <string name="remove">ลบ</string>
+    <string name="ringer_mode">โหมดเสียงเรียกเข้า</string>
+    <string name="ringer_normal">ปกติ</string>
+    <string name="ringer_silent">เงียบ</string>
+    <string name="ringer_vibrate">สั่น</string>
+    <string name="summary_brightness">ความสว่าง: %s</string>
+    <string name="summary_dnd">ดีเอ็นดี: %s</string>
+    <string name="summary_notification">แจ้งเตือน: %s</string>
+    <string name="summary_ringer_mode">เสียงเรียกเข้า: %s</string>
+    <string name="summary_volume">เล่มที่: M%d R%d A%d N%d</string>
+    <string name="tile_label">กิจวัตรประจำวัน</string>
 
 </resources>
 

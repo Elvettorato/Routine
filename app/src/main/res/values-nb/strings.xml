@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">Rutine</string>
     <string name="no_routines">Ingen routines ennå</string>
     <string name="tap_to_add">Trykk på + for å opprette din første routine</string>
     <string name="add_routine">Legg til routine</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">Legg til handling</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">Tilbake</string>
+    <string name="dnd_allow_alarms">Tillat alarmer</string>
+    <string name="dnd_allow_calls">Tillat anrop fra</string>
+    <string name="dnd_allow_contacts">Kontakter</string>
+    <string name="dnd_allow_everyone">Alle sammen</string>
+    <string name="dnd_allow_media">Tillat media</string>
+    <string name="dnd_allow_messages">Tillat meldinger fra</string>
+    <string name="dnd_allow_none">Ingen</string>
+    <string name="dnd_allow_starred">Stjernemerkede kontakter</string>
+    <string name="dnd_allow_system">Tillat systemet</string>
+    <string name="dnd_customize">Tilpass avbrudd</string>
+    <string name="dnd_mode">Ikke forstyrr-modus</string>
+    <string name="foreground_service_active">Overvåkingsrutiner i bakgrunnen</string>
+    <string name="get_current_location">Få nåværende plassering</string>
+    <string name="level_format">Nivå: %d%%</string>
 
     <string name="ok">OK</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
+    <string name="priority">Prioritet</string>
+    <string name="priority_default">Misligholde</string>
+    <string name="priority_high">Høy</string>
+    <string name="priority_low">Lav</string>
     <string name="priority_min">Min</string>
     <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
+    <string name="remove">Fjerne</string>
+    <string name="ringer_mode">Ringemodus</string>
     <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
+    <string name="ringer_silent">Stille</string>
+    <string name="ringer_vibrate">Vibrere</string>
+    <string name="summary_brightness">Lysstyrke: %s</string>
     <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="summary_notification">Varsle: %s</string>
+    <string name="summary_ringer_mode">Ringesignal: %s</string>
+    <string name="summary_volume">Volum: M%d R%d A%d N%d</string>
+    <string name="tile_label">Rutine</string>
 
 </resources>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">روتين</string>
     <string name="no_routines">لا توجد روتينات بعد</string>
     <string name="tap_to_add">اضغط + لإنشاء أول روتين لك</string>
     <string name="add_routine">إضافة روتين</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">أضف الإجراء</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">خلف</string>
+    <string name="dnd_allow_alarms">السماح بالإنذارات</string>
+    <string name="dnd_allow_calls">السماح بالمكالمات من</string>
+    <string name="dnd_allow_contacts">اتصالات</string>
+    <string name="dnd_allow_everyone">الجميع</string>
+    <string name="dnd_allow_media">السماح للوسائط</string>
+    <string name="dnd_allow_messages">السماح بالرسائل من</string>
+    <string name="dnd_allow_none">لا أحد</string>
+    <string name="dnd_allow_starred">جهات الاتصال المميزة بنجمة</string>
+    <string name="dnd_allow_system">السماح للنظام</string>
+    <string name="dnd_customize">تخصيص الانقطاعات</string>
+    <string name="dnd_mode">وضع عدم الإزعاج</string>
+    <string name="foreground_service_active">إجراءات الرصد في الخلفية</string>
+    <string name="get_current_location">احصل على الموقع الحالي</string>
+    <string name="level_format">المستوى: %d%%</string>
 
-    <string name="ok">OK</string>
+    <string name="ok">نعم</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
-    <string name="priority_min">Min</string>
-    <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
-    <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
-    <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="priority">أولوية</string>
+    <string name="priority_default">تقصير</string>
+    <string name="priority_high">عالي</string>
+    <string name="priority_low">قليل</string>
+    <string name="priority_min">دقيقة</string>
+    <string name="radius_format">نصف القطر: %d م</string>
+    <string name="remove">يزيل</string>
+    <string name="ringer_mode">وضع الرنين</string>
+    <string name="ringer_normal">طبيعي</string>
+    <string name="ringer_silent">صامت</string>
+    <string name="ringer_vibrate">تذبذب</string>
+    <string name="summary_brightness">السطوع: %s</string>
+    <string name="summary_dnd">عدم الإزعاج: %s</string>
+    <string name="summary_notification">إعلام: %s</string>
+    <string name="summary_ringer_mode">الرنين: %s</string>
+    <string name="summary_volume">المجلد: م%d ص%d أ%d ن%d</string>
+    <string name="tile_label">روتين</string>
 
 </resources>
 

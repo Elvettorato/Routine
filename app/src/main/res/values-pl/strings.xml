@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">Rutyna</string>
     <string name="no_routines">Brak jeszcze routines</string>
     <string name="tap_to_add">Dotknij +, aby utworzyć swoją pierwszą routine</string>
     <string name="add_routine">Dodaj routine</string>
@@ -29,9 +29,9 @@
     <string name="edit_action">Edytuj akcję</string>
 <string name="notification_title">Tytuł</string>
     <string name="notification_content">Treść</string>
-    <string name="auto">Auto</string>
+    <string name="auto">Automatyczny</string>
 
-    <string name="media">Media</string>
+    <string name="media">Głoska bezdźwięczna</string>
     <string name="ring">Dzwonek</string>
     <string name="alarm">Alarm</string>
     <string name="notification">Powiadomienie</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">Dodaj akcję</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">Z powrotem</string>
+    <string name="dnd_allow_alarms">Zezwalaj na alarmy</string>
+    <string name="dnd_allow_calls">Zezwalaj na połączenia z</string>
+    <string name="dnd_allow_contacts">Łączność</string>
+    <string name="dnd_allow_everyone">Wszyscy</string>
+    <string name="dnd_allow_media">Zezwól na multimedia</string>
+    <string name="dnd_allow_messages">Zezwalaj na wiadomości od</string>
+    <string name="dnd_allow_none">Nikt</string>
+    <string name="dnd_allow_starred">Kontakty oznaczone gwiazdką</string>
+    <string name="dnd_allow_system">Zezwól systemowi</string>
+    <string name="dnd_customize">Dostosuj przerwy</string>
+    <string name="dnd_mode">Tryb Nie przeszkadzać</string>
+    <string name="foreground_service_active">Procedury monitorowania w tle</string>
+    <string name="get_current_location">Uzyskaj aktualną lokalizację</string>
+    <string name="level_format">Poziom: %d%%</string>
 
     <string name="ok">OK</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
+    <string name="priority">Priorytet</string>
+    <string name="priority_default">Domyślny</string>
+    <string name="priority_high">Wysoki</string>
+    <string name="priority_low">Niski</string>
     <string name="priority_min">Min</string>
-    <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
-    <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
-    <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="radius_format">Promień: %d m</string>
+    <string name="remove">Usunąć</string>
+    <string name="ringer_mode">Tryb dzwonka</string>
+    <string name="ringer_normal">Normalna</string>
+    <string name="ringer_silent">Cichy</string>
+    <string name="ringer_vibrate">Wibrować</string>
+    <string name="summary_brightness">Jasność: %s</string>
+    <string name="summary_dnd">Nie przeszkadzać: %s</string>
+    <string name="summary_notification">Powiadom: %s</string>
+    <string name="summary_ringer_mode">Dzwonek: %s</string>
+    <string name="summary_volume">Objętość: M%d R%d A%d N%d</string>
+    <string name="tile_label">Rutyna</string>
 
 </resources>
 

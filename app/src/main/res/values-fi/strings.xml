@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">Rutiini</string>
     <string name="no_routines">Ei vielä routines</string>
     <string name="tap_to_add">Napauta + luodaksesi ensimmäisen routine</string>
     <string name="add_routine">Lisää routine</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">Lisää toiminto</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">Takaisin</string>
+    <string name="dnd_allow_alarms">Salli hälytykset</string>
+    <string name="dnd_allow_calls">Salli puhelut osoitteesta</string>
+    <string name="dnd_allow_contacts">Yhteystiedot</string>
+    <string name="dnd_allow_everyone">Kaikki</string>
+    <string name="dnd_allow_media">Salli media</string>
+    <string name="dnd_allow_messages">Salli viestit osoitteesta</string>
+    <string name="dnd_allow_none">Ei kukaan</string>
+    <string name="dnd_allow_starred">Tähdellä merkityt yhteystiedot</string>
+    <string name="dnd_allow_system">Salli järjestelmä</string>
+    <string name="dnd_customize">Mukauta keskeytyksiä</string>
+    <string name="dnd_mode">Älä häiritse -tila</string>
+    <string name="foreground_service_active">Rutiinien valvonta taustalla</string>
+    <string name="get_current_location">Hanki nykyinen sijainti</string>
+    <string name="level_format">Taso: %d%%</string>
 
     <string name="ok">OK</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
+    <string name="priority">Prioriteetti</string>
+    <string name="priority_default">Oletus</string>
+    <string name="priority_high">Korkea</string>
+    <string name="priority_low">Matala</string>
     <string name="priority_min">Min</string>
-    <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
-    <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
+    <string name="radius_format">Säde: %d m</string>
+    <string name="remove">Poistaa</string>
+    <string name="ringer_mode">Soittotila</string>
+    <string name="ringer_normal">Normaali</string>
+    <string name="ringer_silent">Hiljainen</string>
+    <string name="ringer_vibrate">Värinä</string>
+    <string name="summary_brightness">Kirkkaus: %s</string>
     <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="summary_notification">Ilmoita: %s</string>
+    <string name="summary_ringer_mode">Soittoääni: %s</string>
+    <string name="summary_volume">Vol.: M%d R%d A%d N%d</string>
+    <string name="tile_label">Rutiini</string>
 
 </resources>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">Rutin</string>
     <string name="no_routines">Henüz routine yok</string>
     <string name="tap_to_add">İlk routine\'nizi oluşturmak için +\'ya dokunun</string>
     <string name="add_routine">Routine Ekle</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">Eylem Ekle</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">Geri</string>
+    <string name="dnd_allow_alarms">Alarmlara izin ver</string>
+    <string name="dnd_allow_calls">Şundan aramalara izin ver:</string>
+    <string name="dnd_allow_contacts">Kişiler</string>
+    <string name="dnd_allow_everyone">Herkes</string>
+    <string name="dnd_allow_media">Medyaya izin ver</string>
+    <string name="dnd_allow_messages">Şu kişiden gelen mesajlara izin ver:</string>
+    <string name="dnd_allow_none">Hiç kimse</string>
+    <string name="dnd_allow_starred">Yıldızlı kişiler</string>
+    <string name="dnd_allow_system">Sisteme izin ver</string>
+    <string name="dnd_customize">Kesintileri özelleştirin</string>
+    <string name="dnd_mode">Rahatsız Etmeyin Modu</string>
+    <string name="foreground_service_active">Arka planda izleme rutinleri</string>
+    <string name="get_current_location">Mevcut Konumu Al</string>
+    <string name="level_format">Seviye: %d%%</string>
 
-    <string name="ok">OK</string>
+    <string name="ok">TAMAM</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
-    <string name="priority_min">Min</string>
-    <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
+    <string name="priority">Öncelik</string>
+    <string name="priority_default">Varsayılan</string>
+    <string name="priority_high">Yüksek</string>
+    <string name="priority_low">Düşük</string>
+    <string name="priority_min">Min.</string>
+    <string name="radius_format">Yarıçap: %d m</string>
+    <string name="remove">Kaldırmak</string>
+    <string name="ringer_mode">Zil Modu</string>
     <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
-    <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="ringer_silent">Sessiz</string>
+    <string name="ringer_vibrate">Titreşim</string>
+    <string name="summary_brightness">Parlaklık: %s</string>
+    <string name="summary_dnd">Rahatsızlık Verme: %s</string>
+    <string name="summary_notification">Bildir: %s</string>
+    <string name="summary_ringer_mode">Zil sesi: %s</string>
+    <string name="summary_volume">Hacim: M%d R%d A%d N%d</string>
+    <string name="tile_label">Rutin</string>
 
 </resources>
 

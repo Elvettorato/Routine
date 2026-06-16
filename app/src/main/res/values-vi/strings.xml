@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">Lịch trình</string>
     <string name="no_routines">Chưa có thói quen nào</string>
     <string name="tap_to_add">Nhấn + để tạo thói quen đầu tiên của bạn</string>
     <string name="add_routine">Thêm Thói quen</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">Thêm hành động</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">Mặt sau</string>
+    <string name="dnd_allow_alarms">Cho phép báo thức</string>
+    <string name="dnd_allow_calls">Cho phép cuộc gọi từ</string>
+    <string name="dnd_allow_contacts">Danh bạ</string>
+    <string name="dnd_allow_everyone">Mọi người</string>
+    <string name="dnd_allow_media">Cho phép phương tiện</string>
+    <string name="dnd_allow_messages">Cho phép tin nhắn từ</string>
+    <string name="dnd_allow_none">Không ai</string>
+    <string name="dnd_allow_starred">Địa chỉ liên hệ được gắn dấu sao</string>
+    <string name="dnd_allow_system">Cho phép hệ thống</string>
+    <string name="dnd_customize">Tùy chỉnh gián đoạn</string>
+    <string name="dnd_mode">Chế độ không làm phiền</string>
+    <string name="foreground_service_active">Giám sát các thói quen ở chế độ nền</string>
+    <string name="get_current_location">Nhận vị trí hiện tại</string>
+    <string name="level_format">Cấp độ: %d%%</string>
 
-    <string name="ok">OK</string>
+    <string name="ok">ĐƯỢC RỒI</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
-    <string name="priority_min">Min</string>
-    <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
-    <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
+    <string name="priority">Sự ưu tiên</string>
+    <string name="priority_default">Mặc định</string>
+    <string name="priority_high">Cao</string>
+    <string name="priority_low">Thấp</string>
+    <string name="priority_min">tối thiểu</string>
+    <string name="radius_format">Bán kính: %dm</string>
+    <string name="remove">Di dời</string>
+    <string name="ringer_mode">Chế độ chuông</string>
+    <string name="ringer_normal">Bình thường</string>
+    <string name="ringer_silent">Im lặng</string>
+    <string name="ringer_vibrate">Rung</string>
+    <string name="summary_brightness">Độ sáng: %s</string>
     <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="summary_notification">Thông báo: %s</string>
+    <string name="summary_ringer_mode">Chuông: %s</string>
+    <string name="summary_volume">Tập: M%d R%d A%d N%d</string>
+    <string name="tile_label">Lịch trình</string>
 
 </resources>
 

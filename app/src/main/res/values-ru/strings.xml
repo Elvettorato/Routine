@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">Рутина</string>
     <string name="no_routines">Пока нет routines</string>
     <string name="tap_to_add">Нажмите +, чтобы создать вашу первую routine</string>
     <string name="add_routine">Добавить routine</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">Добавить действие</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">Назад</string>
+    <string name="dnd_allow_alarms">Разрешить сигналы тревоги</string>
+    <string name="dnd_allow_calls">Разрешить звонки от</string>
+    <string name="dnd_allow_contacts">Контакты</string>
+    <string name="dnd_allow_everyone">Каждый</string>
+    <string name="dnd_allow_media">Разрешить медиа</string>
+    <string name="dnd_allow_messages">Разрешить сообщения от</string>
+    <string name="dnd_allow_none">Никто</string>
+    <string name="dnd_allow_starred">Помеченные контакты</string>
+    <string name="dnd_allow_system">Разрешить систему</string>
+    <string name="dnd_customize">Настройте прерывания</string>
+    <string name="dnd_mode">Режим «Не беспокоить»</string>
+    <string name="foreground_service_active">Процедуры мониторинга в фоновом режиме</string>
+    <string name="get_current_location">Получить текущее местоположение</string>
+    <string name="level_format">Уровень: %d%%</string>
 
-    <string name="ok">OK</string>
+    <string name="ok">ХОРОШО</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
-    <string name="priority_min">Min</string>
-    <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
-    <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
-    <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="priority">Приоритет</string>
+    <string name="priority_default">По умолчанию</string>
+    <string name="priority_high">Высокий</string>
+    <string name="priority_low">Низкий</string>
+    <string name="priority_min">Мин</string>
+    <string name="radius_format">Радиус: %d м</string>
+    <string name="remove">Удалять</string>
+    <string name="ringer_mode">Режим звонка</string>
+    <string name="ringer_normal">Нормальный</string>
+    <string name="ringer_silent">Тихий</string>
+    <string name="ringer_vibrate">Вибрация</string>
+    <string name="summary_brightness">Яркость: %s</string>
+    <string name="summary_dnd">Не беспокоить: %s</string>
+    <string name="summary_notification">Уведомить: %s</string>
+    <string name="summary_ringer_mode">Звонок: %s</string>
+    <string name="summary_volume">Объем: M%d R%d A%d N%d</string>
+    <string name="tile_label">Рутина</string>
 
 </resources>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">Errutina</string>
     <string name="no_routines">Oraindik ez dago errutinarik</string>
     <string name="tap_to_add">Sakatu + zure lehen errutina sortzeko</string>
     <string name="add_routine">Errutina gehitu</string>
@@ -29,7 +29,7 @@
     <string name="edit_action">Ekintza editatu</string>
 <string name="notification_title">Izenburua</string>
     <string name="notification_content">Edukia</string>
-    <string name="auto">Auto</string>
+    <string name="auto">Autoa</string>
 
     <string name="media">Multimedia</string>
     <string name="ring">Tonua</string>
@@ -56,44 +56,44 @@
 
 
 
-    <string name="add_action_dialog">Add Action</string>
+    <string name="add_action_dialog">Gehitu ekintza</string>
 
-    <string name="back">Back</string>
-    <string name="dnd_allow_alarms">Allow alarms</string>
-    <string name="dnd_allow_calls">Allow calls from</string>
-    <string name="dnd_allow_contacts">Contacts</string>
-    <string name="dnd_allow_everyone">Everyone</string>
-    <string name="dnd_allow_media">Allow media</string>
-    <string name="dnd_allow_messages">Allow messages from</string>
-    <string name="dnd_allow_none">Nobody</string>
-    <string name="dnd_allow_starred">Starred contacts</string>
-    <string name="dnd_allow_system">Allow system</string>
-    <string name="dnd_customize">Customize interruptions</string>
-    <string name="dnd_mode">Do Not Disturb Mode</string>
-    <string name="foreground_service_active">Monitoring routines in background</string>
-    <string name="get_current_location">Get Current Location</string>
-    <string name="level_format">Level: %d%%</string>
+    <string name="back">Itzuli</string>
+    <string name="dnd_allow_alarms">Baimendu alarmak</string>
+    <string name="dnd_allow_calls">Baimendu deiak</string>
+    <string name="dnd_allow_contacts">Kontaktuak</string>
+    <string name="dnd_allow_everyone">Denak</string>
+    <string name="dnd_allow_media">Onartu multimedia</string>
+    <string name="dnd_allow_messages">Baimendu mezuak</string>
+    <string name="dnd_allow_none">Inork</string>
+    <string name="dnd_allow_starred">Kontaktu izardunak</string>
+    <string name="dnd_allow_system">Baimendu sistema</string>
+    <string name="dnd_customize">Pertsonalizatu etenaldiak</string>
+    <string name="dnd_mode">Ez molestatu modua</string>
+    <string name="foreground_service_active">Errutinak atzeko planoan kontrolatzea</string>
+    <string name="get_current_location">Lortu uneko kokapena</string>
+    <string name="level_format">Maila: %d%%</string>
 
-    <string name="ok">OK</string>
+    <string name="ok">Ados</string>
 
 
-    <string name="priority">Priority</string>
-    <string name="priority_default">Default</string>
-    <string name="priority_high">High</string>
-    <string name="priority_low">Low</string>
+    <string name="priority">Lehentasuna</string>
+    <string name="priority_default">Lehenetsia</string>
+    <string name="priority_high">Alta</string>
+    <string name="priority_low">Baxua</string>
     <string name="priority_min">Min</string>
-    <string name="radius_format">Radius: %d m</string>
-    <string name="remove">Remove</string>
-    <string name="ringer_mode">Ringer Mode</string>
-    <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Silent</string>
-    <string name="ringer_vibrate">Vibrate</string>
-    <string name="summary_brightness">Brightness: %s</string>
+    <string name="radius_format">Erradioa: %d m</string>
+    <string name="remove">Kendu</string>
+    <string name="ringer_mode">Dei-modua</string>
+    <string name="ringer_normal">Normala</string>
+    <string name="ringer_silent">Isilik</string>
+    <string name="ringer_vibrate">Dardara</string>
+    <string name="summary_brightness">Distira: %s</string>
     <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Notify: %s</string>
-    <string name="summary_ringer_mode">Ringer: %s</string>
-    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Routine</string>
+    <string name="summary_notification">Jakinarazi: %s</string>
+    <string name="summary_ringer_mode">Dei-jotzailea: %s</string>
+    <string name="summary_volume">Bolumena: M%d R%d A%d N%d</string>
+    <string name="tile_label">Errutina</string>
 
 </resources>
 
