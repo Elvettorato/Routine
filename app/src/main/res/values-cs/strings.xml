@@ -55,4 +55,46 @@
     <string name="permission_notification">Oprávnění k oznámením je nutné pro oznámení routines</string>
     <string name="permission_write_settings">Oprávnění k zápisu nastavení je nutné pro změnu jasu</string>
     <string name="permission_dnd">Oprávnění Nerušit je nutné pro změnu režimu NERUŠIT</string>
+    <string name="action_ringer_mode">Ringer Mode</string>
+    <string name="add_action_dialog">Add Action</string>
+    <string name="am">AM</string>
+    <string name="back">Back</string>
+    <string name="dnd_allow_alarms">Allow alarms</string>
+    <string name="dnd_allow_calls">Allow calls from</string>
+    <string name="dnd_allow_contacts">Contacts</string>
+    <string name="dnd_allow_everyone">Everyone</string>
+    <string name="dnd_allow_media">Allow media</string>
+    <string name="dnd_allow_messages">Allow messages from</string>
+    <string name="dnd_allow_none">Nobody</string>
+    <string name="dnd_allow_starred">Starred contacts</string>
+    <string name="dnd_allow_system">Allow system</string>
+    <string name="dnd_customize">Customize interruptions</string>
+    <string name="dnd_mode">Do Not Disturb Mode</string>
+    <string name="foreground_service_active">Monitoring routines in background</string>
+    <string name="get_current_location">Get Current Location</string>
+    <string name="level_format">Level: %d%%</string>
+    <string name="off">OFF</string>
+    <string name="ok">OK</string>
+    <string name="on">ON</string>
+    <string name="pm">PM</string>
+    <string name="priority">Priority</string>
+    <string name="priority_default">Default</string>
+    <string name="priority_high">High</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_min">Min</string>
+    <string name="radius_format">Radius: %d m</string>
+    <string name="remove">Remove</string>
+    <string name="ringer_mode">Ringer Mode</string>
+    <string name="ringer_normal">Normal</string>
+    <string name="ringer_silent">Silent</string>
+    <string name="ringer_vibrate">Vibrate</string>
+    <string name="summary_brightness">Brightness: %s</string>
+    <string name="summary_dnd">DND: %s</string>
+    <string name="summary_notification">Notify: %s</string>
+    <string name="summary_ringer_mode">Ringer: %s</string>
+    <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
+    <string name="tile_label">Routine</string>
+    <string name="trigger_location">Location: %.2f, %.2f</string>
+
 </resources>
+
