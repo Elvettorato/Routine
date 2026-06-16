@@ -152,6 +152,7 @@ object ActionExecutor {
 
     private const val TAG = "ActionExecutor"
 
+    @Suppress("MissingPermission")
     private fun sendActionNotification(context: Context, action: RoutineAction) {
         val title = action.notificationTitle ?: "Routine"
         val text = action.notificationText ?: ""
@@ -172,6 +173,7 @@ object ActionExecutor {
             .let { NotificationManagerCompat.from(context).notify(System.currentTimeMillis().toInt(), it) }
     }
 
+    @Suppress("MissingPermission")
     private fun sendExecutionNotification(context: Context, routineName: String, actions: List<RoutineAction>) {
         val actionSummary = actions.joinToString(", ") {
             ActionType.fromValue(it.type).name

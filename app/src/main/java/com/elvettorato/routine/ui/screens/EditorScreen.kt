@@ -124,6 +124,7 @@ fun EditorScreen(
         if (permissions.all { it.value }) {
             val fusedLocationClient =
                 com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(context)
+            @Suppress("MissingPermission")
             fusedLocationClient.lastLocation.addOnSuccessListener { location ->
                 location?.let {
                     viewModel.updateLat(it.latitude)

@@ -45,6 +45,7 @@ object GeofenceHelper {
 
         val pendingIntent = getGeofencePendingIntent(context, routine.id)
 
+        @Suppress("MissingPermission")
         geofencingClient.addGeofences(geofencingRequest, pendingIntent)
             .addOnSuccessListener {
                 Log.d(TAG, "Geofence added for routine ${routine.id}")
