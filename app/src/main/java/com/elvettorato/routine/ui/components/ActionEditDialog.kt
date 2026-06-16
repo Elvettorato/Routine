@@ -22,6 +22,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -60,12 +61,12 @@ fun ActionEditDialog(
     var dndCallsExpanded by remember { mutableStateOf(false) }
     var dndMsgsExpanded by remember { mutableStateOf(false) }
 
-    var mediaVolume by remember { mutableStateOf(initialAction?.mediaVolume ?: 7) }
-    var ringVolume by remember { mutableStateOf(initialAction?.ringVolume ?: 5) }
-    var alarmVolume by remember { mutableStateOf(initialAction?.alarmVolume ?: 10) }
-    var notificationVolume by remember { mutableStateOf(initialAction?.notificationVolume ?: 5) }
+    var mediaVolume by remember { mutableIntStateOf(initialAction?.mediaVolume ?: 7) }
+    var ringVolume by remember { mutableIntStateOf(initialAction?.ringVolume ?: 5) }
+    var alarmVolume by remember { mutableIntStateOf(initialAction?.alarmVolume ?: 10) }
+    var notificationVolume by remember { mutableIntStateOf(initialAction?.notificationVolume ?: 5) }
 
-    var brightnessLevel by remember { mutableStateOf(initialAction?.brightnessLevel ?: 128) }
+    var brightnessLevel by remember { mutableIntStateOf(initialAction?.brightnessLevel ?: 128) }
     var brightnessAuto by remember { mutableStateOf(initialAction?.brightnessAuto ?: false) }
 
     var ringerMode by remember { mutableStateOf(initialAction?.ringerMode?.let { RingerMode.valueOf(it) } ?: RingerMode.NORMAL) }

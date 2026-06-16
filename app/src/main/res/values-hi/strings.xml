@@ -17,12 +17,12 @@
     <string name="delete">हटाएँ</string>
     <string name="cancel">रद्द करें</string>
     <string name="save">सहेजें</string>
-    <string name="edit">संपादित करें</string>
+
     <string name="select_time">समय चुनें</string>
     <string name="repeat_on">दोहराएँ</string>
-    <string name="latitude">अक्षांश</string>
-    <string name="longitude">देशांतर</string>
-    <string name="radius">त्रिज्या</string>
+
+
+
     <string name="on_enter">प्रवेश पर</string>
     <string name="on_exit">निकास पर</string>
     <string name="action_type">क्रिया प्रकार</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">शीर्षक</string>
     <string name="notification_content">सामग्री</string>
     <string name="auto">ऑटो</string>
-    <string name="level">स्तर</string>
+
     <string name="media">मीडिया</string>
     <string name="ring">रिंग</string>
     <string name="alarm">अलार्म</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">केवल प्राथमिकता</string>
     <string name="dnd_total">पूर्ण मौन</string>
     <string name="dnd_alarms">केवल अलार्म</string>
-    <string name="action_dnd">डू नॉट डिस्टर्ब</string>
-    <string name="action_volume">वॉल्यूम</string>
-    <string name="action_brightness">चमक</string>
-<string name="action_notification">सूचना</string>
+
+
+
+
     <string name="mon">सोम</string>
     <string name="tue">मंगल</string>
     <string name="wed">बुध</string>
@@ -50,14 +50,14 @@
     <string name="fri">शुक्र</string>
     <string name="sat">शनि</string>
     <string name="sun">रवि</string>
-    <string name="unnamed">अनाम</string>
-    <string name="permission_location">स्थान-आधारित रूटीन के लिए स्थान अनुमति आवश्यक है</string>
-    <string name="permission_notification">रूटीन सूचनाओं के लिए सूचना अनुमति आवश्यक है</string>
-    <string name="permission_write_settings">चमक बदलने के लिए सेटिंग लिखने की अनुमति आवश्यक है</string>
-    <string name="permission_dnd">डू नॉट डिस्टर्ब मोड बदलने के लिए डीएनडी अनुमति आवश्यक है</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

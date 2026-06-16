@@ -17,12 +17,12 @@
     <string name="delete">Удалить</string>
     <string name="cancel">Отмена</string>
     <string name="save">Сохранить</string>
-    <string name="edit">Изменить</string>
+
     <string name="select_time">Выбрать время</string>
     <string name="repeat_on">Повторять в</string>
-    <string name="latitude">Широта</string>
-    <string name="longitude">Долгота</string>
-    <string name="radius">Радиус</string>
+
+
+
     <string name="on_enter">При входе</string>
     <string name="on_exit">При выходе</string>
     <string name="action_type">Тип действия</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Заголовок</string>
     <string name="notification_content">Содержание</string>
     <string name="auto">Авто</string>
-    <string name="level">Уровень</string>
+
     <string name="media">Медиа</string>
     <string name="ring">Звонок</string>
     <string name="alarm">Будильник</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Только приоритет</string>
     <string name="dnd_total">Полная тишина</string>
     <string name="dnd_alarms">Только будильники</string>
-    <string name="action_dnd">Не беспокоить</string>
-    <string name="action_volume">Громкость</string>
-    <string name="action_brightness">Яркость</string>
-<string name="action_notification">Уведомление</string>
+
+
+
+
     <string name="mon">Пн</string>
     <string name="tue">Вт</string>
     <string name="wed">Ср</string>
@@ -50,14 +50,14 @@
     <string name="fri">Пт</string>
     <string name="sat">Сб</string>
     <string name="sun">Вс</string>
-    <string name="unnamed">Без имени</string>
-    <string name="permission_location">Разрешение на местоположение необходимо для routines на основе местоположения</string>
-    <string name="permission_notification">Разрешение на уведомления необходимо для уведомлений routines</string>
-    <string name="permission_write_settings">Разрешение на запись настроек необходимо для изменения яркости</string>
-    <string name="permission_dnd">Разрешение «Не беспокоить» необходимо для изменения режима НБ</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

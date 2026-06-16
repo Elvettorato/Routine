@@ -66,6 +66,7 @@ object ActionExecutor {
         }
     }
 
+    @Suppress("InlinedApi")
     private fun applyDndPolicy(context: Context, action: RoutineAction) {
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 

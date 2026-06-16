@@ -17,12 +17,12 @@
     <string name="delete">Törlés</string>
     <string name="cancel">Mégse</string>
     <string name="save">Mentés</string>
-    <string name="edit">Szerkesztés</string>
+
     <string name="select_time">Idő kiválasztása</string>
     <string name="repeat_on">Ismétlés</string>
-    <string name="latitude">Szélesség</string>
-    <string name="longitude">Hosszúság</string>
-    <string name="radius">Sugár</string>
+
+
+
     <string name="on_enter">Belépéskor</string>
     <string name="on_exit">Kilépéskor</string>
     <string name="action_type">Művelet típusa</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Cím</string>
     <string name="notification_content">Tartalom</string>
     <string name="auto">Auto</string>
-    <string name="level">Szint</string>
+
     <string name="media">Média</string>
     <string name="ring">Csengő</string>
     <string name="alarm">Ébresztés</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Csak prioritás</string>
     <string name="dnd_total">Teljes csend</string>
     <string name="dnd_alarms">Csak ébresztések</string>
-    <string name="action_dnd">Ne zavarjanak</string>
-    <string name="action_volume">Hangerő</string>
-    <string name="action_brightness">Fényerő</string>
-<string name="action_notification">Értesítés</string>
+
+
+
+
     <string name="mon">H</string>
     <string name="tue">K</string>
     <string name="wed">Sze</string>
@@ -50,14 +50,14 @@
     <string name="fri">P</string>
     <string name="sat">Szo</string>
     <string name="sun">V</string>
-    <string name="unnamed">Névtelen</string>
-    <string name="permission_location">Helyengedély szükséges a helyalapú routines használatához</string>
-    <string name="permission_notification">Értesítési engedély szükséges a routine-értesítésekhez</string>
-    <string name="permission_write_settings">Írási engedély szükséges a beállítások módosításához a fényerő változtatásához</string>
-    <string name="permission_dnd">Ne zavarjanak engedély szükséges a NZ mód megváltoztatásához</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

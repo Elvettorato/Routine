@@ -17,12 +17,12 @@
     <string name="delete">Supprimer</string>
     <string name="cancel">Annuler</string>
     <string name="save">Enregistrer</string>
-    <string name="edit">Modifier</string>
+
     <string name="select_time">Sélectionner l\'heure</string>
     <string name="repeat_on">Répéter le</string>
-    <string name="latitude">Latitude</string>
-    <string name="longitude">Longitude</string>
-    <string name="radius">Rayon</string>
+
+
+
     <string name="on_enter">À l\'entrée</string>
     <string name="on_exit">À la sortie</string>
     <string name="action_type">Type d\'Action</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Titre</string>
     <string name="notification_content">Contenu</string>
     <string name="auto">Auto</string>
-    <string name="level">Niveau</string>
+
     <string name="media">Média</string>
     <string name="ring">Sonnerie</string>
     <string name="alarm">Alarme</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Priorité uniquement</string>
     <string name="dnd_total">Silence total</string>
     <string name="dnd_alarms">Alarmes uniquement</string>
-    <string name="action_dnd">Ne Pas Déranger</string>
-    <string name="action_volume">Volume</string>
-    <string name="action_brightness">Luminosité</string>
-<string name="action_notification">Notification</string>
+
+
+
+
     <string name="mon">Lun</string>
     <string name="tue">Mar</string>
     <string name="wed">Mer</string>
@@ -50,14 +50,14 @@
     <string name="fri">Ven</string>
     <string name="sat">Sam</string>
     <string name="sun">Dim</string>
-    <string name="unnamed">Sans nom</string>
-    <string name="permission_location">L\'autorisation de localisation est nécessaire pour les routines basées sur la position</string>
-    <string name="permission_notification">L\'autorisation de notification est nécessaire pour les notifications de routine</string>
-    <string name="permission_write_settings">L\'autorisation d\'écrire les paramètres est nécessaire pour changer la luminosité</string>
-    <string name="permission_dnd">L\'autorisation Ne Pas Déranger est nécessaire pour changer le mode NPD</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

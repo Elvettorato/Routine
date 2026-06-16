@@ -17,12 +17,12 @@
     <string name="delete">حذف</string>
     <string name="cancel">إلغاء</string>
     <string name="save">حفظ</string>
-    <string name="edit">تعديل</string>
+
     <string name="select_time">اختيار الوقت</string>
     <string name="repeat_on">التكرار في</string>
-    <string name="latitude">خط العرض</string>
-    <string name="longitude">خط الطول</string>
-    <string name="radius">نصف القطر</string>
+
+
+
     <string name="on_enter">عند الدخول</string>
     <string name="on_exit">عند الخروج</string>
     <string name="action_type">نوع الإجراء</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">العنوان</string>
     <string name="notification_content">المحتوى</string>
     <string name="auto">تلقائي</string>
-    <string name="level">المستوى</string>
+
     <string name="media">وسائط</string>
     <string name="ring">نغمة</string>
     <string name="alarm">منبه</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">الأولوية فقط</string>
     <string name="dnd_total">صمت تام</string>
     <string name="dnd_alarms">المنبهات فقط</string>
-    <string name="action_dnd">عدم الإزعاج</string>
-    <string name="action_volume">مستوى الصوت</string>
-    <string name="action_brightness">السطوع</string>
-<string name="action_notification">إشعار</string>
+
+
+
+
     <string name="mon">إثن</string>
     <string name="tue">ثلث</string>
     <string name="wed">أرب</string>
@@ -50,14 +50,14 @@
     <string name="fri">جمعة</string>
     <string name="sat">سبت</string>
     <string name="sun">أحد</string>
-    <string name="unnamed">بدون اسم</string>
-    <string name="permission_location">إذن الموقع مطلوب للروتينات المستندة إلى الموقع</string>
-    <string name="permission_notification">إذن الإشعارات مطلوب لإشعارات الروتين</string>
-    <string name="permission_write_settings">إذن كتابة الإعدادات مطلوب لتغيير السطوع</string>
-    <string name="permission_dnd">إذن عدم الإزعاج مطلوب لتغيير وضع عدم الإزعاج</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

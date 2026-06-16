@@ -17,12 +17,12 @@
     <string name="delete">Slett</string>
     <string name="cancel">Avbryt</string>
     <string name="save">Lagre</string>
-    <string name="edit">Rediger</string>
+
     <string name="select_time">Velg tid</string>
     <string name="repeat_on">Gjenta på</string>
-    <string name="latitude">Breddegrad</string>
-    <string name="longitude">Lengdegrad</string>
-    <string name="radius">Radius</string>
+
+
+
     <string name="on_enter">Ved inngang</string>
     <string name="on_exit">Ved utgang</string>
     <string name="action_type">Handlingstype</string>
@@ -30,8 +30,8 @@
 <string name="notification_title">Tittel</string>
     <string name="notification_content">Innhold</string>
     <string name="auto">Auto</string>
-    <string name="level">Nivå</string>
-    <string name="media">Media</string>
+
+    <string name="media">Medier</string>
     <string name="ring">Ringetone</string>
     <string name="alarm">Alarm</string>
     <string name="notification">Varsel</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Kun prioritet</string>
     <string name="dnd_total">Total stillhet</string>
     <string name="dnd_alarms">Kun alarmer</string>
-    <string name="action_dnd">Ikke forstyrr</string>
-    <string name="action_volume">Volum</string>
-    <string name="action_brightness">Lysstyrke</string>
-<string name="action_notification">Varsel</string>
+
+
+
+
     <string name="mon">Man</string>
     <string name="tue">Tir</string>
     <string name="wed">Ons</string>
@@ -50,14 +50,14 @@
     <string name="fri">Fre</string>
     <string name="sat">Lør</string>
     <string name="sun">Søn</string>
-    <string name="unnamed">Utnevnt</string>
-    <string name="permission_location">Stedstillatelse er nødvendig for stedsbaserte routines</string>
-    <string name="permission_notification">Varslingstillatelse er nødvendig for routine-varsler</string>
-    <string name="permission_write_settings">Skrivetillatelse for innstillinger er nødvendig for å endre lysstyrke</string>
-    <string name="permission_dnd">Ikke forstyrr-tillatelse er nødvendig for å endre IF-modus</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

@@ -17,12 +17,12 @@
     <string name="delete">Hapus</string>
     <string name="cancel">Batal</string>
     <string name="save">Simpan</string>
-    <string name="edit">Edit</string>
+
     <string name="select_time">Pilih Waktu</string>
     <string name="repeat_on">Ulangi pada</string>
-    <string name="latitude">Lintang</string>
-    <string name="longitude">Bujur</string>
-    <string name="radius">Radius</string>
+
+
+
     <string name="on_enter">Saat masuk</string>
     <string name="on_exit">Saat keluar</string>
     <string name="action_type">Jenis Tindakan</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Judul</string>
     <string name="notification_content">Konten</string>
     <string name="auto">Otomatis</string>
-    <string name="level">Tingkat</string>
+
     <string name="media">Media</string>
     <string name="ring">Nada dering</string>
     <string name="alarm">Alarm</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Prioritas saja</string>
     <string name="dnd_total">Diam total</string>
     <string name="dnd_alarms">Alarm saja</string>
-    <string name="action_dnd">Jangan Ganggu</string>
-    <string name="action_volume">Volume</string>
-    <string name="action_brightness">Kecerahan</string>
-<string name="action_notification">Notifikasi</string>
+
+
+
+
     <string name="mon">Sen</string>
     <string name="tue">Sel</string>
     <string name="wed">Rab</string>
@@ -50,14 +50,14 @@
     <string name="fri">Jum</string>
     <string name="sat">Sab</string>
     <string name="sun">Min</string>
-    <string name="unnamed">Tanpa nama</string>
-    <string name="permission_location">Izin lokasi diperlukan untuk rutinitas berbasis lokasi</string>
-    <string name="permission_notification">Izin notifikasi diperlukan untuk notifikasi rutinitas</string>
-    <string name="permission_write_settings">Izin menulis pengaturan diperlukan untuk mengubah kecerahan</string>
-    <string name="permission_dnd">Izin Jangan Ganggu diperlukan untuk mengubah mode JG</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

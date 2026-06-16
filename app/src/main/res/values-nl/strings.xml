@@ -17,12 +17,12 @@
     <string name="delete">Verwijderen</string>
     <string name="cancel">Annuleren</string>
     <string name="save">Opslaan</string>
-    <string name="edit">Bewerken</string>
+
     <string name="select_time">Tijd selecteren</string>
     <string name="repeat_on">Herhalen op</string>
-    <string name="latitude">Breedtegraad</string>
-    <string name="longitude">Lengtegraad</string>
-    <string name="radius">Straal</string>
+
+
+
     <string name="on_enter">Bij binnenkomst</string>
     <string name="on_exit">Bij vertrek</string>
     <string name="action_type">Actietype</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Titel</string>
     <string name="notification_content">Inhoud</string>
     <string name="auto">Auto</string>
-    <string name="level">Niveau</string>
+
     <string name="media">Media</string>
     <string name="ring">Beltoon</string>
     <string name="alarm">Alarm</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Alleen prioriteit</string>
     <string name="dnd_total">Totale stilte</string>
     <string name="dnd_alarms">Alleen alarmen</string>
-    <string name="action_dnd">Niet storen</string>
-    <string name="action_volume">Volume</string>
-    <string name="action_brightness">Helderheid</string>
-<string name="action_notification">Melding</string>
+
+
+
+
     <string name="mon">Ma</string>
     <string name="tue">Di</string>
     <string name="wed">Wo</string>
@@ -50,14 +50,14 @@
     <string name="fri">Vr</string>
     <string name="sat">Za</string>
     <string name="sun">Zo</string>
-    <string name="unnamed">Naamloos</string>
-    <string name="permission_location">Locatietoestemming is nodig voor locatiegebaseerde routines</string>
-    <string name="permission_notification">Meldingstoestemming is nodig voor routinemeldingen</string>
-    <string name="permission_write_settings">Schrijftoestemming voor instellingen is nodig om helderheid te wijzigen</string>
-    <string name="permission_dnd">Niet-storen-toestemming is nodig om de NS-modus te wijzigen</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

@@ -17,12 +17,12 @@
     <string name="delete">Ștergeți</string>
     <string name="cancel">Anulați</string>
     <string name="save">Salvați</string>
-    <string name="edit">Editați</string>
+
     <string name="select_time">Selectați ora</string>
     <string name="repeat_on">Repetați</string>
-    <string name="latitude">Latitudine</string>
-    <string name="longitude">Longitudine</string>
-    <string name="radius">Rază</string>
+
+
+
     <string name="on_enter">La intrare</string>
     <string name="on_exit">La ieșire</string>
     <string name="action_type">Tip acțiune</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Titlu</string>
     <string name="notification_content">Conținut</string>
     <string name="auto">Auto</string>
-    <string name="level">Nivel</string>
+
     <string name="media">Media</string>
     <string name="ring">Sonerie</string>
     <string name="alarm">Alarmă</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Doar prioritate</string>
     <string name="dnd_total">Liniște totală</string>
     <string name="dnd_alarms">Doar alarme</string>
-    <string name="action_dnd">Nu deranjați</string>
-    <string name="action_volume">Volum</string>
-    <string name="action_brightness">Luminozitate</string>
-<string name="action_notification">Notificare</string>
+
+
+
+
     <string name="mon">Lun</string>
     <string name="tue">Mar</string>
     <string name="wed">Mie</string>
@@ -50,14 +50,14 @@
     <string name="fri">Vin</string>
     <string name="sat">Sâm</string>
     <string name="sun">Dum</string>
-    <string name="unnamed">Fără nume</string>
-    <string name="permission_location">Permisiunea de locație este necesară pentru routines bazate pe locație</string>
-    <string name="permission_notification">Permisiunea de notificare este necesară pentru notificările routine</string>
-    <string name="permission_write_settings">Permisiunea de scriere a setărilor este necesară pentru a schimba luminozitatea</string>
-    <string name="permission_dnd">Permisiunea Nu deranjați este necesară pentru a schimba modul ND</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

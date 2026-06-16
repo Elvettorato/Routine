@@ -17,22 +17,22 @@
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
-    <string name="edit">Edit</string>
+
     <string name="back">Back</string>
     <string name="remove">Remove</string>
     <string name="ok">OK</string>
-    <string name="am">AM</string>
-    <string name="pm">PM</string>
-    <string name="on">ON</string>
-    <string name="off">OFF</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
+
+
+
+
+
     <string name="radius_format">Radius: %d m</string>
     <string name="level_format">Level: %d%%</string>
     <string name="select_time">Select Time</string>
     <string name="repeat_on">Repeat on</string>
-    <string name="latitude">Latitude</string>
-    <string name="longitude">Longitude</string>
-    <string name="radius">Radius</string>
+
+
+
     <string name="on_enter">On enter</string>
     <string name="on_exit">On exit</string>
     <string name="action_type">Action Type</string>
@@ -42,7 +42,7 @@
     <string name="notification_title">Title</string>
     <string name="notification_content">Content</string>
     <string name="auto">Auto</string>
-    <string name="level">Level</string>
+
     <string name="media">Media</string>
     <string name="ring">Ring</string>
     <string name="alarm">Alarm</string>
@@ -51,11 +51,11 @@
     <string name="dnd_priority">Priority only</string>
     <string name="dnd_total">Total silence</string>
     <string name="dnd_alarms">Alarms only</string>
-    <string name="action_dnd">Do Not Disturb</string>
-    <string name="action_volume">Volume</string>
-    <string name="action_brightness">Brightness</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
-    <string name="action_notification">Notification</string>
+
+
+
+
+
     <string name="summary_dnd">DND: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="summary_brightness">Brightness: %s</string>
@@ -68,7 +68,7 @@
     <string name="fri">Fri</string>
     <string name="sat">Sat</string>
     <string name="sun">Sun</string>
-    <string name="unnamed">Unnamed</string>
+
     <string name="get_current_location">Get Current Location</string>
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="priority">Priority</string>
@@ -76,10 +76,9 @@
     <string name="priority_default">Default</string>
     <string name="priority_low">Low</string>
     <string name="priority_min">Min</string>
-    <string name="permission_location">Location permission is needed for location-based routines</string>
-    <string name="permission_notification">Notification permission is needed for routine notifications</string>
-    <string name="permission_write_settings">Write settings permission is needed to change brightness</string>
-    <string name="permission_dnd">Do Not Disturb permission is needed to change DND mode</string>
+
+
+
 
     <!-- Ringer Mode -->
     <string name="ringer_mode">Ringer Mode</string>
@@ -102,3 +101,4 @@
     <!-- Quick Settings Tile -->
     <string name="tile_label">Routine</string>
 </resources>
+

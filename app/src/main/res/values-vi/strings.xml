@@ -17,12 +17,12 @@
     <string name="delete">Xoá</string>
     <string name="cancel">Huỷ</string>
     <string name="save">Lưu</string>
-    <string name="edit">Chỉnh sửa</string>
+
     <string name="select_time">Chọn Thời gian</string>
     <string name="repeat_on">Lặp lại vào</string>
-    <string name="latitude">Vĩ độ</string>
-    <string name="longitude">Kinh độ</string>
-    <string name="radius">Bán kính</string>
+
+
+
     <string name="on_enter">Khi vào</string>
     <string name="on_exit">Khi ra</string>
     <string name="action_type">Loại Hành động</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Tiêu đề</string>
     <string name="notification_content">Nội dung</string>
     <string name="auto">Tự động</string>
-    <string name="level">Mức</string>
+
     <string name="media">Phương tiện</string>
     <string name="ring">Đổ chuông</string>
     <string name="alarm">Báo thức</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Chỉ ưu tiên</string>
     <string name="dnd_total">Im lặng hoàn toàn</string>
     <string name="dnd_alarms">Chỉ báo thức</string>
-    <string name="action_dnd">Không làm phiền</string>
-    <string name="action_volume">Âm lượng</string>
-    <string name="action_brightness">Độ sáng</string>
-<string name="action_notification">Thông báo</string>
+
+
+
+
     <string name="mon">T2</string>
     <string name="tue">T3</string>
     <string name="wed">T4</string>
@@ -50,14 +50,14 @@
     <string name="fri">T6</string>
     <string name="sat">T7</string>
     <string name="sun">CN</string>
-    <string name="unnamed">Không tên</string>
-    <string name="permission_location">Cần quyền vị trí cho các thói quen dựa trên vị trí</string>
-    <string name="permission_notification">Cần quyền thông báo cho các thông báo thói quen</string>
-    <string name="permission_write_settings">Cần quyền ghi cài đặt để thay đổi độ sáng</string>
-    <string name="permission_dnd">Cần quyền Không làm phiền để thay đổi chế độ KLP</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

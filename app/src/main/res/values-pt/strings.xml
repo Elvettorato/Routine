@@ -17,12 +17,12 @@
     <string name="delete">Excluir</string>
     <string name="cancel">Cancelar</string>
     <string name="save">Salvar</string>
-    <string name="edit">Editar</string>
+
     <string name="select_time">Selecionar Hora</string>
     <string name="repeat_on">Repetir em</string>
-    <string name="latitude">Latitude</string>
-    <string name="longitude">Longitude</string>
-    <string name="radius">Raio</string>
+
+
+
     <string name="on_enter">Ao entrar</string>
     <string name="on_exit">Ao sair</string>
     <string name="action_type">Tipo de Ação</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Título</string>
     <string name="notification_content">Conteúdo</string>
     <string name="auto">Auto</string>
-    <string name="level">Nível</string>
+
     <string name="media">Mídia</string>
     <string name="ring">Toque</string>
     <string name="alarm">Alarme</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Apenas prioridade</string>
     <string name="dnd_total">Silêncio total</string>
     <string name="dnd_alarms">Apenas alarmes</string>
-    <string name="action_dnd">Não Perturbe</string>
-    <string name="action_volume">Volume</string>
-    <string name="action_brightness">Brilho</string>
-<string name="action_notification">Notificação</string>
+
+
+
+
     <string name="mon">Seg</string>
     <string name="tue">Ter</string>
     <string name="wed">Qua</string>
@@ -50,14 +50,14 @@
     <string name="fri">Sex</string>
     <string name="sat">Sáb</string>
     <string name="sun">Dom</string>
-    <string name="unnamed">Sem nome</string>
-    <string name="permission_location">A permissão de localização é necessária para rotinas baseadas em localização</string>
-    <string name="permission_notification">A permissão de notificação é necessária para notificações de rotina</string>
-    <string name="permission_write_settings">A permissão de escrever configurações é necessária para alterar o brilho</string>
-    <string name="permission_dnd">A permissão Não Perturbe é necessária para alterar o modo NP</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

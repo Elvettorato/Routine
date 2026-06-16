@@ -98,9 +98,7 @@ fun HomeScreen(
         }
 
         val pm = context.getSystemService(Context.POWER_SERVICE) as android.os.PowerManager
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
-            !pm.isIgnoringBatteryOptimizations(context.packageName)
-        ) {
+        if (!pm.isIgnoringBatteryOptimizations(context.packageName)) {
             val intent = android.content.Intent(
                 android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
             ).apply {

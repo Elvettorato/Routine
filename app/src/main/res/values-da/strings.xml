@@ -17,12 +17,12 @@
     <string name="delete">Slet</string>
     <string name="cancel">Annuller</string>
     <string name="save">Gem</string>
-    <string name="edit">Rediger</string>
+
     <string name="select_time">Vælg tid</string>
     <string name="repeat_on">Gentag på</string>
-    <string name="latitude">Breddegrad</string>
-    <string name="longitude">Længdegrad</string>
-    <string name="radius">Radius</string>
+
+
+
     <string name="on_enter">Ved indgang</string>
     <string name="on_exit">Ved udgang</string>
     <string name="action_type">Handlingstype</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Titel</string>
     <string name="notification_content">Indhold</string>
     <string name="auto">Auto</string>
-    <string name="level">Niveau</string>
+
     <string name="media">Medier</string>
     <string name="ring">Ringetone</string>
     <string name="alarm">Vækkeur</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Kun prioritet</string>
     <string name="dnd_total">Total stilhed</string>
     <string name="dnd_alarms">Kun vækkeure</string>
-    <string name="action_dnd">Forstyr ikke</string>
-    <string name="action_volume">Lydstyrke</string>
-    <string name="action_brightness">Lysstyrke</string>
-<string name="action_notification">Notifikation</string>
+
+
+
+
     <string name="mon">Man</string>
     <string name="tue">Tir</string>
     <string name="wed">Ons</string>
@@ -50,14 +50,14 @@
     <string name="fri">Fre</string>
     <string name="sat">Lør</string>
     <string name="sun">Søn</string>
-    <string name="unnamed">Unavngivet</string>
-    <string name="permission_location">Pladstilladelse er nødvendig for stedsbaserede routines</string>
-    <string name="permission_notification">Notifikationstilladelse er nødvendig for routine-notifikationer</string>
-    <string name="permission_write_settings">Skrivetilladelse til indstillinger er nødvendig for at ændre lysstyrke</string>
-    <string name="permission_dnd">Forstyr ikke-tilladelse er nødvendig for at ændre FI-tilstand</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

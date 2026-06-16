@@ -17,12 +17,12 @@
     <string name="delete">ลบ</string>
     <string name="cancel">ยกเลิก</string>
     <string name="save">บันทึก</string>
-    <string name="edit">แก้ไข</string>
+
     <string name="select_time">เลือกเวลา</string>
     <string name="repeat_on">ทำซ้ำใน</string>
-    <string name="latitude">ละติจูด</string>
-    <string name="longitude">ลองจิจูด</string>
-    <string name="radius">รัศมี</string>
+
+
+
     <string name="on_enter">เมื่อเข้า</string>
     <string name="on_exit">เมื่อออก</string>
     <string name="action_type">ประเภทการกระทำ</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">หัวข้อ</string>
     <string name="notification_content">เนื้อหา</string>
     <string name="auto">อัตโนมัติ</string>
-    <string name="level">ระดับ</string>
+
     <string name="media">สื่อ</string>
     <string name="ring">เสียงเรียกเข้า</string>
     <string name="alarm">ปลุก</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">เฉพาะสำคัญ</string>
     <string name="dnd_total">เงียบสนิท</string>
     <string name="dnd_alarms">เฉพาะปลุก</string>
-    <string name="action_dnd">ห้ามรบกวน</string>
-    <string name="action_volume">ระดับเสียง</string>
-    <string name="action_brightness">ความสว่าง</string>
-<string name="action_notification">การแจ้งเตือน</string>
+
+
+
+
     <string name="mon">จ.</string>
     <string name="tue">อ.</string>
     <string name="wed">พ.</string>
@@ -50,14 +50,14 @@
     <string name="fri">ศ.</string>
     <string name="sat">ส.</string>
     <string name="sun">อา.</string>
-    <string name="unnamed">ไม่มีชื่อ</string>
-    <string name="permission_location">จำเป็นต้องมีสิทธิ์ตำแหน่งสำหรับรูทีนตามตำแหน่ง</string>
-    <string name="permission_notification">จำเป็นต้องมีสิทธิ์การแจ้งเตือนสำหรับการแจ้งเตือนรูทีน</string>
-    <string name="permission_write_settings">จำเป็นต้องมีสิทธิ์เขียนการตั้งค่าเพื่อเปลี่ยนความสว่าง</string>
-    <string name="permission_dnd">จำเป็นต้องมีสิทธิ์ห้ามรบกวนเพื่อเปลี่ยนโหมดห้ามรบกวน</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

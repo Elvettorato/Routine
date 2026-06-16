@@ -17,12 +17,12 @@
     <string name="delete">Ta bort</string>
     <string name="cancel">Avbryt</string>
     <string name="save">Spara</string>
-    <string name="edit">Redigera</string>
+
     <string name="select_time">Välj tid</string>
     <string name="repeat_on">Upprepa på</string>
-    <string name="latitude">Latitud</string>
-    <string name="longitude">Longitud</string>
-    <string name="radius">Radie</string>
+
+
+
     <string name="on_enter">Vid inträde</string>
     <string name="on_exit">Vid utgång</string>
     <string name="action_type">Åtgärdstyp</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Titel</string>
     <string name="notification_content">Innehåll</string>
     <string name="auto">Auto</string>
-    <string name="level">Nivå</string>
+
     <string name="media">Media</string>
     <string name="ring">Signal</string>
     <string name="alarm">Alarm</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Endast prioriterat</string>
     <string name="dnd_total">Total tystnad</string>
     <string name="dnd_alarms">Endast alarm</string>
-    <string name="action_dnd">Stör ej</string>
-    <string name="action_volume">Volym</string>
-    <string name="action_brightness">Ljusstyrka</string>
-<string name="action_notification">Avisering</string>
+
+
+
+
     <string name="mon">Mån</string>
     <string name="tue">Tis</string>
     <string name="wed">Ons</string>
@@ -50,14 +50,14 @@
     <string name="fri">Fre</string>
     <string name="sat">Lör</string>
     <string name="sun">Sön</string>
-    <string name="unnamed">Namnlös</string>
-    <string name="permission_location">Platstillstånd krävs för platsbaserade routines</string>
-    <string name="permission_notification">Aviseringsbehörighet krävs för routine-aviseringar</string>
-    <string name="permission_write_settings">Skrivbehörighet för inställningar krävs för att ändra ljusstyrka</string>
-    <string name="permission_dnd">Stör ej-behörighet krävs för att ändra SE-läge</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

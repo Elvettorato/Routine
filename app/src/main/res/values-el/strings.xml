@@ -17,12 +17,12 @@
     <string name="delete">Διαγραφή</string>
     <string name="cancel">Ακύρωση</string>
     <string name="save">Αποθήκευση</string>
-    <string name="edit">Επεξεργασία</string>
+
     <string name="select_time">Επιλογή ώρας</string>
     <string name="repeat_on">Επανάληψη</string>
-    <string name="latitude">Γεωγραφικό πλάτος</string>
-    <string name="longitude">Γεωγραφικό μήκος</string>
-    <string name="radius">Ακτίνα</string>
+
+
+
     <string name="on_enter">Κατά την είσοδο</string>
     <string name="on_exit">Κατά την έξοδο</string>
     <string name="action_type">Τύπος ενέργειας</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Τίτλος</string>
     <string name="notification_content">Περιεχόμενο</string>
     <string name="auto">Αυτόματο</string>
-    <string name="level">Επίπεδο</string>
+
     <string name="media">Πολυμέσα</string>
     <string name="ring">Ήχος κλήσης</string>
     <string name="alarm">Ξυπνητήρι</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Μόνο προτεραιότητα</string>
     <string name="dnd_total">Πλήρης σιωπή</string>
     <string name="dnd_alarms">Μόνο ξυπνητήρια</string>
-    <string name="action_dnd">Μην ενοχλείτε</string>
-    <string name="action_volume">Ένταση</string>
-    <string name="action_brightness">Φωτεινότητα</string>
-<string name="action_notification">Ειδοποίηση</string>
+
+
+
+
     <string name="mon">Δευ</string>
     <string name="tue">Τρί</string>
     <string name="wed">Τετ</string>
@@ -50,14 +50,14 @@
     <string name="fri">Παρ</string>
     <string name="sat">Σάβ</string>
     <string name="sun">Κυρ</string>
-    <string name="unnamed">Χωρίς όνομα</string>
-    <string name="permission_location">Η άδεια τοποθεσίας είναι απαραίτητη για routines βάσει τοποθεσίας</string>
-    <string name="permission_notification">Η άδεια ειδοποίησης είναι απαραίτητη για ειδοποιήσεις routines</string>
-    <string name="permission_write_settings">Η άδεια εγγραφής ρυθμίσεων είναι απαραίτητη για την αλλαγή φωτεινότητας</string>
-    <string name="permission_dnd">Η άδεια Μην ενοχλείτε είναι απαραίτητη για την αλλαγή λειτουργίας ΜΕ</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

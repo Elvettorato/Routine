@@ -17,12 +17,12 @@
     <string name="delete">Ezabatu</string>
     <string name="cancel">Utzi</string>
     <string name="save">Gorde</string>
-    <string name="edit">Editatu</string>
+
     <string name="select_time">Ordua hautatu</string>
     <string name="repeat_on">Errepikatu</string>
-    <string name="latitude">Latitudea</string>
-    <string name="longitude">Longitudea</string>
-    <string name="radius">Erradioa</string>
+
+
+
     <string name="on_enter">Sartzean</string>
     <string name="on_exit">Irteeran</string>
     <string name="action_type">Ekintza mota</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Izenburua</string>
     <string name="notification_content">Edukia</string>
     <string name="auto">Auto</string>
-    <string name="level">Maila</string>
+
     <string name="media">Multimedia</string>
     <string name="ring">Tonua</string>
     <string name="alarm">Alarma</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Lehentasuna bakarrik</string>
     <string name="dnd_total">Isiltasun osoa</string>
     <string name="dnd_alarms">Alarmak bakarrik</string>
-    <string name="action_dnd">Ez trabarik</string>
-    <string name="action_volume">Bolumena</string>
-    <string name="action_brightness">Distira</string>
-<string name="action_notification">Jakinarazpena</string>
+
+
+
+
     <string name="mon">Al</string>
     <string name="tue">Ar</string>
     <string name="wed">Az</string>
@@ -50,14 +50,14 @@
     <string name="fri">Ol</string>
     <string name="sat">Lr</string>
     <string name="sun">Ig</string>
-    <string name="unnamed">Izenik gabe</string>
-    <string name="permission_location">Kokaleku baimena behar da kokalekuan oinarritutako errutinetarako</string>
-    <string name="permission_notification">Jakinarazpen baimena behar da errutinen jakinarazpenetarako</string>
-    <string name="permission_write_settings">Ezarpenak idazteko baimena behar da distira aldatzeko</string>
-    <string name="permission_dnd">Ez trabarik baimena behar da ET modua aldatzeko</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

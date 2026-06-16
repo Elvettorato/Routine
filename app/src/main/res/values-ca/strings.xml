@@ -17,12 +17,12 @@
     <string name="delete">Suprimir</string>
     <string name="cancel">Cancel·lar</string>
     <string name="save">Desar</string>
-    <string name="edit">Editar</string>
+
     <string name="select_time">Seleccionar Hora</string>
     <string name="repeat_on">Repetir el</string>
-    <string name="latitude">Latitud</string>
-    <string name="longitude">Longitud</string>
-    <string name="radius">Radi</string>
+
+
+
     <string name="on_enter">En entrar</string>
     <string name="on_exit">En sortir</string>
     <string name="action_type">Tipus d\'Acció</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Títol</string>
     <string name="notification_content">Contingut</string>
     <string name="auto">Auto</string>
-    <string name="level">Nivell</string>
+
     <string name="media">Multimèdia</string>
     <string name="ring">Trucada</string>
     <string name="alarm">Alarma</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Només prioritat</string>
     <string name="dnd_total">Silenci total</string>
     <string name="dnd_alarms">Només alarmes</string>
-    <string name="action_dnd">No Molestar</string>
-    <string name="action_volume">Volum</string>
-    <string name="action_brightness">Brillantor</string>
-<string name="action_notification">Notificació</string>
+
+
+
+
     <string name="mon">Dl</string>
     <string name="tue">Dt</string>
     <string name="wed">Dc</string>
@@ -50,14 +50,14 @@
     <string name="fri">Dv</string>
     <string name="sat">Ds</string>
     <string name="sun">Dg</string>
-    <string name="unnamed">Sense nom</string>
-    <string name="permission_location">Cal permís d\'ubicació per a les rutines basades en la ubicació</string>
-    <string name="permission_notification">Cal permís de notificació per a les notificacions de rutina</string>
-    <string name="permission_write_settings">Cal permís d\'escriptura de configuració per canviar la brillantor</string>
-    <string name="permission_dnd">Cal permís No Molestar per canviar el mode NM</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 

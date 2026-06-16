@@ -23,7 +23,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.BrightnessMedium
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.DoNotDisturbAlt
@@ -31,7 +31,7 @@ import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Schedule
-import androidx.compose.material.icons.filled.VolumeUp
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -57,6 +57,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -115,7 +116,7 @@ fun EditorScreen(
 
     var showTimePicker by remember { mutableStateOf(false) }
     var showActionDialog by remember { mutableStateOf(false) }
-    var editingActionIndex by remember { mutableStateOf(-1) }
+    var editingActionIndex by remember { mutableIntStateOf(-1) }
 
     val context = LocalContext.current
     val locationPermissionLauncher = rememberLauncherForActivityResult(
@@ -183,7 +184,7 @@ fun EditorScreen(
                 title = { Text(if (routineId != null) stringResource(R.string.edit_routine) else stringResource(R.string.new_routine)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back))
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -489,7 +490,7 @@ private fun ActionCard(
             summary = stringResource(R.string.summary_dnd, dndCustom)
         }
         ActionType.VOLUME -> {
-            icon = Icons.Default.VolumeUp; color = ActionVolumeColor
+            icon = Icons.AutoMirrored.Filled.VolumeUp; color = ActionVolumeColor
             summary = stringResource(R.string.summary_volume, action.mediaVolume ?: 0, action.ringVolume ?: 0, action.alarmVolume ?: 0, action.notificationVolume ?: 0)
         }
         ActionType.BRIGHTNESS -> {

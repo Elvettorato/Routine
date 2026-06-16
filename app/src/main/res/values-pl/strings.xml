@@ -17,12 +17,12 @@
     <string name="delete">Usuń</string>
     <string name="cancel">Anuluj</string>
     <string name="save">Zapisz</string>
-    <string name="edit">Edytuj</string>
+
     <string name="select_time">Wybierz czas</string>
     <string name="repeat_on">Powtarzaj w</string>
-    <string name="latitude">Szerokość</string>
-    <string name="longitude">Długość</string>
-    <string name="radius">Promień</string>
+
+
+
     <string name="on_enter">Przy wejściu</string>
     <string name="on_exit">Przy wyjściu</string>
     <string name="action_type">Typ akcji</string>
@@ -30,7 +30,7 @@
 <string name="notification_title">Tytuł</string>
     <string name="notification_content">Treść</string>
     <string name="auto">Auto</string>
-    <string name="level">Poziom</string>
+
     <string name="media">Media</string>
     <string name="ring">Dzwonek</string>
     <string name="alarm">Alarm</string>
@@ -39,10 +39,10 @@
     <string name="dnd_priority">Tylko priorytet</string>
     <string name="dnd_total">Całkowita cisza</string>
     <string name="dnd_alarms">Tylko alarmy</string>
-    <string name="action_dnd">Nie przeszkadzać</string>
-    <string name="action_volume">Głośność</string>
-    <string name="action_brightness">Jasność</string>
-<string name="action_notification">Powiadomienie</string>
+
+
+
+
     <string name="mon">Pon</string>
     <string name="tue">Wt</string>
     <string name="wed">Śr</string>
@@ -50,14 +50,14 @@
     <string name="fri">Pt</string>
     <string name="sat">Sob</string>
     <string name="sun">Niedz</string>
-    <string name="unnamed">Bez nazwy</string>
-    <string name="permission_location">Zezwolenie na lokalizację jest wymagane dla routines opartych na lokalizacji</string>
-    <string name="permission_notification">Zezwolenie na powiadomienia jest wymagane dla powiadomień routines</string>
-    <string name="permission_write_settings">Zezwolenie na zapis ustawień jest wymagane do zmiany jasności</string>
-    <string name="permission_dnd">Zezwolenie «Nie przeszkadzać» jest wymagane do zmiany trybu NP</string>
-    <string name="action_ringer_mode">Ringer Mode</string>
+
+
+
+
+
+
     <string name="add_action_dialog">Add Action</string>
-    <string name="am">AM</string>
+
     <string name="back">Back</string>
     <string name="dnd_allow_alarms">Allow alarms</string>
     <string name="dnd_allow_calls">Allow calls from</string>
@@ -73,10 +73,10 @@
     <string name="foreground_service_active">Monitoring routines in background</string>
     <string name="get_current_location">Get Current Location</string>
     <string name="level_format">Level: %d%%</string>
-    <string name="off">OFF</string>
+
     <string name="ok">OK</string>
-    <string name="on">ON</string>
-    <string name="pm">PM</string>
+
+
     <string name="priority">Priority</string>
     <string name="priority_default">Default</string>
     <string name="priority_high">High</string>
@@ -94,7 +94,7 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
-    <string name="trigger_location">Location: %.2f, %.2f</string>
 
 </resources>
+
 
