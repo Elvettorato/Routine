@@ -29,6 +29,7 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Schedule
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -76,7 +77,8 @@ import java.util.Locale
 fun HomeScreen(
     viewModel: HomeViewModel,
     onAddRoutine: () -> Unit,
-    onEditRoutine: (Long) -> Unit
+    onEditRoutine: (Long) -> Unit,
+    onOpenSettings: () -> Unit
 ) {
     val routines by viewModel.routines.collectAsState()
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
@@ -117,7 +119,15 @@ fun HomeScreen(
                     containerColor = Color.Transparent,
                     scrolledContainerColor = MaterialTheme.colorScheme.surface
                 ),
-                scrollBehavior = scrollBehavior
+                scrollBehavior = scrollBehavior,
+                actions = {
+                    IconButton(onClick = onOpenSettings) {
+                        Icon(
+                            Icons.Default.Settings,
+                            contentDescription = stringResource(R.string.settings)
+                        )
+                    }
+                }
             )
         },
         floatingActionButton = {

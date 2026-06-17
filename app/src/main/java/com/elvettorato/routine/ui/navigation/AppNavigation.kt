@@ -11,6 +11,7 @@ import com.elvettorato.routine.ui.screens.EditorScreen
 import com.elvettorato.routine.ui.screens.EditorViewModel
 import com.elvettorato.routine.ui.screens.HomeScreen
 import com.elvettorato.routine.ui.screens.HomeViewModel
+import com.elvettorato.routine.ui.screens.SettingsScreen
 
 @Composable
 fun AppNavigation() {
@@ -22,7 +23,13 @@ fun AppNavigation() {
             HomeScreen(
                 viewModel = viewModel,
                 onAddRoutine = { navController.navigate("editor") },
-                onEditRoutine = { id -> navController.navigate("editor/$id") }
+                onEditRoutine = { id -> navController.navigate("editor/$id") },
+                onOpenSettings = { navController.navigate("settings") }
+            )
+        }
+        composable("settings") {
+            SettingsScreen(
+                onNavigateBack = { navController.popBackStack() }
             )
         }
         composable(

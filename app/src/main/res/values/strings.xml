@@ -100,5 +100,14 @@
 
     <!-- Quick Settings Tile -->
     <string name="tile_label">Routine</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="location_interval_title">Location check interval</string>
+    <string name="location_interval_summary">How often the app checks your location in background to trigger routines</string>
+    <string name="location_permission_title">Background location</string>
+    <string name="location_permission_summary">Required for location-based routines to trigger when the app is in background</string>
+    <string name="granted">Granted</string>
+    <string name="not_granted">Not granted — tap to open settings</string>
 </resources>
 
