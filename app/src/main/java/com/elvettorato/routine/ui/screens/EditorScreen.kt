@@ -3,6 +3,7 @@ package com.elvettorato.routine.ui.screens
 import android.Manifest
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.net.Uri
 import android.provider.Settings
@@ -46,6 +47,8 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -60,6 +63,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -73,6 +77,7 @@ import androidx.compose.ui.unit.dp
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.RoutineAction
+import com.elvettorato.routine.service.GeofenceHelper
 import com.elvettorato.routine.ui.components.ActionEditDialog
 import com.elvettorato.routine.ui.components.DayPicker
 import com.elvettorato.routine.ui.theme.ActionBrightnessColor
@@ -81,6 +86,10 @@ import com.elvettorato.routine.ui.theme.ActionNotificationColor
 import com.elvettorato.routine.ui.theme.ActionRingerColor
 import com.elvettorato.routine.ui.theme.ActionVolumeColor
 import com.elvettorato.routine.ui.theme.LineagePrimary
+import com.google.android.gms.location.CurrentLocationRequest
+import com.google.android.gms.location.Priority
+import com.google.android.gms.tasks.CancellationTokenSource
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -119,6 +128,13 @@ fun EditorScreen(
     var editingActionIndex by remember { mutableIntStateOf(-1) }
 
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    val settingsLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { }
+
     val locationPermissionLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
     ) { permissions ->
@@ -126,10 +142,24 @@ fun EditorScreen(
             val fusedLocationClient =
                 com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(context)
             @Suppress("MissingPermission")
-            fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+            fusedLocationClient.getCurrentLocation(
+                CurrentLocationRequest.Builder().setPriority(Priority.PRIORITY_HIGH_ACCURACY).build(),
+                CancellationTokenSource().token
+            ).addOnSuccessListener { location ->
                 location?.let {
                     viewModel.updateLat(it.latitude)
                     viewModel.updateLng(it.longitude)
+                }
+            }
+            if (!GeofenceHelper.hasBackgroundLocationPermission(context)) {
+                scope.launch {
+                    snackbarHostState.showSnackbar(
+                        "Per geofence anche in background, concedi 'Consenti sempre'",
+                        "Impostazioni"
+                    )
+                    settingsLauncher.launch(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                        data = Uri.fromParts("package", context.packageName, null)
+                    })
                 }
             }
         }
@@ -179,6 +209,7 @@ fun EditorScreen(
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = { Text(if (routineId != null) stringResource(R.string.edit_routine) else stringResource(R.string.new_routine)) },
@@ -256,7 +287,31 @@ fun EditorScreen(
                 )
                 Switch(
                     checked = hasLocationTrigger,
-                    onCheckedChange = viewModel::updateHasLocationTrigger
+                    onCheckedChange = { enabled ->
+                        if (enabled) {
+                            val hasFine = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                            if (!hasFine) {
+                                locationPermissionLauncher.launch(
+                                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
+                                )
+                            } else {
+                                viewModel.updateHasLocationTrigger(true)
+                                if (!GeofenceHelper.hasBackgroundLocationPermission(context)) {
+                                    scope.launch {
+                                        snackbarHostState.showSnackbar(
+                                            "Per geofence anche in background, concedi 'Consenti sempre'",
+                                            "Impostazioni"
+                                        )
+                                        settingsLauncher.launch(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                                            data = Uri.fromParts("package", context.packageName, null)
+                                        })
+                                    }
+                                }
+                            }
+                        } else {
+                            viewModel.updateHasLocationTrigger(false)
+                        }
+                    }
                 )
             }
             if (hasLocationTrigger) {
