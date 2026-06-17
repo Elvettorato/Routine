@@ -14,6 +14,9 @@ interface RoutineDao {
     @Query("SELECT * FROM routines ORDER BY updatedAt DESC")
     fun getAllRoutines(): Flow<List<RoutineEntity>>
 
+    @Query("SELECT * FROM routines ORDER BY updatedAt DESC")
+    suspend fun getAllRoutinesOnce(): List<RoutineEntity>
+
     @Query("SELECT * FROM routines WHERE isEnabled = 1")
     suspend fun getEnabledRoutines(): List<RoutineEntity>
 

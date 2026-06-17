@@ -18,6 +18,9 @@ class RoutineRepository(private val dao: RoutineDao) {
     suspend fun getRoutineByIdOnce(id: Long): Routine? =
         dao.getRoutineById(id)?.let { Routine.fromEntity(it) }
 
+    suspend fun getAllRoutinesOnce(): List<Routine> =
+        dao.getAllRoutinesOnce().map { Routine.fromEntity(it) }
+
     suspend fun getEnabledRoutines(): List<Routine> =
         dao.getEnabledRoutines().map { Routine.fromEntity(it) }
 
