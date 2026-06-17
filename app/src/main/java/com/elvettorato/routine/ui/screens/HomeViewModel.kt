@@ -32,7 +32,10 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             repository.allRoutines.collect { list ->
                 val hasEnabled = list.any { it.isEnabled }
-                val intent = Intent(ctx, RoutineForegroundService::class.java)
+                val hasLocation = list.any { it.isEnabled && it.hasLocationTrigger }
+                val intent = Intent(ctx, RoutineForegroundService::class.java).apply {
+                    putExtra(RoutineForegroundService.EXTRA_MONITOR_LOCATION, hasLocation)
+                }
                 if (hasEnabled) {
                     ctx.startForegroundService(intent)
                 } else {

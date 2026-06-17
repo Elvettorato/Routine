@@ -59,7 +59,7 @@
 
         <service
             android:name=".service.RoutineForegroundService"
-            android:foregroundServiceType="dataSync"
+            android:foregroundServiceType="location|dataSync"
             android:exported="false" />
 
         <service

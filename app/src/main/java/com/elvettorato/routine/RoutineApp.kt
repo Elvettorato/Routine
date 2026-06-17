@@ -5,6 +5,8 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import androidx.core.app.NotificationManagerCompat
 
+import com.elvettorato.routine.data.settings.SettingsManager
+
 class RoutineApp : Application() {
     companion object {
         const val CHANNEL_ROUTINE = "routine_actions"
@@ -13,6 +15,7 @@ class RoutineApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        SettingsManager.init(this)
         createNotificationChannels()
     }
 
