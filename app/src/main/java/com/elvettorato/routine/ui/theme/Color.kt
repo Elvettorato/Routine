@@ -45,10 +45,3 @@ val LineageInversePrimary = Color(0xFF006B63)
 
 val LineageDim = Color(0xFF0B0D12)
 val LineageScrim = Color(0xFF000000)
-
-// Action type colors
-val ActionDndColor = Color(0xFFEF4444)
-val ActionVolumeColor = Color(0xFF3B82F6)
-val ActionBrightnessColor = Color(0xFFEAB308)
-val ActionRingerColor = Color(0xFFEC4899)
-val ActionNotificationColor = Color(0xFFA855F7)
