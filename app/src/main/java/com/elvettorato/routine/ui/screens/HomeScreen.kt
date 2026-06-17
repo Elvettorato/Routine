@@ -61,12 +61,6 @@ import androidx.core.content.ContextCompat
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.model.ActionType
 import com.elvettorato.routine.data.model.Routine
-import com.elvettorato.routine.ui.theme.ActionBrightnessColor
-import com.elvettorato.routine.ui.theme.ActionDndColor
-import com.elvettorato.routine.ui.theme.ActionNotificationColor
-import com.elvettorato.routine.ui.theme.ActionRingerColor
-import com.elvettorato.routine.ui.theme.ActionVolumeColor
-import com.elvettorato.routine.ui.theme.LineagePrimary
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -133,7 +127,7 @@ fun HomeScreen(
         floatingActionButton = {
             FloatingActionButton(
                 onClick = onAddRoutine,
-                containerColor = LineagePrimary
+                containerColor = MaterialTheme.colorScheme.primary
             ) {
                 Icon(Icons.Default.Add, contentDescription = stringResource(R.string.add_routine))
             }
@@ -225,7 +219,7 @@ private fun RoutineCard(
                     checked = routine.isEnabled,
                     onCheckedChange = onToggle,
                     colors = SwitchDefaults.colors(
-                        checkedTrackColor = LineagePrimary,
+                        checkedTrackColor = MaterialTheme.colorScheme.primary,
                         checkedThumbColor = MaterialTheme.colorScheme.onPrimary
                     )
                 )
@@ -353,11 +347,11 @@ private fun ActionIconsRow(types: List<ActionType>) {
     Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
         types.take(5).forEach { type ->
             val (icon, color) = when (type) {
-                ActionType.DND -> Icons.Default.DoNotDisturbAlt to ActionDndColor
-                ActionType.VOLUME -> Icons.Default.VolumeUp to ActionVolumeColor
-                ActionType.BRIGHTNESS -> Icons.Default.BrightnessMedium to ActionBrightnessColor
-                ActionType.RINGER_MODE -> Icons.Default.NotificationsActive to ActionRingerColor
-                ActionType.NOTIFICATION -> Icons.Default.Notifications to ActionNotificationColor
+                ActionType.DND -> Icons.Default.DoNotDisturbAlt to MaterialTheme.colorScheme.error
+                ActionType.VOLUME -> Icons.Default.VolumeUp to MaterialTheme.colorScheme.primary
+                ActionType.BRIGHTNESS -> Icons.Default.BrightnessMedium to MaterialTheme.colorScheme.tertiary
+                ActionType.RINGER_MODE -> Icons.Default.NotificationsActive to MaterialTheme.colorScheme.secondary
+                ActionType.NOTIFICATION -> Icons.Default.Notifications to MaterialTheme.colorScheme.onSurfaceVariant
             }
             Icon(
                 imageVector = icon,

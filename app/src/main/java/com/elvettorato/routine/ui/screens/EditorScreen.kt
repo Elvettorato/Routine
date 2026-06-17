@@ -80,12 +80,6 @@ import com.elvettorato.routine.data.model.RoutineAction
 import com.elvettorato.routine.service.GeofenceHelper
 import com.elvettorato.routine.ui.components.ActionEditDialog
 import com.elvettorato.routine.ui.components.DayPicker
-import com.elvettorato.routine.ui.theme.ActionBrightnessColor
-import com.elvettorato.routine.ui.theme.ActionDndColor
-import com.elvettorato.routine.ui.theme.ActionNotificationColor
-import com.elvettorato.routine.ui.theme.ActionRingerColor
-import com.elvettorato.routine.ui.theme.ActionVolumeColor
-import com.elvettorato.routine.ui.theme.LineagePrimary
 import com.google.android.gms.location.CurrentLocationRequest
 import com.google.android.gms.location.Priority
 import com.google.android.gms.tasks.CancellationTokenSource
@@ -395,7 +389,7 @@ fun EditorScreen(
                 },
                 modifier = Modifier.fillMaxWidth(),
                 enabled = !isSaving,
-                colors = ButtonDefaults.buttonColors(containerColor = LineagePrimary)
+                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
             ) {
                 Text(if (isSaving) stringResource(R.string.saving) else stringResource(R.string.save_routine))
             }
@@ -533,7 +527,7 @@ private fun ActionCard(
     val summary: String
     when (type) {
         ActionType.DND -> {
-            icon = Icons.Default.DoNotDisturbAlt; color = ActionDndColor
+            icon = Icons.Default.DoNotDisturbAlt; color = MaterialTheme.colorScheme.error
             val mode = action.dndMode ?: "OFF"
             val dndCustom = buildString {
                 append(mode)
@@ -545,16 +539,16 @@ private fun ActionCard(
             summary = stringResource(R.string.summary_dnd, dndCustom)
         }
         ActionType.VOLUME -> {
-            icon = Icons.AutoMirrored.Filled.VolumeUp; color = ActionVolumeColor
+            icon = Icons.AutoMirrored.Filled.VolumeUp; color = MaterialTheme.colorScheme.primary
             summary = stringResource(R.string.summary_volume, action.mediaVolume ?: 0, action.ringVolume ?: 0, action.alarmVolume ?: 0, action.notificationVolume ?: 0)
         }
         ActionType.BRIGHTNESS -> {
-            icon = Icons.Default.BrightnessMedium; color = ActionBrightnessColor
+            icon = Icons.Default.BrightnessMedium; color = MaterialTheme.colorScheme.tertiary
             val brightText = if (action.brightnessAuto == true) stringResource(R.string.auto) else "${action.brightnessLevel}"
             summary = stringResource(R.string.summary_brightness, brightText)
         }
         ActionType.RINGER_MODE -> {
-            icon = Icons.Default.NotificationsActive; color = ActionRingerColor
+            icon = Icons.Default.NotificationsActive; color = MaterialTheme.colorScheme.secondary
             val mode = action.ringerMode?.let {
                 when (it) {
                     "NORMAL" -> stringResource(R.string.ringer_normal)
@@ -566,7 +560,7 @@ private fun ActionCard(
             summary = stringResource(R.string.summary_ringer_mode, mode)
         }
         ActionType.NOTIFICATION -> {
-            icon = Icons.Default.Notifications; color = ActionNotificationColor
+            icon = Icons.Default.Notifications; color = MaterialTheme.colorScheme.onSurfaceVariant
             summary = stringResource(R.string.summary_notification, action.notificationTitle ?: "")
         }
     }
