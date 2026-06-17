@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import android.util.Log
 import androidx.core.content.ContextCompat
 import com.elvettorato.routine.data.model.Routine
@@ -20,6 +21,9 @@ object GeofenceHelper {
         if (!hasLocationPermission(context)) {
             Log.w(TAG, "Missing location permission for routine ${routine.id}")
             return
+        }
+        if (!hasBackgroundLocationPermission(context)) {
+            Log.w(TAG, "Background location not granted — geofence may not trigger when app is backgrounded")
         }
 
         val lat = routine.triggerLatitude ?: return
@@ -68,12 +72,18 @@ object GeofenceHelper {
 
     private fun getGeofencePendingIntent(context: Context, routineId: Long): PendingIntent {
         val intent = Intent(context, GeofenceBroadcastReceiver::class.java)
-        return PendingIntent.getBroadcast(
-            context,
-            routineId.toInt(),
-            intent,
+        val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE
+        } else {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        )
+        }
+        return PendingIntent.getBroadcast(context, routineId.toInt(), intent, flags)
+    }
+
+    fun hasBackgroundLocationPermission(context: Context): Boolean {
+        return ContextCompat.checkSelfPermission(
+            context, Manifest.permission.ACCESS_BACKGROUND_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED
     }
 
     private fun hasLocationPermission(context: Context): Boolean {
