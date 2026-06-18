@@ -45,3 +45,35 @@ val LineageInversePrimary = Color(0xFF006B63)
 
 val LineageDim = Color(0xFF0B0D12)
 val LineageScrim = Color(0xFF000000)
+
+// LineageOS-inspired light theme
+val LineageLightPrimary = Color(0xFF006B63)
+val LineageLightOnPrimary = Color(0xFFFFFFFF)
+val LineageLightPrimaryContainer = Color(0xFFA7F5EC)
+val LineageLightOnPrimaryContainer = Color(0xFF00201E)
+
+val LineageLightSecondary = Color(0xFF004956)
+val LineageLightOnSecondary = Color(0xFFFFFFFF)
+val LineageLightSecondaryContainer = Color(0xFFC7F6FF)
+val LineageLightOnSecondaryContainer = Color(0xFF001F25)
+
+val LineageLightTertiary = Color(0xFF6D5300)
+val LineageLightOnTertiary = Color(0xFFFFFFFF)
+val LineageLightTertiaryContainer = Color(0xFFFFE082)
+val LineageLightOnTertiaryContainer = Color(0xFF231900)
+
+val LineageLightError = Color(0xFFBA1A1A)
+val LineageLightOnError = Color(0xFFFFFFFF)
+val LineageLightErrorContainer = Color(0xFFFFDAD6)
+val LineageLightOnErrorContainer = Color(0xFF410002)
+
+val LineageLightBackground = Color(0xFFF8F9FA)
+val LineageLightOnBackground = Color(0xFF1C1B1F)
+val LineageLightSurface = Color(0xFFFFFBFE)
+val LineageLightOnSurface = Color(0xFF1C1B1F)
+val LineageLightSurfaceVariant = Color(0xFFE7E0EC)
+val LineageLightOnSurfaceVariant = Color(0xFF49454F)
+val LineageLightOutline = Color(0xFF79747E)
+val LineageLightOutlineVariant = Color(0xFFCAC4D0)
+val LineageLightInverseSurface = Color(0xFF313033)
+val LineageLightInverseOnSurface = Color(0xFFF4EFF4)
