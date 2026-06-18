@@ -40,6 +40,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.text.ClickableText
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.platform.LocalUriHandler
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.settings.SettingsManager
 import com.elvettorato.routine.service.GeofenceHelper
@@ -50,6 +56,7 @@ fun SettingsScreen(
     onNavigateBack: () -> Unit
 ) {
     val context = LocalContext.current
+    val uriHandler = LocalUriHandler.current
     val currentInterval by SettingsManager.locationIntervalMs.collectAsState()
 
     val backgroundSettingsLauncher = rememberLauncherForActivityResult(
@@ -174,7 +181,32 @@ fun SettingsScreen(
                 }
             }
 
-            Spacer(Modifier.height(24.dp))
+            Spacer(Modifier.height(16.dp))
+
+            val githubUrl = "https://github.com/Elvettorato/Routine"
+            val annotatedString = buildAnnotatedString {
+                pushStringAnnotation("url", githubUrl)
+                withStyle(SpanStyle(
+                    color = MaterialTheme.colorScheme.primary,
+                    textDecoration = TextDecoration.Underline
+                )) {
+                    append(githubUrl)
+                }
+                pop()
+            }
+            ClickableText(
+                text = annotatedString,
+                style = MaterialTheme.typography.bodySmall.copy(
+                    color = MaterialTheme.colorScheme.primary
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                onClick = { offset ->
+                    annotatedString.getStringAnnotations("url", offset, offset)
+                        .firstOrNull()?.let { uriHandler.openUri(it.item) }
+                }
+            )
 
             Text(
                 "Made with \u2764\uFE0F by Elvettorato",
