@@ -175,6 +175,15 @@ fun SettingsScreen(
             }
 
             Spacer(Modifier.height(24.dp))
+
+            Text(
+                "Made with \u2764\uFE0F by Elvettorato",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 16.dp)
+            )
         }
     }
 }
