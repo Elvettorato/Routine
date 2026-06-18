@@ -18,7 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.animateItem
+
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -150,8 +150,7 @@ fun HomeScreen(
                         onToggle = { viewModel.toggleRoutine(routine.id, it) },
                         onRunNow = { viewModel.runNow(routine.id) },
                         onDelete = { viewModel.deleteRoutine(routine.id) },
-                        onClick = { onEditRoutine(routine.id) },
-                        modifier = Modifier.animateItem()
+                        onClick = { onEditRoutine(routine.id) }
                     )
                 }
             }
@@ -194,12 +193,10 @@ private fun RoutineCard(
     onToggle: (Boolean) -> Unit,
     onRunNow: () -> Unit,
     onDelete: () -> Unit,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    onClick: () -> Unit
 ) {
     Card(
         onClick = onClick,
-        modifier = modifier,
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
         )
