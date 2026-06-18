@@ -109,10 +109,15 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     fun save() {
         viewModelScope.launch {
             _isSaving.value = true
+            val isEnabled = if (editingId != null) {
+                repository.getRoutineByIdOnce(editingId!!)?.isEnabled ?: true
+            } else {
+                true
+            }
             val routine = Routine(
                 id = editingId ?: 0,
                 name = _routineName.value.ifBlank { "Unnamed" },
-                isEnabled = true,
+                isEnabled = isEnabled,
                 triggerHour = if (_hasTimeTrigger.value) _triggerHour.value else null,
                 triggerMinute = if (_hasTimeTrigger.value) _triggerMinute.value else null,
                 triggerDaysOfWeek = if (_hasTimeTrigger.value) _triggerDays.value.ifEmpty { null } else null,
@@ -136,7 +141,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 _saveComplete.value = true
                 return@launch
             }
-            RoutineScheduler.schedule(ctx, routine)
+            if (isEnabled) {
+                RoutineScheduler.schedule(ctx, routine)
+            }
             _isSaving.value = false
             _saveComplete.value = true
         }

@@ -12,6 +12,7 @@ import java.util.Calendar
 object RoutineScheduler {
 
     fun schedule(context: Context, routine: Routine) {
+        if (!routine.isEnabled) return
         if (routine.hasTimeTrigger) {
             scheduleTimeBased(context, routine)
         }
@@ -29,6 +30,8 @@ object RoutineScheduler {
     }
 
     private fun cancelTimeAlarms(context: Context, routine: Routine) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+
         val intent = Intent(context, TimeBroadcastReceiver::class.java).apply {
             putExtra("routine_id", routine.id)
         }
@@ -38,11 +41,10 @@ object RoutineScheduler {
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
-        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         alarmManager.cancel(pendingIntent)
         pendingIntent.cancel()
 
-        routine.triggerDaysOfWeek?.forEach { day ->
+        for (day in 0..6) {
             val weeklyIntent = Intent(context, TimeBroadcastReceiver::class.java).apply {
                 putExtra("routine_id", routine.id)
                 putExtra("day_of_week", day)
