@@ -33,8 +33,11 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -46,6 +49,7 @@ import androidx.compose.ui.platform.LocalUriHandler
 import com.elvettorato.routine.R
 import com.elvettorato.routine.data.settings.SettingsManager
 import com.elvettorato.routine.service.GeofenceHelper
+import com.elvettorato.routine.service.UpdateChecker
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,6 +59,15 @@ fun SettingsScreen(
     val context = LocalContext.current
     val uriHandler = LocalUriHandler.current
     val currentInterval by SettingsManager.locationIntervalMs.collectAsState()
+    val versionName = remember {
+        @Suppress("DEPRECATION")
+        context.packageManager.getPackageInfo(context.packageName, 0).versionName ?: "1.0"
+    }
+    val updateInfo = remember { mutableStateOf<com.elvettorato.routine.service.UpdateInfo?>(null) }
+
+    LaunchedEffect(Unit) {
+        updateInfo.value = UpdateChecker.check(versionName)
+    }
 
     val backgroundSettingsLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -179,6 +192,50 @@ fun SettingsScreen(
             }
 
             Spacer(Modifier.height(16.dp))
+
+            Text(
+                "Version $versionName",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+            )
+
+            val info = updateInfo.value
+            if (info != null && info.isUpdateAvailable) {
+                Card(
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.tertiaryContainer
+                    ),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { uriHandler.openUri(info.downloadUrl) }
+                            .padding(16.dp)
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                "Update available",
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.onTertiaryContainer
+                            )
+                            Text(
+                                "v${info.latestVersion}",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.7f)
+                            )
+                        }
+                        Icon(
+                            Icons.Default.ChevronRight,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onTertiaryContainer
+                        )
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+            }
 
             Card(
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainer),
