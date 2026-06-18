@@ -9,6 +9,9 @@ import android.net.Uri
 import android.provider.Settings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -257,7 +260,11 @@ fun EditorScreen(
                     onCheckedChange = viewModel::updateHasTimeTrigger
                 )
             }
-            if (hasTimeTrigger) {
+            AnimatedVisibility(
+                visible = hasTimeTrigger,
+                enter = expandVertically(),
+                exit = shrinkVertically()
+            ) {
                 TimeTriggerSection(
                     hour = hour,
                     minute = minute,
@@ -308,7 +315,11 @@ fun EditorScreen(
                     }
                 )
             }
-            if (hasLocationTrigger) {
+            AnimatedVisibility(
+                visible = hasLocationTrigger,
+                enter = expandVertically(),
+                exit = shrinkVertically()
+            ) {
                 LocationTriggerSection(
                     lat = lat,
                     lng = lng,
