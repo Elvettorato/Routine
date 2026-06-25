@@ -203,9 +203,9 @@ fun SettingsScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
-                            val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
-                                data = Uri.fromParts("package", context.packageName, null)
-                            }
+                            val intent = Intent(
+                                Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS
+                            ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                             context.startActivity(intent)
                         }
                         .padding(16.dp)
