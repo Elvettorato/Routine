@@ -36,6 +36,8 @@ class TimeBroadcastReceiver : BroadcastReceiver() {
                 } else if (dayOfWeek != -1) {
                     scheduleNextWeekly(context, routine, dayOfWeek)
                 }
+
+                RoutineScheduler.restartServiceIfNeeded(context)
             }
         }
     }

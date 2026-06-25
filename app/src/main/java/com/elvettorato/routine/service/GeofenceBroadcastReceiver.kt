@@ -37,6 +37,7 @@ class GeofenceBroadcastReceiver : BroadcastReceiver() {
 
                 if (shouldTrigger) {
                     ActionExecutor.execute(context, routine.actions, routine.name)
+                    RoutineScheduler.restartServiceIfNeeded(context)
                 }
             }
         }

@@ -38,8 +38,10 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
                 }
                 if (hasEnabled) {
                     ctx.startForegroundService(intent)
+                    RoutineScheduler.scheduleKeepAlive(ctx)
                 } else {
                     ctx.stopService(intent)
+                    RoutineScheduler.cancelKeepAlive(ctx)
                 }
             }
         }
