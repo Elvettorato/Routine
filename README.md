@@ -40,7 +40,7 @@ Built with Jetpack Compose and Material 3, featuring a LineageOS-inspired dark t
 
 ## Screenshots
 
-*(Add screenshots here)*
+*(Gotta remember to add screenshots here... too lazy tho ._.)*
 
 ## Getting Started
 
