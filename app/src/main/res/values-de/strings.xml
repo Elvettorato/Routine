@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Routine</string>
     <string name="no_routines">Noch keine Routinen</string>
     <string name="tap_to_add">Tippe auf +, um deine erste Routine zu erstellen</string>
-    <string name="add_routine">Routine hinzufügen</string>
+    <string name="add_routine">Routine hinzufÃ¼gen</string>
     <string name="new_routine">Neue Routine</string>
     <string name="edit_routine">Routine bearbeiten</string>
     <string name="routine_name">Routinenname</string>
-    <string name="trigger">Auslöser</string>
+    <string name="trigger">AuslÃ¶ser</string>
     <string name="time">Uhrzeit</string>
     <string name="location">Ort</string>
     <string name="actions">Aktionen</string>
-    <string name="add_action">Aktion hinzufügen</string>
+    <string name="add_action">Aktion hinzufÃ¼gen</string>
     <string name="save_routine">Routine speichern</string>
-    <string name="saving">Speichern…</string>
-    <string name="delete">Löschen</string>
+    <string name="saving">Speichernâ€¦</string>
+    <string name="delete">LÃ¶schen</string>
     <string name="cancel">Abbrechen</string>
     <string name="save">Speichern</string>
 
-    <string name="select_time">Uhrzeit auswählen</string>
+    <string name="select_time">Uhrzeit auswÃ¤hlen</string>
     <string name="repeat_on">Wiederholen am</string>
 
 
@@ -36,8 +36,8 @@
     <string name="alarm">Wecker</string>
     <string name="notification">Benachrichtigung</string>
     <string name="dnd_off">Aus</string>
-    <string name="dnd_priority">Nur Priorität</string>
-    <string name="dnd_total">Völlige Stille</string>
+    <string name="dnd_priority">Nur PrioritÃ¤t</string>
+    <string name="dnd_total">VÃ¶llige Stille</string>
     <string name="dnd_alarms">Nur Wecker</string>
 
 
@@ -56,9 +56,9 @@
 
 
 
-    <string name="add_action_dialog">Aktion hinzufügen</string>
+    <string name="add_action_dialog">Aktion hinzufÃ¼gen</string>
 
-    <string name="back">Zurück</string>
+    <string name="back">ZurÃ¼ck</string>
     <string name="dnd_allow_alarms">Alarme zulassen</string>
     <string name="dnd_allow_calls">Anrufe zulassen von</string>
     <string name="dnd_allow_contacts">Kontakte</string>
@@ -69,15 +69,15 @@
     <string name="dnd_allow_starred">Markierte Kontakte</string>
     <string name="dnd_allow_system">System zulassen</string>
     <string name="dnd_customize">Passen Sie Unterbrechungen an</string>
-    <string name="dnd_mode">Nicht stören-Modus</string>
-    <string name="foreground_service_active">Überwachungsroutinen im Hintergrund</string>
+    <string name="dnd_mode">Nicht stÃ¶ren-Modus</string>
+    <string name="foreground_service_active">Ãœberwachungsroutinen im Hintergrund</string>
     <string name="get_current_location">Aktuellen Standort abrufen</string>
     <string name="level_format">Level: %d%%</string>
 
     <string name="ok">OK</string>
 
 
-    <string name="priority">Priorität</string>
+    <string name="priority">PrioritÃ¤t</string>
     <string name="priority_default">Standard</string>
     <string name="priority_high">Hoch</string>
     <string name="priority_low">Niedrig</string>
@@ -89,11 +89,22 @@
     <string name="ringer_silent">Still</string>
     <string name="ringer_vibrate">Vibrieren</string>
     <string name="summary_brightness">Helligkeit: %s</string>
-    <string name="summary_dnd">Nicht stören: %s</string>
+    <string name="summary_dnd">Nicht stÃ¶ren: %s</string>
     <string name="summary_notification">Benachrichtigen: %s</string>
     <string name="summary_ringer_mode">Klingelton: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
+
+    <string name="battery_optimization_title">Akku-Optimierung</string>
+    <string name="battery_optimization_summary">Verhindert, dass das System die App im Hintergrund beendet</string>
+    <string name="battery_optimization_disabled">Deaktiviert — tippen zum Ändern</string>
+    <string name="battery_optimization_enabled">Aktiviert</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

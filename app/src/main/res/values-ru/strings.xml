@@ -1,99 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Рутина</string>
-    <string name="no_routines">Пока нет routines</string>
-    <string name="tap_to_add">Нажмите +, чтобы создать вашу первую routine</string>
-    <string name="add_routine">Добавить routine</string>
-    <string name="new_routine">Новая routine</string>
-    <string name="edit_routine">Изменить routine</string>
-    <string name="routine_name">Название routine</string>
-    <string name="trigger">Триггер</string>
-    <string name="time">Время</string>
-    <string name="location">Местоположение</string>
-    <string name="actions">Действия</string>
-    <string name="add_action">Добавить действие</string>
-    <string name="save_routine">Сохранить routine</string>
-    <string name="saving">Сохранение…</string>
-    <string name="delete">Удалить</string>
-    <string name="cancel">Отмена</string>
-    <string name="save">Сохранить</string>
+    <string name="app_name">Ð ÑƒÑ‚Ð¸Ð½Ð°</string>
+    <string name="no_routines">ÐŸÐ¾ÐºÐ° Ð½ÐµÑ‚ routines</string>
+    <string name="tap_to_add">ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ +, Ñ‡Ñ‚Ð¾Ð±Ñ‹ ÑÐ¾Ð·Ð´Ð°Ñ‚ÑŒ Ð²Ð°ÑˆÑƒ Ð¿ÐµÑ€Ð²ÑƒÑŽ routine</string>
+    <string name="add_routine">Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ routine</string>
+    <string name="new_routine">ÐÐ¾Ð²Ð°Ñ routine</string>
+    <string name="edit_routine">Ð˜Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ routine</string>
+    <string name="routine_name">ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ routine</string>
+    <string name="trigger">Ð¢Ñ€Ð¸Ð³Ð³ÐµÑ€</string>
+    <string name="time">Ð’Ñ€ÐµÐ¼Ñ</string>
+    <string name="location">ÐœÐµÑÑ‚Ð¾Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ</string>
+    <string name="actions">Ð”ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ</string>
+    <string name="add_action">Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ</string>
+    <string name="save_routine">Ð¡Ð¾Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ÑŒ routine</string>
+    <string name="saving">Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ðµâ€¦</string>
+    <string name="delete">Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ</string>
+    <string name="cancel">ÐžÑ‚Ð¼ÐµÐ½Ð°</string>
+    <string name="save">Ð¡Ð¾Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ÑŒ</string>
 
-    <string name="select_time">Выбрать время</string>
-    <string name="repeat_on">Повторять в</string>
-
-
-
-    <string name="on_enter">При входе</string>
-    <string name="on_exit">При выходе</string>
-    <string name="action_type">Тип действия</string>
-    <string name="edit_action">Изменить действие</string>
-<string name="notification_title">Заголовок</string>
-    <string name="notification_content">Содержание</string>
-    <string name="auto">Авто</string>
-
-    <string name="media">Медиа</string>
-    <string name="ring">Звонок</string>
-    <string name="alarm">Будильник</string>
-    <string name="notification">Уведомление</string>
-    <string name="dnd_off">Выкл</string>
-    <string name="dnd_priority">Только приоритет</string>
-    <string name="dnd_total">Полная тишина</string>
-    <string name="dnd_alarms">Только будильники</string>
+    <string name="select_time">Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ Ð²Ñ€ÐµÐ¼Ñ</string>
+    <string name="repeat_on">ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€ÑÑ‚ÑŒ Ð²</string>
 
 
 
+    <string name="on_enter">ÐŸÑ€Ð¸ Ð²Ñ…Ð¾Ð´Ðµ</string>
+    <string name="on_exit">ÐŸÑ€Ð¸ Ð²Ñ‹Ñ…Ð¾Ð´Ðµ</string>
+    <string name="action_type">Ð¢Ð¸Ð¿ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ</string>
+    <string name="edit_action">Ð˜Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ</string>
+<string name="notification_title">Ð—Ð°Ð³Ð¾Ð»Ð¾Ð²Ð¾Ðº</string>
+    <string name="notification_content">Ð¡Ð¾Ð´ÐµÑ€Ð¶Ð°Ð½Ð¸Ðµ</string>
+    <string name="auto">ÐÐ²Ñ‚Ð¾</string>
 
-    <string name="mon">Пн</string>
-    <string name="tue">Вт</string>
-    <string name="wed">Ср</string>
-    <string name="thu">Чт</string>
-    <string name="fri">Пт</string>
-    <string name="sat">Сб</string>
-    <string name="sun">Вс</string>
+    <string name="media">ÐœÐµÐ´Ð¸Ð°</string>
+    <string name="ring">Ð—Ð²Ð¾Ð½Ð¾Ðº</string>
+    <string name="alarm">Ð‘ÑƒÐ´Ð¸Ð»ÑŒÐ½Ð¸Ðº</string>
+    <string name="notification">Ð£Ð²ÐµÐ´Ð¾Ð¼Ð»ÐµÐ½Ð¸Ðµ</string>
+    <string name="dnd_off">Ð’Ñ‹ÐºÐ»</string>
+    <string name="dnd_priority">Ð¢Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ñ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚</string>
+    <string name="dnd_total">ÐŸÐ¾Ð»Ð½Ð°Ñ Ñ‚Ð¸ÑˆÐ¸Ð½Ð°</string>
+    <string name="dnd_alarms">Ð¢Ð¾Ð»ÑŒÐºÐ¾ Ð±ÑƒÐ´Ð¸Ð»ÑŒÐ½Ð¸ÐºÐ¸</string>
 
 
 
 
+    <string name="mon">ÐŸÐ½</string>
+    <string name="tue">Ð’Ñ‚</string>
+    <string name="wed">Ð¡Ñ€</string>
+    <string name="thu">Ð§Ñ‚</string>
+    <string name="fri">ÐŸÑ‚</string>
+    <string name="sat">Ð¡Ð±</string>
+    <string name="sun">Ð’Ñ</string>
 
 
-    <string name="add_action_dialog">Добавить действие</string>
-
-    <string name="back">Назад</string>
-    <string name="dnd_allow_alarms">Разрешить сигналы тревоги</string>
-    <string name="dnd_allow_calls">Разрешить звонки от</string>
-    <string name="dnd_allow_contacts">Контакты</string>
-    <string name="dnd_allow_everyone">Каждый</string>
-    <string name="dnd_allow_media">Разрешить медиа</string>
-    <string name="dnd_allow_messages">Разрешить сообщения от</string>
-    <string name="dnd_allow_none">Никто</string>
-    <string name="dnd_allow_starred">Помеченные контакты</string>
-    <string name="dnd_allow_system">Разрешить систему</string>
-    <string name="dnd_customize">Настройте прерывания</string>
-    <string name="dnd_mode">Режим «Не беспокоить»</string>
-    <string name="foreground_service_active">Процедуры мониторинга в фоновом режиме</string>
-    <string name="get_current_location">Получить текущее местоположение</string>
-    <string name="level_format">Уровень: %d%%</string>
-
-    <string name="ok">ХОРОШО</string>
 
 
-    <string name="priority">Приоритет</string>
-    <string name="priority_default">По умолчанию</string>
-    <string name="priority_high">Высокий</string>
-    <string name="priority_low">Низкий</string>
-    <string name="priority_min">Мин</string>
-    <string name="radius_format">Радиус: %d м</string>
-    <string name="remove">Удалять</string>
-    <string name="ringer_mode">Режим звонка</string>
-    <string name="ringer_normal">Нормальный</string>
-    <string name="ringer_silent">Тихий</string>
-    <string name="ringer_vibrate">Вибрация</string>
-    <string name="summary_brightness">Яркость: %s</string>
-    <string name="summary_dnd">Не беспокоить: %s</string>
-    <string name="summary_notification">Уведомить: %s</string>
-    <string name="summary_ringer_mode">Звонок: %s</string>
-    <string name="summary_volume">Объем: M%d R%d A%d N%d</string>
-    <string name="tile_label">Рутина</string>
+
+
+    <string name="add_action_dialog">Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ</string>
+
+    <string name="back">ÐÐ°Ð·Ð°Ð´</string>
+    <string name="dnd_allow_alarms">Ð Ð°Ð·Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ ÑÐ¸Ð³Ð½Ð°Ð»Ñ‹ Ñ‚Ñ€ÐµÐ²Ð¾Ð³Ð¸</string>
+    <string name="dnd_allow_calls">Ð Ð°Ð·Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ Ð·Ð²Ð¾Ð½ÐºÐ¸ Ð¾Ñ‚</string>
+    <string name="dnd_allow_contacts">ÐšÐ¾Ð½Ñ‚Ð°ÐºÑ‚Ñ‹</string>
+    <string name="dnd_allow_everyone">ÐšÐ°Ð¶Ð´Ñ‹Ð¹</string>
+    <string name="dnd_allow_media">Ð Ð°Ð·Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ Ð¼ÐµÐ´Ð¸Ð°</string>
+    <string name="dnd_allow_messages">Ð Ð°Ð·Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ñ Ð¾Ñ‚</string>
+    <string name="dnd_allow_none">ÐÐ¸ÐºÑ‚Ð¾</string>
+    <string name="dnd_allow_starred">ÐŸÐ¾Ð¼ÐµÑ‡ÐµÐ½Ð½Ñ‹Ðµ ÐºÐ¾Ð½Ñ‚Ð°ÐºÑ‚Ñ‹</string>
+    <string name="dnd_allow_system">Ð Ð°Ð·Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ ÑÐ¸ÑÑ‚ÐµÐ¼Ñƒ</string>
+    <string name="dnd_customize">ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹Ñ‚Ðµ Ð¿Ñ€ÐµÑ€Ñ‹Ð²Ð°Ð½Ð¸Ñ</string>
+    <string name="dnd_mode">Ð ÐµÐ¶Ð¸Ð¼ Â«ÐÐµ Ð±ÐµÑÐ¿Ð¾ÐºÐ¾Ð¸Ñ‚ÑŒÂ»</string>
+    <string name="foreground_service_active">ÐŸÑ€Ð¾Ñ†ÐµÐ´ÑƒÑ€Ñ‹ Ð¼Ð¾Ð½Ð¸Ñ‚Ð¾Ñ€Ð¸Ð½Ð³Ð° Ð² Ñ„Ð¾Ð½Ð¾Ð²Ð¾Ð¼ Ñ€ÐµÐ¶Ð¸Ð¼Ðµ</string>
+    <string name="get_current_location">ÐŸÐ¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ Ñ‚ÐµÐºÑƒÑ‰ÐµÐµ Ð¼ÐµÑÑ‚Ð¾Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ</string>
+    <string name="level_format">Ð£Ñ€Ð¾Ð²ÐµÐ½ÑŒ: %d%%</string>
+
+    <string name="ok">Ð¥ÐžÐ ÐžÐ¨Ðž</string>
+
+
+    <string name="priority">ÐŸÑ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚</string>
+    <string name="priority_default">ÐŸÐ¾ ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ</string>
+    <string name="priority_high">Ð’Ñ‹ÑÐ¾ÐºÐ¸Ð¹</string>
+    <string name="priority_low">ÐÐ¸Ð·ÐºÐ¸Ð¹</string>
+    <string name="priority_min">ÐœÐ¸Ð½</string>
+    <string name="radius_format">Ð Ð°Ð´Ð¸ÑƒÑ: %d Ð¼</string>
+    <string name="remove">Ð£Ð´Ð°Ð»ÑÑ‚ÑŒ</string>
+    <string name="ringer_mode">Ð ÐµÐ¶Ð¸Ð¼ Ð·Ð²Ð¾Ð½ÐºÐ°</string>
+    <string name="ringer_normal">ÐÐ¾Ñ€Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹</string>
+    <string name="ringer_silent">Ð¢Ð¸Ñ…Ð¸Ð¹</string>
+    <string name="ringer_vibrate">Ð’Ð¸Ð±Ñ€Ð°Ñ†Ð¸Ñ</string>
+    <string name="summary_brightness">Ð¯Ñ€ÐºÐ¾ÑÑ‚ÑŒ: %s</string>
+    <string name="summary_dnd">ÐÐµ Ð±ÐµÑÐ¿Ð¾ÐºÐ¾Ð¸Ñ‚ÑŒ: %s</string>
+    <string name="summary_notification">Ð£Ð²ÐµÐ´Ð¾Ð¼Ð¸Ñ‚ÑŒ: %s</string>
+    <string name="summary_ringer_mode">Ð—Ð²Ð¾Ð½Ð¾Ðº: %s</string>
+    <string name="summary_volume">ÐžÐ±ÑŠÐµÐ¼: M%d R%d A%d N%d</string>
+    <string name="tile_label">Ð ÑƒÑ‚Ð¸Ð½Ð°</string>
+
+    <string name="battery_optimization_title">Оптимизация батареи</string>
+    <string name="battery_optimization_summary">Предотвращает остановку приложения системой в фоновом режиме</string>
+    <string name="battery_optimization_disabled">Отключено — нажмите чтобы изменить</string>
+    <string name="battery_optimization_enabled">Включено</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

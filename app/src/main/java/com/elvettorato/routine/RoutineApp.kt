@@ -11,12 +11,14 @@ class RoutineApp : Application() {
     companion object {
         const val CHANNEL_ROUTINE = "routine_actions"
         const val CHANNEL_LOCATION = "routine_location"
+        const val CHANNEL_CRASH = "routine_crash"
     }
 
     override fun onCreate() {
         super.onCreate()
         SettingsManager.init(this)
         createNotificationChannels()
+        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(this))
     }
 
     private fun createNotificationChannels() {
@@ -34,6 +36,13 @@ class RoutineApp : Application() {
                 NotificationManager.IMPORTANCE_LOW
             ).apply {
                 description = "Foreground service for location monitoring"
+            },
+            NotificationChannel(
+                CHANNEL_CRASH,
+                "Crash Reports",
+                NotificationManager.IMPORTANCE_HIGH
+            ).apply {
+                description = "App crash notifications"
             }
         )
         val manager = getSystemService(NotificationManager::class.java)

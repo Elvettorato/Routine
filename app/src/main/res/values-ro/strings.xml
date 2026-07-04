@@ -1,43 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rutină</string>
-    <string name="no_routines">Încă nu există routines</string>
-    <string name="tap_to_add">Apăsați + pentru a crea prima dvs. routine</string>
-    <string name="add_routine">Adăugați routine</string>
-    <string name="new_routine">Routine nouă</string>
-    <string name="edit_routine">Editați routine</string>
+    <string name="app_name">RutinÄƒ</string>
+    <string name="no_routines">ÃŽncÄƒ nu existÄƒ routines</string>
+    <string name="tap_to_add">ApÄƒsaÈ›i + pentru a crea prima dvs. routine</string>
+    <string name="add_routine">AdÄƒugaÈ›i routine</string>
+    <string name="new_routine">Routine nouÄƒ</string>
+    <string name="edit_routine">EditaÈ›i routine</string>
     <string name="routine_name">Numele routine</string>
-    <string name="trigger">Declanșator</string>
+    <string name="trigger">DeclanÈ™ator</string>
     <string name="time">Ora</string>
-    <string name="location">Locație</string>
-    <string name="actions">Acțiuni</string>
-    <string name="add_action">Adăugați acțiune</string>
-    <string name="save_routine">Salvați routine</string>
-    <string name="saving">Se salvează…</string>
-    <string name="delete">Ștergeți</string>
-    <string name="cancel">Anulați</string>
-    <string name="save">Salvați</string>
+    <string name="location">LocaÈ›ie</string>
+    <string name="actions">AcÈ›iuni</string>
+    <string name="add_action">AdÄƒugaÈ›i acÈ›iune</string>
+    <string name="save_routine">SalvaÈ›i routine</string>
+    <string name="saving">Se salveazÄƒâ€¦</string>
+    <string name="delete">È˜tergeÈ›i</string>
+    <string name="cancel">AnulaÈ›i</string>
+    <string name="save">SalvaÈ›i</string>
 
-    <string name="select_time">Selectați ora</string>
-    <string name="repeat_on">Repetați</string>
+    <string name="select_time">SelectaÈ›i ora</string>
+    <string name="repeat_on">RepetaÈ›i</string>
 
 
 
     <string name="on_enter">La intrare</string>
-    <string name="on_exit">La ieșire</string>
-    <string name="action_type">Tip acțiune</string>
-    <string name="edit_action">Editați acțiunea</string>
+    <string name="on_exit">La ieÈ™ire</string>
+    <string name="action_type">Tip acÈ›iune</string>
+    <string name="edit_action">EditaÈ›i acÈ›iunea</string>
 <string name="notification_title">Titlu</string>
-    <string name="notification_content">Conținut</string>
+    <string name="notification_content">ConÈ›inut</string>
     <string name="auto">Auto</string>
 
     <string name="media">Media</string>
     <string name="ring">Sonerie</string>
-    <string name="alarm">Alarmă</string>
+    <string name="alarm">AlarmÄƒ</string>
     <string name="notification">Notificare</string>
     <string name="dnd_off">Oprit</string>
     <string name="dnd_priority">Doar prioritate</string>
-    <string name="dnd_total">Liniște totală</string>
+    <string name="dnd_total">LiniÈ™te totalÄƒ</string>
     <string name="dnd_alarms">Doar alarme</string>
 
 
@@ -48,7 +48,7 @@
     <string name="wed">Mie</string>
     <string name="thu">Joi</string>
     <string name="fri">Vin</string>
-    <string name="sat">Sâm</string>
+    <string name="sat">SÃ¢m</string>
     <string name="sun">Dum</string>
 
 
@@ -56,22 +56,22 @@
 
 
 
-    <string name="add_action_dialog">Adăugați o acțiune</string>
+    <string name="add_action_dialog">AdÄƒugaÈ›i o acÈ›iune</string>
 
     <string name="back">Spate</string>
     <string name="dnd_allow_alarms">Permite alarme</string>
     <string name="dnd_allow_calls">Permite apeluri de la</string>
     <string name="dnd_allow_contacts">Contacte</string>
-    <string name="dnd_allow_everyone">Toată lumea</string>
+    <string name="dnd_allow_everyone">ToatÄƒ lumea</string>
     <string name="dnd_allow_media">Permite media</string>
     <string name="dnd_allow_messages">Permite mesaje de la</string>
     <string name="dnd_allow_none">Nimeni</string>
     <string name="dnd_allow_starred">Contacte marcate cu stea</string>
     <string name="dnd_allow_system">Permite sistemul</string>
-    <string name="dnd_customize">Personalizați întreruperile</string>
+    <string name="dnd_customize">PersonalizaÈ›i Ã®ntreruperile</string>
     <string name="dnd_mode">Modul Nu deranja</string>
-    <string name="foreground_service_active">Monitorizarea rutinelor în fundal</string>
-    <string name="get_current_location">Obțineți locația curentă</string>
+    <string name="foreground_service_active">Monitorizarea rutinelor Ã®n fundal</string>
+    <string name="get_current_location">ObÈ›ineÈ›i locaÈ›ia curentÄƒ</string>
     <string name="level_format">Nivel: %d%%</string>
 
     <string name="ok">Bine</string>
@@ -80,20 +80,31 @@
     <string name="priority">Prioritate</string>
     <string name="priority_default">Implicit</string>
     <string name="priority_high">Ridicat</string>
-    <string name="priority_low">Scăzut</string>
+    <string name="priority_low">ScÄƒzut</string>
     <string name="priority_min">Min</string>
     <string name="radius_format">Raza: %d m</string>
     <string name="remove">Elimina</string>
     <string name="ringer_mode">Modul sonerie</string>
     <string name="ringer_normal">Normal</string>
-    <string name="ringer_silent">Tăcut</string>
-    <string name="ringer_vibrate">Vibrați</string>
+    <string name="ringer_silent">TÄƒcut</string>
+    <string name="ringer_vibrate">VibraÈ›i</string>
     <string name="summary_brightness">Luminozitate: %s</string>
     <string name="summary_dnd">DND: %s</string>
     <string name="summary_notification">Notificare: %s</string>
     <string name="summary_ringer_mode">Sonerie: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
-    <string name="tile_label">Rutină</string>
+    <string name="tile_label">RutinÄƒ</string>
+
+    <string name="battery_optimization_title">Optimizare baterie</string>
+    <string name="battery_optimization_summary">Împiedică sistemul să oprească aplicația în fundal</string>
+    <string name="battery_optimization_disabled">Dezactivat — atingeți pentru a modifica</string>
+    <string name="battery_optimization_enabled">Activat</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

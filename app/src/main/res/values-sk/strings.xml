@@ -1,44 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutina</string>
-    <string name="no_routines">Zatiaľ žiadne routines</string>
-    <string name="tap_to_add">Klepnite na + a vytvorte svoju prvú routine</string>
-    <string name="add_routine">Pridať routine</string>
-    <string name="new_routine">Nová routine</string>
-    <string name="edit_routine">Upraviť routine</string>
-    <string name="routine_name">Názov routine</string>
-    <string name="trigger">Spúšťač</string>
-    <string name="time">Čas</string>
+    <string name="no_routines">ZatiaÄ¾ Å¾iadne routines</string>
+    <string name="tap_to_add">Klepnite na + a vytvorte svoju prvÃº routine</string>
+    <string name="add_routine">PridaÅ¥ routine</string>
+    <string name="new_routine">NovÃ¡ routine</string>
+    <string name="edit_routine">UpraviÅ¥ routine</string>
+    <string name="routine_name">NÃ¡zov routine</string>
+    <string name="trigger">SpÃºÅ¡Å¥aÄ</string>
+    <string name="time">ÄŒas</string>
     <string name="location">Poloha</string>
     <string name="actions">Akcie</string>
-    <string name="add_action">Pridať akciu</string>
-    <string name="save_routine">Uložiť routine</string>
-    <string name="saving">Ukladanie…</string>
-    <string name="delete">Odstrániť</string>
-    <string name="cancel">Zrušiť</string>
-    <string name="save">Uložiť</string>
+    <string name="add_action">PridaÅ¥ akciu</string>
+    <string name="save_routine">UloÅ¾iÅ¥ routine</string>
+    <string name="saving">Ukladanieâ€¦</string>
+    <string name="delete">OdstrÃ¡niÅ¥</string>
+    <string name="cancel">ZruÅ¡iÅ¥</string>
+    <string name="save">UloÅ¾iÅ¥</string>
 
-    <string name="select_time">Vybrať čas</string>
-    <string name="repeat_on">Opakovať v</string>
+    <string name="select_time">VybraÅ¥ Äas</string>
+    <string name="repeat_on">OpakovaÅ¥ v</string>
 
 
 
     <string name="on_enter">Pri vstupe</string>
     <string name="on_exit">Pri odchode</string>
     <string name="action_type">Typ akcie</string>
-    <string name="edit_action">Upraviť akciu</string>
+    <string name="edit_action">UpraviÅ¥ akciu</string>
 <string name="notification_title">Titulok</string>
     <string name="notification_content">Obsah</string>
     <string name="auto">Auto</string>
 
-    <string name="media">Médiá</string>
+    <string name="media">MÃ©diÃ¡</string>
     <string name="ring">Zvonenie</string>
-    <string name="alarm">Budík</string>
-    <string name="notification">Oznámenie</string>
-    <string name="dnd_off">Vypnuté</string>
+    <string name="alarm">BudÃ­k</string>
+    <string name="notification">OznÃ¡menie</string>
+    <string name="dnd_off">VypnutÃ©</string>
     <string name="dnd_priority">Iba priorita</string>
-    <string name="dnd_total">Úplné ticho</string>
-    <string name="dnd_alarms">Iba budíky</string>
+    <string name="dnd_total">ÃšplnÃ© ticho</string>
+    <string name="dnd_alarms">Iba budÃ­ky</string>
 
 
 
@@ -46,7 +46,7 @@
     <string name="mon">Po</string>
     <string name="tue">Ut</string>
     <string name="wed">St</string>
-    <string name="thu">Št</string>
+    <string name="thu">Å t</string>
     <string name="fri">Pi</string>
     <string name="sat">So</string>
     <string name="sun">Ne</string>
@@ -56,44 +56,55 @@
 
 
 
-    <string name="add_action_dialog">Pridať akciu</string>
+    <string name="add_action_dialog">PridaÅ¥ akciu</string>
 
-    <string name="back">Späť</string>
-    <string name="dnd_allow_alarms">Povoliť budíky</string>
-    <string name="dnd_allow_calls">Povoliť hovory z</string>
+    <string name="back">SpÃ¤Å¥</string>
+    <string name="dnd_allow_alarms">PovoliÅ¥ budÃ­ky</string>
+    <string name="dnd_allow_calls">PovoliÅ¥ hovory z</string>
     <string name="dnd_allow_contacts">Kontakty</string>
-    <string name="dnd_allow_everyone">Všetci</string>
-    <string name="dnd_allow_media">Povoliť médiá</string>
-    <string name="dnd_allow_messages">Povoliť správy od</string>
+    <string name="dnd_allow_everyone">VÅ¡etci</string>
+    <string name="dnd_allow_media">PovoliÅ¥ mÃ©diÃ¡</string>
+    <string name="dnd_allow_messages">PovoliÅ¥ sprÃ¡vy od</string>
     <string name="dnd_allow_none">Nikto</string>
-    <string name="dnd_allow_starred">Kontakty označené hviezdičkou</string>
-    <string name="dnd_allow_system">Povoliť systém</string>
-    <string name="dnd_customize">Prispôsobte prerušenia</string>
-    <string name="dnd_mode">Režim Nerušiť</string>
-    <string name="foreground_service_active">Monitorovacie rutiny na pozadí</string>
-    <string name="get_current_location">Získajte aktuálnu polohu</string>
-    <string name="level_format">Úroveň: %d%%</string>
+    <string name="dnd_allow_starred">Kontakty oznaÄenÃ© hviezdiÄkou</string>
+    <string name="dnd_allow_system">PovoliÅ¥ systÃ©m</string>
+    <string name="dnd_customize">PrispÃ´sobte preruÅ¡enia</string>
+    <string name="dnd_mode">ReÅ¾im NeruÅ¡iÅ¥</string>
+    <string name="foreground_service_active">Monitorovacie rutiny na pozadÃ­</string>
+    <string name="get_current_location">ZÃ­skajte aktuÃ¡lnu polohu</string>
+    <string name="level_format">ÃšroveÅˆ: %d%%</string>
 
     <string name="ok">OK</string>
 
 
     <string name="priority">Priorita</string>
-    <string name="priority_default">Predvolené</string>
-    <string name="priority_high">Vysoká</string>
-    <string name="priority_low">Nízka</string>
+    <string name="priority_default">PredvolenÃ©</string>
+    <string name="priority_high">VysokÃ¡</string>
+    <string name="priority_low">NÃ­zka</string>
     <string name="priority_min">Min</string>
     <string name="radius_format">Polomer: %d m</string>
-    <string name="remove">Odstrániť</string>
-    <string name="ringer_mode">Režim zvonenia</string>
-    <string name="ringer_normal">Normálne</string>
-    <string name="ringer_silent">Tichý</string>
-    <string name="ringer_vibrate">Vibrovať</string>
+    <string name="remove">OdstrÃ¡niÅ¥</string>
+    <string name="ringer_mode">ReÅ¾im zvonenia</string>
+    <string name="ringer_normal">NormÃ¡lne</string>
+    <string name="ringer_silent">TichÃ½</string>
+    <string name="ringer_vibrate">VibrovaÅ¥</string>
     <string name="summary_brightness">Jas: %s</string>
     <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Upozorniť: %s</string>
+    <string name="summary_notification">UpozorniÅ¥: %s</string>
     <string name="summary_ringer_mode">Zvonenie: %s</string>
     <string name="summary_volume">Objem: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutina</string>
+
+    <string name="battery_optimization_title">Optimalizácia batérie</string>
+    <string name="battery_optimization_summary">Zabraňuje systému v zastavení aplikácie na pozadí</string>
+    <string name="battery_optimization_disabled">Vypnuté — ťuknite pre zmenu</string>
+    <string name="battery_optimization_enabled">Zapnuté</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

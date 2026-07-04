@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Errutina</string>
     <string name="no_routines">Oraindik ez dago errutinarik</string>
@@ -13,7 +13,7 @@
     <string name="actions">Ekintzak</string>
     <string name="add_action">Ekintza gehitu</string>
     <string name="save_routine">Errutina gorde</string>
-    <string name="saving">Gordetzen…</string>
+    <string name="saving">Gordetzenâ€¦</string>
     <string name="delete">Ezabatu</string>
     <string name="cancel">Utzi</string>
     <string name="save">Gorde</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Dei-jotzailea: %s</string>
     <string name="summary_volume">Bolumena: M%d R%d A%d N%d</string>
     <string name="tile_label">Errutina</string>
+
+    <string name="battery_optimization_title">Bateria optimizazioa</string>
+    <string name="battery_optimization_summary">Sistemak atzeko planoan aplikazioa gelditzea eragozten du</string>
+    <string name="battery_optimization_disabled">Desgaituta — sakatu aldatzeko</string>
+    <string name="battery_optimization_enabled">Gaituta</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

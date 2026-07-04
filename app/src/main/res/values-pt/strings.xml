@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rotina</string>
     <string name="no_routines">Nenhuma rotina ainda</string>
@@ -9,11 +9,11 @@
     <string name="routine_name">Nome da Rotina</string>
     <string name="trigger">Gatilho</string>
     <string name="time">Hora</string>
-    <string name="location">Localização</string>
-    <string name="actions">Ações</string>
-    <string name="add_action">Adicionar Ação</string>
+    <string name="location">LocalizaÃ§Ã£o</string>
+    <string name="actions">AÃ§Ãµes</string>
+    <string name="add_action">Adicionar AÃ§Ã£o</string>
     <string name="save_routine">Salvar Rotina</string>
-    <string name="saving">Salvando…</string>
+    <string name="saving">Salvandoâ€¦</string>
     <string name="delete">Excluir</string>
     <string name="cancel">Cancelar</string>
     <string name="save">Salvar</string>
@@ -25,19 +25,19 @@
 
     <string name="on_enter">Ao entrar</string>
     <string name="on_exit">Ao sair</string>
-    <string name="action_type">Tipo de Ação</string>
-    <string name="edit_action">Editar Ação</string>
-<string name="notification_title">Título</string>
-    <string name="notification_content">Conteúdo</string>
+    <string name="action_type">Tipo de AÃ§Ã£o</string>
+    <string name="edit_action">Editar AÃ§Ã£o</string>
+<string name="notification_title">TÃ­tulo</string>
+    <string name="notification_content">ConteÃºdo</string>
     <string name="auto">Auto</string>
 
-    <string name="media">Mídia</string>
+    <string name="media">MÃ­dia</string>
     <string name="ring">Toque</string>
     <string name="alarm">Alarme</string>
-    <string name="notification">Notificação</string>
+    <string name="notification">NotificaÃ§Ã£o</string>
     <string name="dnd_off">Desligado</string>
     <string name="dnd_priority">Apenas prioridade</string>
-    <string name="dnd_total">Silêncio total</string>
+    <string name="dnd_total">SilÃªncio total</string>
     <string name="dnd_alarms">Apenas alarmes</string>
 
 
@@ -48,7 +48,7 @@
     <string name="wed">Qua</string>
     <string name="thu">Qui</string>
     <string name="fri">Sex</string>
-    <string name="sat">Sáb</string>
+    <string name="sat">SÃ¡b</string>
     <string name="sun">Dom</string>
 
 
@@ -56,32 +56,32 @@
 
 
 
-    <string name="add_action_dialog">Adicionar ação</string>
+    <string name="add_action_dialog">Adicionar aÃ§Ã£o</string>
 
     <string name="back">Voltar</string>
     <string name="dnd_allow_alarms">Permitir alarmes</string>
     <string name="dnd_allow_calls">Permitir chamadas de</string>
     <string name="dnd_allow_contacts">Contatos</string>
     <string name="dnd_allow_everyone">Todos</string>
-    <string name="dnd_allow_media">Permitir mídia</string>
+    <string name="dnd_allow_media">Permitir mÃ­dia</string>
     <string name="dnd_allow_messages">Permitir mensagens de</string>
-    <string name="dnd_allow_none">Ninguém</string>
+    <string name="dnd_allow_none">NinguÃ©m</string>
     <string name="dnd_allow_starred">Contatos marcados com estrela</string>
     <string name="dnd_allow_system">Permitir sistema</string>
-    <string name="dnd_customize">Personalize interrupções</string>
-    <string name="dnd_mode">Modo Não perturbe</string>
+    <string name="dnd_customize">Personalize interrupÃ§Ãµes</string>
+    <string name="dnd_mode">Modo NÃ£o perturbe</string>
     <string name="foreground_service_active">Monitorando rotinas em segundo plano</string>
-    <string name="get_current_location">Obtenha a localização atual</string>
-    <string name="level_format">Nível: %d%%</string>
+    <string name="get_current_location">Obtenha a localizaÃ§Ã£o atual</string>
+    <string name="level_format">NÃ­vel: %d%%</string>
 
     <string name="ok">OK</string>
 
 
     <string name="priority">Prioridade</string>
-    <string name="priority_default">Padrão</string>
+    <string name="priority_default">PadrÃ£o</string>
     <string name="priority_high">Alto</string>
     <string name="priority_low">Baixo</string>
-    <string name="priority_min">Mínimo</string>
+    <string name="priority_min">MÃ­nimo</string>
     <string name="radius_format">Raio: %dm</string>
     <string name="remove">Remover</string>
     <string name="ringer_mode">Modo de campainha</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Campainha: %s</string>
     <string name="summary_volume">Volume: M%d R%d A%d N%d</string>
     <string name="tile_label">Rotina</string>
+
+    <string name="battery_optimization_title">Otimização da bateria</string>
+    <string name="battery_optimization_summary">Impede o sistema de parar o aplicativo em segundo plano</string>
+    <string name="battery_optimization_disabled">Desativado — toque para alterar</string>
+    <string name="battery_optimization_enabled">Ativado</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

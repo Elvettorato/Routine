@@ -1,99 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">दिनचर्या</string>
-    <string name="no_routines">अभी तक कोई रूटीन नहीं</string>
-    <string name="tap_to_add">अपनी पहली रूटीन बनाने के लिए + पर टैप करें</string>
-    <string name="add_routine">रूटीन जोड़ें</string>
-    <string name="new_routine">नई रूटीन</string>
-    <string name="edit_routine">रूटीन संपादित करें</string>
-    <string name="routine_name">रूटीन का नाम</string>
-    <string name="trigger">ट्रिगर</string>
-    <string name="time">समय</string>
-    <string name="location">स्थान</string>
-    <string name="actions">क्रियाएँ</string>
-    <string name="add_action">क्रिया जोड़ें</string>
-    <string name="save_routine">रूटीन सहेजें</string>
-    <string name="saving">सहेजा जा रहा है…</string>
-    <string name="delete">हटाएँ</string>
-    <string name="cancel">रद्द करें</string>
-    <string name="save">सहेजें</string>
+    <string name="app_name">à¤¦à¤¿à¤¨à¤šà¤°à¥à¤¯à¤¾</string>
+    <string name="no_routines">à¤…à¤­à¥€ à¤¤à¤• à¤•à¥‹à¤ˆ à¤°à¥‚à¤Ÿà¥€à¤¨ à¤¨à¤¹à¥€à¤‚</string>
+    <string name="tap_to_add">à¤…à¤ªà¤¨à¥€ à¤ªà¤¹à¤²à¥€ à¤°à¥‚à¤Ÿà¥€à¤¨ à¤¬à¤¨à¤¾à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ + à¤ªà¤° à¤Ÿà¥ˆà¤ª à¤•à¤°à¥‡à¤‚</string>
+    <string name="add_routine">à¤°à¥‚à¤Ÿà¥€à¤¨ à¤œà¥‹à¤¡à¤¼à¥‡à¤‚</string>
+    <string name="new_routine">à¤¨à¤ˆ à¤°à¥‚à¤Ÿà¥€à¤¨</string>
+    <string name="edit_routine">à¤°à¥‚à¤Ÿà¥€à¤¨ à¤¸à¤‚à¤ªà¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¥‡à¤‚</string>
+    <string name="routine_name">à¤°à¥‚à¤Ÿà¥€à¤¨ à¤•à¤¾ à¤¨à¤¾à¤®</string>
+    <string name="trigger">à¤Ÿà¥à¤°à¤¿à¤—à¤°</string>
+    <string name="time">à¤¸à¤®à¤¯</string>
+    <string name="location">à¤¸à¥à¤¥à¤¾à¤¨</string>
+    <string name="actions">à¤•à¥à¤°à¤¿à¤¯à¤¾à¤à¤</string>
+    <string name="add_action">à¤•à¥à¤°à¤¿à¤¯à¤¾ à¤œà¥‹à¤¡à¤¼à¥‡à¤‚</string>
+    <string name="save_routine">à¤°à¥‚à¤Ÿà¥€à¤¨ à¤¸à¤¹à¥‡à¤œà¥‡à¤‚</string>
+    <string name="saving">à¤¸à¤¹à¥‡à¤œà¤¾ à¤œà¤¾ à¤°à¤¹à¤¾ à¤¹à¥ˆâ€¦</string>
+    <string name="delete">à¤¹à¤Ÿà¤¾à¤à¤</string>
+    <string name="cancel">à¤°à¤¦à¥à¤¦ à¤•à¤°à¥‡à¤‚</string>
+    <string name="save">à¤¸à¤¹à¥‡à¤œà¥‡à¤‚</string>
 
-    <string name="select_time">समय चुनें</string>
-    <string name="repeat_on">दोहराएँ</string>
-
-
-
-    <string name="on_enter">प्रवेश पर</string>
-    <string name="on_exit">निकास पर</string>
-    <string name="action_type">क्रिया प्रकार</string>
-    <string name="edit_action">क्रिया संपादित करें</string>
-<string name="notification_title">शीर्षक</string>
-    <string name="notification_content">सामग्री</string>
-    <string name="auto">ऑटो</string>
-
-    <string name="media">मीडिया</string>
-    <string name="ring">रिंग</string>
-    <string name="alarm">अलार्म</string>
-    <string name="notification">सूचना</string>
-    <string name="dnd_off">बंद</string>
-    <string name="dnd_priority">केवल प्राथमिकता</string>
-    <string name="dnd_total">पूर्ण मौन</string>
-    <string name="dnd_alarms">केवल अलार्म</string>
+    <string name="select_time">à¤¸à¤®à¤¯ à¤šà¥à¤¨à¥‡à¤‚</string>
+    <string name="repeat_on">à¤¦à¥‹à¤¹à¤°à¤¾à¤à¤</string>
 
 
 
+    <string name="on_enter">à¤ªà¥à¤°à¤µà¥‡à¤¶ à¤ªà¤°</string>
+    <string name="on_exit">à¤¨à¤¿à¤•à¤¾à¤¸ à¤ªà¤°</string>
+    <string name="action_type">à¤•à¥à¤°à¤¿à¤¯à¤¾ à¤ªà¥à¤°à¤•à¤¾à¤°</string>
+    <string name="edit_action">à¤•à¥à¤°à¤¿à¤¯à¤¾ à¤¸à¤‚à¤ªà¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¥‡à¤‚</string>
+<string name="notification_title">à¤¶à¥€à¤°à¥à¤·à¤•</string>
+    <string name="notification_content">à¤¸à¤¾à¤®à¤—à¥à¤°à¥€</string>
+    <string name="auto">à¤‘à¤Ÿà¥‹</string>
 
-    <string name="mon">सोम</string>
-    <string name="tue">मंगल</string>
-    <string name="wed">बुध</string>
-    <string name="thu">गुरु</string>
-    <string name="fri">शुक्र</string>
-    <string name="sat">शनि</string>
-    <string name="sun">रवि</string>
+    <string name="media">à¤®à¥€à¤¡à¤¿à¤¯à¤¾</string>
+    <string name="ring">à¤°à¤¿à¤‚à¤—</string>
+    <string name="alarm">à¤…à¤²à¤¾à¤°à¥à¤®</string>
+    <string name="notification">à¤¸à¥‚à¤šà¤¨à¤¾</string>
+    <string name="dnd_off">à¤¬à¤‚à¤¦</string>
+    <string name="dnd_priority">à¤•à¥‡à¤µà¤² à¤ªà¥à¤°à¤¾à¤¥à¤®à¤¿à¤•à¤¤à¤¾</string>
+    <string name="dnd_total">à¤ªà¥‚à¤°à¥à¤£ à¤®à¥Œà¤¨</string>
+    <string name="dnd_alarms">à¤•à¥‡à¤µà¤² à¤…à¤²à¤¾à¤°à¥à¤®</string>
 
 
 
 
+    <string name="mon">à¤¸à¥‹à¤®</string>
+    <string name="tue">à¤®à¤‚à¤—à¤²</string>
+    <string name="wed">à¤¬à¥à¤§</string>
+    <string name="thu">à¤—à¥à¤°à¥</string>
+    <string name="fri">à¤¶à¥à¤•à¥à¤°</string>
+    <string name="sat">à¤¶à¤¨à¤¿</string>
+    <string name="sun">à¤°à¤µà¤¿</string>
 
 
-    <string name="add_action_dialog">क्रिया जोड़ें</string>
-
-    <string name="back">पीछे</string>
-    <string name="dnd_allow_alarms">अलार्म की अनुमति दें</string>
-    <string name="dnd_allow_calls">से कॉल की अनुमति दें</string>
-    <string name="dnd_allow_contacts">संपर्क</string>
-    <string name="dnd_allow_everyone">सब लोग</string>
-    <string name="dnd_allow_media">मीडिया को अनुमति दें</string>
-    <string name="dnd_allow_messages">से संदेशों की अनुमति दें</string>
-    <string name="dnd_allow_none">कोई नहीं</string>
-    <string name="dnd_allow_starred">तारांकित संपर्क</string>
-    <string name="dnd_allow_system">सिस्टम को अनुमति दें</string>
-    <string name="dnd_customize">रुकावटों को अनुकूलित करें</string>
-    <string name="dnd_mode">परेशान न करें मोड</string>
-    <string name="foreground_service_active">पृष्ठभूमि में निगरानी दिनचर्या</string>
-    <string name="get_current_location">वर्तमान स्थान प्राप्त करें</string>
-    <string name="level_format">स्तर: %d%%</string>
-
-    <string name="ok">ठीक है</string>
 
 
-    <string name="priority">प्राथमिकता</string>
-    <string name="priority_default">गलती करना</string>
-    <string name="priority_high">उच्च</string>
-    <string name="priority_low">कम</string>
-    <string name="priority_min">मिन</string>
-    <string name="radius_format">त्रिज्या: %d मी</string>
-    <string name="remove">निकालना</string>
-    <string name="ringer_mode">रिंगर मोड</string>
-    <string name="ringer_normal">सामान्य</string>
-    <string name="ringer_silent">चुपचाप</string>
-    <string name="ringer_vibrate">कंपन</string>
-    <string name="summary_brightness">चमक: %s</string>
-    <string name="summary_dnd">डीएनडी: %s</string>
-    <string name="summary_notification">सूचित करें: %s</string>
-    <string name="summary_ringer_mode">रिंगर: %s</string>
-    <string name="summary_volume">वॉल्यूम: M%d R%d A%d N%d</string>
-    <string name="tile_label">दिनचर्या</string>
+
+
+    <string name="add_action_dialog">à¤•à¥à¤°à¤¿à¤¯à¤¾ à¤œà¥‹à¤¡à¤¼à¥‡à¤‚</string>
+
+    <string name="back">à¤ªà¥€à¤›à¥‡</string>
+    <string name="dnd_allow_alarms">à¤…à¤²à¤¾à¤°à¥à¤® à¤•à¥€ à¤…à¤¨à¥à¤®à¤¤à¤¿ à¤¦à¥‡à¤‚</string>
+    <string name="dnd_allow_calls">à¤¸à¥‡ à¤•à¥‰à¤² à¤•à¥€ à¤…à¤¨à¥à¤®à¤¤à¤¿ à¤¦à¥‡à¤‚</string>
+    <string name="dnd_allow_contacts">à¤¸à¤‚à¤ªà¤°à¥à¤•</string>
+    <string name="dnd_allow_everyone">à¤¸à¤¬ à¤²à¥‹à¤—</string>
+    <string name="dnd_allow_media">à¤®à¥€à¤¡à¤¿à¤¯à¤¾ à¤•à¥‹ à¤…à¤¨à¥à¤®à¤¤à¤¿ à¤¦à¥‡à¤‚</string>
+    <string name="dnd_allow_messages">à¤¸à¥‡ à¤¸à¤‚à¤¦à¥‡à¤¶à¥‹à¤‚ à¤•à¥€ à¤…à¤¨à¥à¤®à¤¤à¤¿ à¤¦à¥‡à¤‚</string>
+    <string name="dnd_allow_none">à¤•à¥‹à¤ˆ à¤¨à¤¹à¥€à¤‚</string>
+    <string name="dnd_allow_starred">à¤¤à¤¾à¤°à¤¾à¤‚à¤•à¤¿à¤¤ à¤¸à¤‚à¤ªà¤°à¥à¤•</string>
+    <string name="dnd_allow_system">à¤¸à¤¿à¤¸à¥à¤Ÿà¤® à¤•à¥‹ à¤…à¤¨à¥à¤®à¤¤à¤¿ à¤¦à¥‡à¤‚</string>
+    <string name="dnd_customize">à¤°à¥à¤•à¤¾à¤µà¤Ÿà¥‹à¤‚ à¤•à¥‹ à¤…à¤¨à¥à¤•à¥‚à¤²à¤¿à¤¤ à¤•à¤°à¥‡à¤‚</string>
+    <string name="dnd_mode">à¤ªà¤°à¥‡à¤¶à¤¾à¤¨ à¤¨ à¤•à¤°à¥‡à¤‚ à¤®à¥‹à¤¡</string>
+    <string name="foreground_service_active">à¤ªà¥ƒà¤·à¥à¤ à¤­à¥‚à¤®à¤¿ à¤®à¥‡à¤‚ à¤¨à¤¿à¤—à¤°à¤¾à¤¨à¥€ à¤¦à¤¿à¤¨à¤šà¤°à¥à¤¯à¤¾</string>
+    <string name="get_current_location">à¤µà¤°à¥à¤¤à¤®à¤¾à¤¨ à¤¸à¥à¤¥à¤¾à¤¨ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤•à¤°à¥‡à¤‚</string>
+    <string name="level_format">à¤¸à¥à¤¤à¤°: %d%%</string>
+
+    <string name="ok">à¤ à¥€à¤• à¤¹à¥ˆ</string>
+
+
+    <string name="priority">à¤ªà¥à¤°à¤¾à¤¥à¤®à¤¿à¤•à¤¤à¤¾</string>
+    <string name="priority_default">à¤—à¤²à¤¤à¥€ à¤•à¤°à¤¨à¤¾</string>
+    <string name="priority_high">à¤‰à¤šà¥à¤š</string>
+    <string name="priority_low">à¤•à¤®</string>
+    <string name="priority_min">à¤®à¤¿à¤¨</string>
+    <string name="radius_format">à¤¤à¥à¤°à¤¿à¤œà¥à¤¯à¤¾: %d à¤®à¥€</string>
+    <string name="remove">à¤¨à¤¿à¤•à¤¾à¤²à¤¨à¤¾</string>
+    <string name="ringer_mode">à¤°à¤¿à¤‚à¤—à¤° à¤®à¥‹à¤¡</string>
+    <string name="ringer_normal">à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯</string>
+    <string name="ringer_silent">à¤šà¥à¤ªà¤šà¤¾à¤ª</string>
+    <string name="ringer_vibrate">à¤•à¤‚à¤ªà¤¨</string>
+    <string name="summary_brightness">à¤šà¤®à¤•: %s</string>
+    <string name="summary_dnd">à¤¡à¥€à¤à¤¨à¤¡à¥€: %s</string>
+    <string name="summary_notification">à¤¸à¥‚à¤šà¤¿à¤¤ à¤•à¤°à¥‡à¤‚: %s</string>
+    <string name="summary_ringer_mode">à¤°à¤¿à¤‚à¤—à¤°: %s</string>
+    <string name="summary_volume">à¤µà¥‰à¤²à¥à¤¯à¥‚à¤®: M%d R%d A%d N%d</string>
+    <string name="tile_label">à¤¦à¤¿à¤¨à¤šà¤°à¥à¤¯à¤¾</string>
+
+    <string name="battery_optimization_title">बैटरी ऑप्टिमाइज़ेशन</string>
+    <string name="battery_optimization_summary">सिस्टम को बैकग्राउंड में ऐप को रोकने से रोकता है</string>
+    <string name="battery_optimization_disabled">अक्षम — बदलने के लिए टैप करें</string>
+    <string name="battery_optimization_enabled">सक्षम</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

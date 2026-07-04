@@ -1,44 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lịch trình</string>
-    <string name="no_routines">Chưa có thói quen nào</string>
-    <string name="tap_to_add">Nhấn + để tạo thói quen đầu tiên của bạn</string>
-    <string name="add_routine">Thêm Thói quen</string>
-    <string name="new_routine">Thói quen mới</string>
-    <string name="edit_routine">Chỉnh sửa Thói quen</string>
-    <string name="routine_name">Tên Thói quen</string>
-    <string name="trigger">Trình kích hoạt</string>
-    <string name="time">Thời gian</string>
-    <string name="location">Vị trí</string>
-    <string name="actions">Hành động</string>
-    <string name="add_action">Thêm Hành động</string>
-    <string name="save_routine">Lưu Thói quen</string>
-    <string name="saving">Đang lưu…</string>
-    <string name="delete">Xoá</string>
-    <string name="cancel">Huỷ</string>
-    <string name="save">Lưu</string>
+    <string name="app_name">Lá»‹ch trÃ¬nh</string>
+    <string name="no_routines">ChÆ°a cÃ³ thÃ³i quen nÃ o</string>
+    <string name="tap_to_add">Nháº¥n + Ä‘á»ƒ táº¡o thÃ³i quen Ä‘áº§u tiÃªn cá»§a báº¡n</string>
+    <string name="add_routine">ThÃªm ThÃ³i quen</string>
+    <string name="new_routine">ThÃ³i quen má»›i</string>
+    <string name="edit_routine">Chá»‰nh sá»­a ThÃ³i quen</string>
+    <string name="routine_name">TÃªn ThÃ³i quen</string>
+    <string name="trigger">TrÃ¬nh kÃ­ch hoáº¡t</string>
+    <string name="time">Thá»i gian</string>
+    <string name="location">Vá»‹ trÃ­</string>
+    <string name="actions">HÃ nh Ä‘á»™ng</string>
+    <string name="add_action">ThÃªm HÃ nh Ä‘á»™ng</string>
+    <string name="save_routine">LÆ°u ThÃ³i quen</string>
+    <string name="saving">Äang lÆ°uâ€¦</string>
+    <string name="delete">XoÃ¡</string>
+    <string name="cancel">Huá»·</string>
+    <string name="save">LÆ°u</string>
 
-    <string name="select_time">Chọn Thời gian</string>
-    <string name="repeat_on">Lặp lại vào</string>
+    <string name="select_time">Chá»n Thá»i gian</string>
+    <string name="repeat_on">Láº·p láº¡i vÃ o</string>
 
 
 
-    <string name="on_enter">Khi vào</string>
+    <string name="on_enter">Khi vÃ o</string>
     <string name="on_exit">Khi ra</string>
-    <string name="action_type">Loại Hành động</string>
-    <string name="edit_action">Chỉnh sửa Hành động</string>
-<string name="notification_title">Tiêu đề</string>
-    <string name="notification_content">Nội dung</string>
-    <string name="auto">Tự động</string>
+    <string name="action_type">Loáº¡i HÃ nh Ä‘á»™ng</string>
+    <string name="edit_action">Chá»‰nh sá»­a HÃ nh Ä‘á»™ng</string>
+<string name="notification_title">TiÃªu Ä‘á»</string>
+    <string name="notification_content">Ná»™i dung</string>
+    <string name="auto">Tá»± Ä‘á»™ng</string>
 
-    <string name="media">Phương tiện</string>
-    <string name="ring">Đổ chuông</string>
-    <string name="alarm">Báo thức</string>
-    <string name="notification">Thông báo</string>
-    <string name="dnd_off">Tắt</string>
-    <string name="dnd_priority">Chỉ ưu tiên</string>
-    <string name="dnd_total">Im lặng hoàn toàn</string>
-    <string name="dnd_alarms">Chỉ báo thức</string>
+    <string name="media">PhÆ°Æ¡ng tiá»‡n</string>
+    <string name="ring">Äá»• chuÃ´ng</string>
+    <string name="alarm">BÃ¡o thá»©c</string>
+    <string name="notification">ThÃ´ng bÃ¡o</string>
+    <string name="dnd_off">Táº¯t</string>
+    <string name="dnd_priority">Chá»‰ Æ°u tiÃªn</string>
+    <string name="dnd_total">Im láº·ng hoÃ n toÃ n</string>
+    <string name="dnd_alarms">Chá»‰ bÃ¡o thá»©c</string>
 
 
 
@@ -56,44 +56,55 @@
 
 
 
-    <string name="add_action_dialog">Thêm hành động</string>
+    <string name="add_action_dialog">ThÃªm hÃ nh Ä‘á»™ng</string>
 
-    <string name="back">Mặt sau</string>
-    <string name="dnd_allow_alarms">Cho phép báo thức</string>
-    <string name="dnd_allow_calls">Cho phép cuộc gọi từ</string>
-    <string name="dnd_allow_contacts">Danh bạ</string>
-    <string name="dnd_allow_everyone">Mọi người</string>
-    <string name="dnd_allow_media">Cho phép phương tiện</string>
-    <string name="dnd_allow_messages">Cho phép tin nhắn từ</string>
-    <string name="dnd_allow_none">Không ai</string>
-    <string name="dnd_allow_starred">Địa chỉ liên hệ được gắn dấu sao</string>
-    <string name="dnd_allow_system">Cho phép hệ thống</string>
-    <string name="dnd_customize">Tùy chỉnh gián đoạn</string>
-    <string name="dnd_mode">Chế độ không làm phiền</string>
-    <string name="foreground_service_active">Giám sát các thói quen ở chế độ nền</string>
-    <string name="get_current_location">Nhận vị trí hiện tại</string>
-    <string name="level_format">Cấp độ: %d%%</string>
+    <string name="back">Máº·t sau</string>
+    <string name="dnd_allow_alarms">Cho phÃ©p bÃ¡o thá»©c</string>
+    <string name="dnd_allow_calls">Cho phÃ©p cuá»™c gá»i tá»«</string>
+    <string name="dnd_allow_contacts">Danh báº¡</string>
+    <string name="dnd_allow_everyone">Má»i ngÆ°á»i</string>
+    <string name="dnd_allow_media">Cho phÃ©p phÆ°Æ¡ng tiá»‡n</string>
+    <string name="dnd_allow_messages">Cho phÃ©p tin nháº¯n tá»«</string>
+    <string name="dnd_allow_none">KhÃ´ng ai</string>
+    <string name="dnd_allow_starred">Äá»‹a chá»‰ liÃªn há»‡ Ä‘Æ°á»£c gáº¯n dáº¥u sao</string>
+    <string name="dnd_allow_system">Cho phÃ©p há»‡ thá»‘ng</string>
+    <string name="dnd_customize">TÃ¹y chá»‰nh giÃ¡n Ä‘oáº¡n</string>
+    <string name="dnd_mode">Cháº¿ Ä‘á»™ khÃ´ng lÃ m phiá»n</string>
+    <string name="foreground_service_active">GiÃ¡m sÃ¡t cÃ¡c thÃ³i quen á»Ÿ cháº¿ Ä‘á»™ ná»n</string>
+    <string name="get_current_location">Nháº­n vá»‹ trÃ­ hiá»‡n táº¡i</string>
+    <string name="level_format">Cáº¥p Ä‘á»™: %d%%</string>
 
-    <string name="ok">ĐƯỢC RỒI</string>
+    <string name="ok">ÄÆ¯á»¢C Rá»’I</string>
 
 
-    <string name="priority">Sự ưu tiên</string>
-    <string name="priority_default">Mặc định</string>
+    <string name="priority">Sá»± Æ°u tiÃªn</string>
+    <string name="priority_default">Máº·c Ä‘á»‹nh</string>
     <string name="priority_high">Cao</string>
-    <string name="priority_low">Thấp</string>
-    <string name="priority_min">tối thiểu</string>
-    <string name="radius_format">Bán kính: %dm</string>
-    <string name="remove">Di dời</string>
-    <string name="ringer_mode">Chế độ chuông</string>
-    <string name="ringer_normal">Bình thường</string>
-    <string name="ringer_silent">Im lặng</string>
+    <string name="priority_low">Tháº¥p</string>
+    <string name="priority_min">tá»‘i thiá»ƒu</string>
+    <string name="radius_format">BÃ¡n kÃ­nh: %dm</string>
+    <string name="remove">Di dá»i</string>
+    <string name="ringer_mode">Cháº¿ Ä‘á»™ chuÃ´ng</string>
+    <string name="ringer_normal">BÃ¬nh thÆ°á»ng</string>
+    <string name="ringer_silent">Im láº·ng</string>
     <string name="ringer_vibrate">Rung</string>
-    <string name="summary_brightness">Độ sáng: %s</string>
+    <string name="summary_brightness">Äá»™ sÃ¡ng: %s</string>
     <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Thông báo: %s</string>
-    <string name="summary_ringer_mode">Chuông: %s</string>
-    <string name="summary_volume">Tập: M%d R%d A%d N%d</string>
-    <string name="tile_label">Lịch trình</string>
+    <string name="summary_notification">ThÃ´ng bÃ¡o: %s</string>
+    <string name="summary_ringer_mode">ChuÃ´ng: %s</string>
+    <string name="summary_volume">Táº­p: M%d R%d A%d N%d</string>
+    <string name="tile_label">Lá»‹ch trÃ¬nh</string>
+
+    <string name="battery_optimization_title">Tối ưu hóa pin</string>
+    <string name="battery_optimization_summary">Ngăn hệ thống dừng ứng dụng trong nền</string>
+    <string name="battery_optimization_disabled">Đã tắt — chạm để thay đổi</string>
+    <string name="battery_optimization_enabled">Đã bật</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

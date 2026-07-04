@@ -1,44 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutin</string>
-    <string name="no_routines">Még nincsenek routines</string>
-    <string name="tap_to_add">Koppintson a + gombra az első routine létrehozásához</string>
-    <string name="add_routine">Routine hozzáadása</string>
-    <string name="new_routine">Új routine</string>
-    <string name="edit_routine">Routine szerkesztése</string>
+    <string name="no_routines">MÃ©g nincsenek routines</string>
+    <string name="tap_to_add">Koppintson a + gombra az elsÅ‘ routine lÃ©trehozÃ¡sÃ¡hoz</string>
+    <string name="add_routine">Routine hozzÃ¡adÃ¡sa</string>
+    <string name="new_routine">Ãšj routine</string>
+    <string name="edit_routine">Routine szerkesztÃ©se</string>
     <string name="routine_name">Routine neve</string>
-    <string name="trigger">Kioldó</string>
-    <string name="time">Idő</string>
+    <string name="trigger">KioldÃ³</string>
+    <string name="time">IdÅ‘</string>
     <string name="location">Hely</string>
-    <string name="actions">Műveletek</string>
-    <string name="add_action">Művelet hozzáadása</string>
-    <string name="save_routine">Routine mentése</string>
-    <string name="saving">Mentés…</string>
-    <string name="delete">Törlés</string>
-    <string name="cancel">Mégse</string>
-    <string name="save">Mentés</string>
+    <string name="actions">MÅ±veletek</string>
+    <string name="add_action">MÅ±velet hozzÃ¡adÃ¡sa</string>
+    <string name="save_routine">Routine mentÃ©se</string>
+    <string name="saving">MentÃ©sâ€¦</string>
+    <string name="delete">TÃ¶rlÃ©s</string>
+    <string name="cancel">MÃ©gse</string>
+    <string name="save">MentÃ©s</string>
 
-    <string name="select_time">Idő kiválasztása</string>
-    <string name="repeat_on">Ismétlés</string>
+    <string name="select_time">IdÅ‘ kivÃ¡lasztÃ¡sa</string>
+    <string name="repeat_on">IsmÃ©tlÃ©s</string>
 
 
 
-    <string name="on_enter">Belépéskor</string>
-    <string name="on_exit">Kilépéskor</string>
-    <string name="action_type">Művelet típusa</string>
-    <string name="edit_action">Művelet szerkesztése</string>
-<string name="notification_title">Cím</string>
+    <string name="on_enter">BelÃ©pÃ©skor</string>
+    <string name="on_exit">KilÃ©pÃ©skor</string>
+    <string name="action_type">MÅ±velet tÃ­pusa</string>
+    <string name="edit_action">MÅ±velet szerkesztÃ©se</string>
+<string name="notification_title">CÃ­m</string>
     <string name="notification_content">Tartalom</string>
     <string name="auto">Auto</string>
 
-    <string name="media">Média</string>
-    <string name="ring">Csengő</string>
-    <string name="alarm">Ébresztés</string>
-    <string name="notification">Értesítés</string>
+    <string name="media">MÃ©dia</string>
+    <string name="ring">CsengÅ‘</string>
+    <string name="alarm">Ã‰bresztÃ©s</string>
+    <string name="notification">Ã‰rtesÃ­tÃ©s</string>
     <string name="dnd_off">Ki</string>
-    <string name="dnd_priority">Csak prioritás</string>
+    <string name="dnd_priority">Csak prioritÃ¡s</string>
     <string name="dnd_total">Teljes csend</string>
-    <string name="dnd_alarms">Csak ébresztések</string>
+    <string name="dnd_alarms">Csak Ã©bresztÃ©sek</string>
 
 
 
@@ -56,44 +56,55 @@
 
 
 
-    <string name="add_action_dialog">Művelet hozzáadása elemre</string>
+    <string name="add_action_dialog">MÅ±velet hozzÃ¡adÃ¡sa elemre</string>
 
     <string name="back">Vissza</string>
-    <string name="dnd_allow_alarms">Riasztások engedélyezése</string>
-    <string name="dnd_allow_calls">Hívások engedélyezése a következőről:</string>
+    <string name="dnd_allow_alarms">RiasztÃ¡sok engedÃ©lyezÃ©se</string>
+    <string name="dnd_allow_calls">HÃ­vÃ¡sok engedÃ©lyezÃ©se a kÃ¶vetkezÅ‘rÅ‘l:</string>
     <string name="dnd_allow_contacts">Kapcsolatok</string>
     <string name="dnd_allow_everyone">Mindenki</string>
-    <string name="dnd_allow_media">Média engedélyezése</string>
-    <string name="dnd_allow_messages">Üzenetek engedélyezése a következőtől:</string>
+    <string name="dnd_allow_media">MÃ©dia engedÃ©lyezÃ©se</string>
+    <string name="dnd_allow_messages">Ãœzenetek engedÃ©lyezÃ©se a kÃ¶vetkezÅ‘tÅ‘l:</string>
     <string name="dnd_allow_none">Senki</string>
-    <string name="dnd_allow_starred">Csillagozott névjegyek</string>
-    <string name="dnd_allow_system">Rendszer engedélyezése</string>
-    <string name="dnd_customize">A megszakítások testreszabása</string>
-    <string name="dnd_mode">Ne zavarjanak mód</string>
-    <string name="foreground_service_active">Rutinok figyelése a háttérben</string>
-    <string name="get_current_location">Szerezze meg az aktuális helyet</string>
+    <string name="dnd_allow_starred">Csillagozott nÃ©vjegyek</string>
+    <string name="dnd_allow_system">Rendszer engedÃ©lyezÃ©se</string>
+    <string name="dnd_customize">A megszakÃ­tÃ¡sok testreszabÃ¡sa</string>
+    <string name="dnd_mode">Ne zavarjanak mÃ³d</string>
+    <string name="foreground_service_active">Rutinok figyelÃ©se a hÃ¡ttÃ©rben</string>
+    <string name="get_current_location">Szerezze meg az aktuÃ¡lis helyet</string>
     <string name="level_format">Szint: %d%%</string>
 
     <string name="ok">RENDBEN</string>
 
 
-    <string name="priority">Prioritás</string>
-    <string name="priority_default">Alapértelmezett</string>
+    <string name="priority">PrioritÃ¡s</string>
+    <string name="priority_default">AlapÃ©rtelmezett</string>
     <string name="priority_high">Magas</string>
     <string name="priority_low">Alacsony</string>
     <string name="priority_min">Min</string>
-    <string name="radius_format">Sugár: %d m</string>
-    <string name="remove">Távolítsa el</string>
-    <string name="ringer_mode">Csengő mód</string>
-    <string name="ringer_normal">Normál</string>
+    <string name="radius_format">SugÃ¡r: %d m</string>
+    <string name="remove">TÃ¡volÃ­tsa el</string>
+    <string name="ringer_mode">CsengÅ‘ mÃ³d</string>
+    <string name="ringer_normal">NormÃ¡l</string>
     <string name="ringer_silent">Csendes</string>
     <string name="ringer_vibrate">Rezeg</string>
-    <string name="summary_brightness">Fényerő: %s</string>
+    <string name="summary_brightness">FÃ©nyerÅ‘: %s</string>
     <string name="summary_dnd">DND: %s</string>
-    <string name="summary_notification">Értesítés: %s</string>
-    <string name="summary_ringer_mode">Csengő: %s</string>
+    <string name="summary_notification">Ã‰rtesÃ­tÃ©s: %s</string>
+    <string name="summary_ringer_mode">CsengÅ‘: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutin</string>
+
+    <string name="battery_optimization_title">Akkumulátor-optimalizálás</string>
+    <string name="battery_optimization_summary">Megakadályozza, hogy a rendszer leállítsa az alkalmazást a háttérben</string>
+    <string name="battery_optimization_disabled">Kikapcsolva — érintse meg a módosításhoz</string>
+    <string name="battery_optimization_enabled">Bekapcsolva</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

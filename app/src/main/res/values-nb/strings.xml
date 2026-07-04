@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutine</string>
-    <string name="no_routines">Ingen routines ennå</string>
-    <string name="tap_to_add">Trykk på + for å opprette din første routine</string>
+    <string name="no_routines">Ingen routines ennÃ¥</string>
+    <string name="tap_to_add">Trykk pÃ¥ + for Ã¥ opprette din fÃ¸rste routine</string>
     <string name="add_routine">Legg til routine</string>
     <string name="new_routine">Ny routine</string>
     <string name="edit_routine">Rediger routine</string>
     <string name="routine_name">Routinenavn</string>
-    <string name="trigger">Utløser</string>
+    <string name="trigger">UtlÃ¸ser</string>
     <string name="time">Tid</string>
     <string name="location">Sted</string>
     <string name="actions">Handlinger</string>
     <string name="add_action">Legg til handling</string>
     <string name="save_routine">Lagre routine</string>
-    <string name="saving">Lagrer…</string>
+    <string name="saving">Lagrerâ€¦</string>
     <string name="delete">Slett</string>
     <string name="cancel">Avbryt</string>
     <string name="save">Lagre</string>
 
     <string name="select_time">Velg tid</string>
-    <string name="repeat_on">Gjenta på</string>
+    <string name="repeat_on">Gjenta pÃ¥</string>
 
 
 
@@ -48,8 +48,8 @@
     <string name="wed">Ons</string>
     <string name="thu">Tor</string>
     <string name="fri">Fre</string>
-    <string name="sat">Lør</string>
-    <string name="sun">Søn</string>
+    <string name="sat">LÃ¸r</string>
+    <string name="sun">SÃ¸n</string>
 
 
 
@@ -70,16 +70,16 @@
     <string name="dnd_allow_system">Tillat systemet</string>
     <string name="dnd_customize">Tilpass avbrudd</string>
     <string name="dnd_mode">Ikke forstyrr-modus</string>
-    <string name="foreground_service_active">Overvåkingsrutiner i bakgrunnen</string>
-    <string name="get_current_location">Få nåværende plassering</string>
-    <string name="level_format">Nivå: %d%%</string>
+    <string name="foreground_service_active">OvervÃ¥kingsrutiner i bakgrunnen</string>
+    <string name="get_current_location">FÃ¥ nÃ¥vÃ¦rende plassering</string>
+    <string name="level_format">NivÃ¥: %d%%</string>
 
     <string name="ok">OK</string>
 
 
     <string name="priority">Prioritet</string>
     <string name="priority_default">Misligholde</string>
-    <string name="priority_high">Høy</string>
+    <string name="priority_high">HÃ¸y</string>
     <string name="priority_low">Lav</string>
     <string name="priority_min">Min</string>
     <string name="radius_format">Radius: %d m</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Ringesignal: %s</string>
     <string name="summary_volume">Volum: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutine</string>
+
+    <string name="battery_optimization_title">Batterioptimalisering</string>
+    <string name="battery_optimization_summary">Hindrer systemet fra å stoppe appen i bakgrunnen</string>
+    <string name="battery_optimization_disabled">Deaktivert — trykk for å endre</string>
+    <string name="battery_optimization_enabled">Aktivert</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

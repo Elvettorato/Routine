@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Routine</string>
     <string name="no_routines">Nog geen routines</string>
@@ -13,7 +13,7 @@
     <string name="actions">Acties</string>
     <string name="add_action">Actie toevoegen</string>
     <string name="save_routine">Routine opslaan</string>
-    <string name="saving">Opslaan…</string>
+    <string name="saving">Opslaanâ€¦</string>
     <string name="delete">Verwijderen</string>
     <string name="cancel">Annuleren</string>
     <string name="save">Opslaan</string>
@@ -60,11 +60,11 @@
 
     <string name="back">Rug</string>
     <string name="dnd_allow_alarms">Alarmen toestaan</string>
-    <string name="dnd_allow_calls">Oproepen toestaan ​​van</string>
+    <string name="dnd_allow_calls">Oproepen toestaan â€‹â€‹van</string>
     <string name="dnd_allow_contacts">Contacten</string>
     <string name="dnd_allow_everyone">Iedereen</string>
     <string name="dnd_allow_media">Media toestaan</string>
-    <string name="dnd_allow_messages">Berichten toestaan ​​van</string>
+    <string name="dnd_allow_messages">Berichten toestaan â€‹â€‹van</string>
     <string name="dnd_allow_none">Niemand</string>
     <string name="dnd_allow_starred">Contacten met ster</string>
     <string name="dnd_allow_system">Systeem toestaan</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Beltoon: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
+
+    <string name="battery_optimization_title">Batterij-optimalisatie</string>
+    <string name="battery_optimization_summary">Voorkomt dat het systeem de app op de achtergrond stopt</string>
+    <string name="battery_optimization_disabled">Uitgeschakeld — tik om te wijzigen</string>
+    <string name="battery_optimization_enabled">Ingeschakeld</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

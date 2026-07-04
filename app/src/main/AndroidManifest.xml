@@ -36,6 +36,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".CrashActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Routine" />
+
         <receiver
             android:name=".receiver.BootReceiver"
             android:exported="true">

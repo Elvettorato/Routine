@@ -1,99 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">กิจวัตรประจำวัน</string>
-    <string name="no_routines">ยังไม่มีรูทีน</string>
-    <string name="tap_to_add">แตะ + เพื่อสร้างรูทีนแรกของคุณ</string>
-    <string name="add_routine">เพิ่มรูทีน</string>
-    <string name="new_routine">รูทีนใหม่</string>
-    <string name="edit_routine">แก้ไขรูทีน</string>
-    <string name="routine_name">ชื่อรูทีน</string>
-    <string name="trigger">ตัวกระตุ้น</string>
-    <string name="time">เวลา</string>
-    <string name="location">ตำแหน่ง</string>
-    <string name="actions">การกระทำ</string>
-    <string name="add_action">เพิ่มการกระทำ</string>
-    <string name="save_routine">บันทึกรูทีน</string>
-    <string name="saving">กำลังบันทึก…</string>
-    <string name="delete">ลบ</string>
-    <string name="cancel">ยกเลิก</string>
-    <string name="save">บันทึก</string>
+    <string name="app_name">à¸à¸´à¸ˆà¸§à¸±à¸•à¸£à¸›à¸£à¸°à¸ˆà¸³à¸§à¸±à¸™</string>
+    <string name="no_routines">à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¡à¸µà¸£à¸¹à¸—à¸µà¸™</string>
+    <string name="tap_to_add">à¹à¸•à¸° + à¹€à¸žà¸·à¹ˆà¸­à¸ªà¸£à¹‰à¸²à¸‡à¸£à¸¹à¸—à¸µà¸™à¹à¸£à¸à¸‚à¸­à¸‡à¸„à¸¸à¸“</string>
+    <string name="add_routine">à¹€à¸žà¸´à¹ˆà¸¡à¸£à¸¹à¸—à¸µà¸™</string>
+    <string name="new_routine">à¸£à¸¹à¸—à¸µà¸™à¹ƒà¸«à¸¡à¹ˆ</string>
+    <string name="edit_routine">à¹à¸à¹‰à¹„à¸‚à¸£à¸¹à¸—à¸µà¸™</string>
+    <string name="routine_name">à¸Šà¸·à¹ˆà¸­à¸£à¸¹à¸—à¸µà¸™</string>
+    <string name="trigger">à¸•à¸±à¸§à¸à¸£à¸°à¸•à¸¸à¹‰à¸™</string>
+    <string name="time">à¹€à¸§à¸¥à¸²</string>
+    <string name="location">à¸•à¸³à¹à¸«à¸™à¹ˆà¸‡</string>
+    <string name="actions">à¸à¸²à¸£à¸à¸£à¸°à¸—à¸³</string>
+    <string name="add_action">à¹€à¸žà¸´à¹ˆà¸¡à¸à¸²à¸£à¸à¸£à¸°à¸—à¸³</string>
+    <string name="save_routine">à¸šà¸±à¸™à¸—à¸¶à¸à¸£à¸¹à¸—à¸µà¸™</string>
+    <string name="saving">à¸à¸³à¸¥à¸±à¸‡à¸šà¸±à¸™à¸—à¸¶à¸â€¦</string>
+    <string name="delete">à¸¥à¸š</string>
+    <string name="cancel">à¸¢à¸à¹€à¸¥à¸´à¸</string>
+    <string name="save">à¸šà¸±à¸™à¸—à¸¶à¸</string>
 
-    <string name="select_time">เลือกเวลา</string>
-    <string name="repeat_on">ทำซ้ำใน</string>
-
-
-
-    <string name="on_enter">เมื่อเข้า</string>
-    <string name="on_exit">เมื่อออก</string>
-    <string name="action_type">ประเภทการกระทำ</string>
-    <string name="edit_action">แก้ไขการกระทำ</string>
-<string name="notification_title">หัวข้อ</string>
-    <string name="notification_content">เนื้อหา</string>
-    <string name="auto">อัตโนมัติ</string>
-
-    <string name="media">สื่อ</string>
-    <string name="ring">เสียงเรียกเข้า</string>
-    <string name="alarm">ปลุก</string>
-    <string name="notification">การแจ้งเตือน</string>
-    <string name="dnd_off">ปิด</string>
-    <string name="dnd_priority">เฉพาะสำคัญ</string>
-    <string name="dnd_total">เงียบสนิท</string>
-    <string name="dnd_alarms">เฉพาะปลุก</string>
+    <string name="select_time">à¹€à¸¥à¸·à¸­à¸à¹€à¸§à¸¥à¸²</string>
+    <string name="repeat_on">à¸—à¸³à¸‹à¹‰à¸³à¹ƒà¸™</string>
 
 
 
+    <string name="on_enter">à¹€à¸¡à¸·à¹ˆà¸­à¹€à¸‚à¹‰à¸²</string>
+    <string name="on_exit">à¹€à¸¡à¸·à¹ˆà¸­à¸­à¸­à¸</string>
+    <string name="action_type">à¸›à¸£à¸°à¹€à¸ à¸—à¸à¸²à¸£à¸à¸£à¸°à¸—à¸³</string>
+    <string name="edit_action">à¹à¸à¹‰à¹„à¸‚à¸à¸²à¸£à¸à¸£à¸°à¸—à¸³</string>
+<string name="notification_title">à¸«à¸±à¸§à¸‚à¹‰à¸­</string>
+    <string name="notification_content">à¹€à¸™à¸·à¹‰à¸­à¸«à¸²</string>
+    <string name="auto">à¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´</string>
 
-    <string name="mon">จ.</string>
-    <string name="tue">อ.</string>
-    <string name="wed">พ.</string>
-    <string name="thu">พฤ.</string>
-    <string name="fri">ศ.</string>
-    <string name="sat">ส.</string>
-    <string name="sun">อา.</string>
+    <string name="media">à¸ªà¸·à¹ˆà¸­</string>
+    <string name="ring">à¹€à¸ªà¸µà¸¢à¸‡à¹€à¸£à¸µà¸¢à¸à¹€à¸‚à¹‰à¸²</string>
+    <string name="alarm">à¸›à¸¥à¸¸à¸</string>
+    <string name="notification">à¸à¸²à¸£à¹à¸ˆà¹‰à¸‡à¹€à¸•à¸·à¸­à¸™</string>
+    <string name="dnd_off">à¸›à¸´à¸”</string>
+    <string name="dnd_priority">à¹€à¸‰à¸žà¸²à¸°à¸ªà¸³à¸„à¸±à¸</string>
+    <string name="dnd_total">à¹€à¸‡à¸µà¸¢à¸šà¸ªà¸™à¸´à¸—</string>
+    <string name="dnd_alarms">à¹€à¸‰à¸žà¸²à¸°à¸›à¸¥à¸¸à¸</string>
 
 
 
 
+    <string name="mon">à¸ˆ.</string>
+    <string name="tue">à¸­.</string>
+    <string name="wed">à¸ž.</string>
+    <string name="thu">à¸žà¸¤.</string>
+    <string name="fri">à¸¨.</string>
+    <string name="sat">à¸ª.</string>
+    <string name="sun">à¸­à¸².</string>
 
 
-    <string name="add_action_dialog">เพิ่มการดำเนินการ</string>
-
-    <string name="back">กลับ</string>
-    <string name="dnd_allow_alarms">อนุญาตการเตือน</string>
-    <string name="dnd_allow_calls">อนุญาตการโทรจาก</string>
-    <string name="dnd_allow_contacts">รายชื่อผู้ติดต่อ</string>
-    <string name="dnd_allow_everyone">ทุกคน</string>
-    <string name="dnd_allow_media">อนุญาตให้มีสื่อ</string>
-    <string name="dnd_allow_messages">อนุญาตข้อความจาก</string>
-    <string name="dnd_allow_none">ไม่มีใคร</string>
-    <string name="dnd_allow_starred">รายชื่อติดต่อที่ติดดาว</string>
-    <string name="dnd_allow_system">อนุญาตระบบ</string>
-    <string name="dnd_customize">ปรับแต่งการหยุดชะงัก</string>
-    <string name="dnd_mode">โหมดห้ามรบกวน</string>
-    <string name="foreground_service_active">การตรวจสอบกิจวัตรในเบื้องหลัง</string>
-    <string name="get_current_location">รับตำแหน่งปัจจุบัน</string>
-    <string name="level_format">ระดับ: %d%%</string>
-
-    <string name="ok">ตกลง</string>
 
 
-    <string name="priority">ลำดับความสำคัญ</string>
-    <string name="priority_default">ค่าเริ่มต้น</string>
-    <string name="priority_high">สูง</string>
-    <string name="priority_low">ต่ำ</string>
-    <string name="priority_min">นาที</string>
-    <string name="radius_format">รัศมี: %d ม</string>
-    <string name="remove">ลบ</string>
-    <string name="ringer_mode">โหมดเสียงเรียกเข้า</string>
-    <string name="ringer_normal">ปกติ</string>
-    <string name="ringer_silent">เงียบ</string>
-    <string name="ringer_vibrate">สั่น</string>
-    <string name="summary_brightness">ความสว่าง: %s</string>
-    <string name="summary_dnd">ดีเอ็นดี: %s</string>
-    <string name="summary_notification">แจ้งเตือน: %s</string>
-    <string name="summary_ringer_mode">เสียงเรียกเข้า: %s</string>
-    <string name="summary_volume">เล่มที่: M%d R%d A%d N%d</string>
-    <string name="tile_label">กิจวัตรประจำวัน</string>
+
+
+    <string name="add_action_dialog">à¹€à¸žà¸´à¹ˆà¸¡à¸à¸²à¸£à¸”à¸³à¹€à¸™à¸´à¸™à¸à¸²à¸£</string>
+
+    <string name="back">à¸à¸¥à¸±à¸š</string>
+    <string name="dnd_allow_alarms">à¸­à¸™à¸¸à¸à¸²à¸•à¸à¸²à¸£à¹€à¸•à¸·à¸­à¸™</string>
+    <string name="dnd_allow_calls">à¸­à¸™à¸¸à¸à¸²à¸•à¸à¸²à¸£à¹‚à¸—à¸£à¸ˆà¸²à¸</string>
+    <string name="dnd_allow_contacts">à¸£à¸²à¸¢à¸Šà¸·à¹ˆà¸­à¸œà¸¹à¹‰à¸•à¸´à¸”à¸•à¹ˆà¸­</string>
+    <string name="dnd_allow_everyone">à¸—à¸¸à¸à¸„à¸™</string>
+    <string name="dnd_allow_media">à¸­à¸™à¸¸à¸à¸²à¸•à¹ƒà¸«à¹‰à¸¡à¸µà¸ªà¸·à¹ˆà¸­</string>
+    <string name="dnd_allow_messages">à¸­à¸™à¸¸à¸à¸²à¸•à¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¸ˆà¸²à¸</string>
+    <string name="dnd_allow_none">à¹„à¸¡à¹ˆà¸¡à¸µà¹ƒà¸„à¸£</string>
+    <string name="dnd_allow_starred">à¸£à¸²à¸¢à¸Šà¸·à¹ˆà¸­à¸•à¸´à¸”à¸•à¹ˆà¸­à¸—à¸µà¹ˆà¸•à¸´à¸”à¸”à¸²à¸§</string>
+    <string name="dnd_allow_system">à¸­à¸™à¸¸à¸à¸²à¸•à¸£à¸°à¸šà¸š</string>
+    <string name="dnd_customize">à¸›à¸£à¸±à¸šà¹à¸•à¹ˆà¸‡à¸à¸²à¸£à¸«à¸¢à¸¸à¸”à¸Šà¸°à¸‡à¸±à¸</string>
+    <string name="dnd_mode">à¹‚à¸«à¸¡à¸”à¸«à¹‰à¸²à¸¡à¸£à¸šà¸à¸§à¸™</string>
+    <string name="foreground_service_active">à¸à¸²à¸£à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸šà¸à¸´à¸ˆà¸§à¸±à¸•à¸£à¹ƒà¸™à¹€à¸šà¸·à¹‰à¸­à¸‡à¸«à¸¥à¸±à¸‡</string>
+    <string name="get_current_location">à¸£à¸±à¸šà¸•à¸³à¹à¸«à¸™à¹ˆà¸‡à¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™</string>
+    <string name="level_format">à¸£à¸°à¸”à¸±à¸š: %d%%</string>
+
+    <string name="ok">à¸•à¸à¸¥à¸‡</string>
+
+
+    <string name="priority">à¸¥à¸³à¸”à¸±à¸šà¸„à¸§à¸²à¸¡à¸ªà¸³à¸„à¸±à¸</string>
+    <string name="priority_default">à¸„à¹ˆà¸²à¹€à¸£à¸´à¹ˆà¸¡à¸•à¹‰à¸™</string>
+    <string name="priority_high">à¸ªà¸¹à¸‡</string>
+    <string name="priority_low">à¸•à¹ˆà¸³</string>
+    <string name="priority_min">à¸™à¸²à¸—à¸µ</string>
+    <string name="radius_format">à¸£à¸±à¸¨à¸¡à¸µ: %d à¸¡</string>
+    <string name="remove">à¸¥à¸š</string>
+    <string name="ringer_mode">à¹‚à¸«à¸¡à¸”à¹€à¸ªà¸µà¸¢à¸‡à¹€à¸£à¸µà¸¢à¸à¹€à¸‚à¹‰à¸²</string>
+    <string name="ringer_normal">à¸›à¸à¸•à¸´</string>
+    <string name="ringer_silent">à¹€à¸‡à¸µà¸¢à¸š</string>
+    <string name="ringer_vibrate">à¸ªà¸±à¹ˆà¸™</string>
+    <string name="summary_brightness">à¸„à¸§à¸²à¸¡à¸ªà¸§à¹ˆà¸²à¸‡: %s</string>
+    <string name="summary_dnd">à¸”à¸µà¹€à¸­à¹‡à¸™à¸”à¸µ: %s</string>
+    <string name="summary_notification">à¹à¸ˆà¹‰à¸‡à¹€à¸•à¸·à¸­à¸™: %s</string>
+    <string name="summary_ringer_mode">à¹€à¸ªà¸µà¸¢à¸‡à¹€à¸£à¸µà¸¢à¸à¹€à¸‚à¹‰à¸²: %s</string>
+    <string name="summary_volume">à¹€à¸¥à¹ˆà¸¡à¸—à¸µà¹ˆ: M%d R%d A%d N%d</string>
+    <string name="tile_label">à¸à¸´à¸ˆà¸§à¸±à¸•à¸£à¸›à¸£à¸°à¸ˆà¸³à¸§à¸±à¸™</string>
+
+    <string name="battery_optimization_title">การเพิ่มประสิทธิภาพแบตเตอรี่</string>
+    <string name="battery_optimization_summary">ป้องกันไม่ให้ระบบหยุดแอปในพื้นหลัง</string>
+    <string name="battery_optimization_disabled">ปิดใช้งาน — แตะเพื่อเปลี่ยน</string>
+    <string name="battery_optimization_enabled">เปิดใช้งาน</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

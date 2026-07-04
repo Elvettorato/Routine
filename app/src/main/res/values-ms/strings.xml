@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutin</string>
     <string name="no_routines">Belum ada rutin</string>
@@ -13,7 +13,7 @@
     <string name="actions">Tindakan</string>
     <string name="add_action">Tambah Tindakan</string>
     <string name="save_routine">Simpan Rutin</string>
-    <string name="saving">Menyimpan…</string>
+    <string name="saving">Menyimpanâ€¦</string>
     <string name="delete">Padam</string>
     <string name="cancel">Batal</string>
     <string name="save">Simpan</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Dering: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutin</string>
+
+    <string name="battery_optimization_title">Pengoptimuman bateri</string>
+    <string name="battery_optimization_summary">Menghalang sistem daripada menghentikan apl di latar belakang</string>
+    <string name="battery_optimization_disabled">Dilumpuhkan — ketik untuk menukar</string>
+    <string name="battery_optimization_enabled">Didayakan</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

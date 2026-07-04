@@ -94,7 +94,15 @@
     <string name="summary_ringer_mode">Ringer: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Routine</string>
+    <string name="battery_optimization_title">Ottimizzazione batteria</string>
+    <string name="battery_optimization_summary">Impedisce al sistema di fermare l\'app in background</string>
+    <string name="battery_optimization_disabled">Disattivata — tocca per cambiare</string>
+    <string name="battery_optimization_enabled">Attivata</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
-
-

@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutina</string>
-    <string name="no_routines">Aún no hay rutinas</string>
+    <string name="no_routines">AÃºn no hay rutinas</string>
     <string name="tap_to_add">Toca + para crear tu primera rutina</string>
-    <string name="add_routine">Añadir Rutina</string>
+    <string name="add_routine">AÃ±adir Rutina</string>
     <string name="new_routine">Nueva Rutina</string>
     <string name="edit_routine">Editar Rutina</string>
     <string name="routine_name">Nombre de la Rutina</string>
     <string name="trigger">Disparador</string>
     <string name="time">Hora</string>
-    <string name="location">Ubicación</string>
+    <string name="location">UbicaciÃ³n</string>
     <string name="actions">Acciones</string>
-    <string name="add_action">Añadir Acción</string>
+    <string name="add_action">AÃ±adir AcciÃ³n</string>
     <string name="save_routine">Guardar Rutina</string>
-    <string name="saving">Guardando…</string>
+    <string name="saving">Guardandoâ€¦</string>
     <string name="delete">Eliminar</string>
     <string name="cancel">Cancelar</string>
     <string name="save">Guardar</string>
@@ -25,16 +25,16 @@
 
     <string name="on_enter">Al entrar</string>
     <string name="on_exit">Al salir</string>
-    <string name="action_type">Tipo de Acción</string>
-    <string name="edit_action">Editar Acción</string>
-<string name="notification_title">Título</string>
+    <string name="action_type">Tipo de AcciÃ³n</string>
+    <string name="edit_action">Editar AcciÃ³n</string>
+<string name="notification_title">TÃ­tulo</string>
     <string name="notification_content">Contenido</string>
     <string name="auto">Auto</string>
 
     <string name="media">Multimedia</string>
     <string name="ring">Timbre</string>
     <string name="alarm">Alarma</string>
-    <string name="notification">Notificación</string>
+    <string name="notification">NotificaciÃ³n</string>
     <string name="dnd_off">Apagado</string>
     <string name="dnd_priority">Solo prioridad</string>
     <string name="dnd_total">Silencio total</string>
@@ -45,10 +45,10 @@
 
     <string name="mon">Lun</string>
     <string name="tue">Mar</string>
-    <string name="wed">Mié</string>
+    <string name="wed">MiÃ©</string>
     <string name="thu">Jue</string>
     <string name="fri">Vie</string>
-    <string name="sat">Sáb</string>
+    <string name="sat">SÃ¡b</string>
     <string name="sun">Dom</string>
 
 
@@ -56,9 +56,9 @@
 
 
 
-    <string name="add_action_dialog">Agregar acción</string>
+    <string name="add_action_dialog">Agregar acciÃ³n</string>
 
-    <string name="back">Atrás</string>
+    <string name="back">AtrÃ¡s</string>
     <string name="dnd_allow_alarms">Permitir alarmas</string>
     <string name="dnd_allow_calls">Permitir llamadas de</string>
     <string name="dnd_allow_contacts">Contactos</string>
@@ -71,7 +71,7 @@
     <string name="dnd_customize">Personaliza las interrupciones</string>
     <string name="dnd_mode">Modo no molestar</string>
     <string name="foreground_service_active">Rutinas de monitoreo en segundo plano</string>
-    <string name="get_current_location">Obtener ubicación actual</string>
+    <string name="get_current_location">Obtener ubicaciÃ³n actual</string>
     <string name="level_format">Nivel: %d%%</string>
 
     <string name="ok">DE ACUERDO</string>
@@ -81,7 +81,7 @@
     <string name="priority_default">Por defecto</string>
     <string name="priority_high">Alto</string>
     <string name="priority_low">Bajo</string>
-    <string name="priority_min">mín.</string>
+    <string name="priority_min">mÃ­n.</string>
     <string name="radius_format">Radio: %d m</string>
     <string name="remove">Eliminar</string>
     <string name="ringer_mode">Modo de timbre</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Timbre: %s</string>
     <string name="summary_volume">Volumen: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutina</string>
+
+    <string name="battery_optimization_title">Optimización de batería</string>
+    <string name="battery_optimization_summary">Evita que el sistema detenga la app en segundo plano</string>
+    <string name="battery_optimization_disabled">Desactivado — toca para cambiar</string>
+    <string name="battery_optimization_enabled">Activado</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

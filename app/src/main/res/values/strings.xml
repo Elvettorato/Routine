@@ -109,5 +109,16 @@
     <string name="location_permission_summary">Required for location-based routines to trigger when the app is in background</string>
     <string name="granted">Granted</string>
     <string name="not_granted">Not granted — tap to open settings</string>
+    <string name="battery_optimization_title">Battery optimization</string>
+    <string name="battery_optimization_summary">Prevents the system from stopping the app in background</string>
+    <string name="battery_optimization_disabled">Disabled — tap to change</string>
+    <string name="battery_optimization_enabled">Enabled</string>
+
+    <!-- Crash Reporting -->
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 </resources>
 

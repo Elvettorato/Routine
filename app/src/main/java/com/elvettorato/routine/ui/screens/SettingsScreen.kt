@@ -14,12 +14,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.BatteryFull
 import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.filled.BugReport
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.Card
@@ -45,6 +47,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.ui.platform.LocalUriHandler
 import com.elvettorato.routine.R
@@ -219,13 +222,15 @@ fun SettingsScreen(
                     Spacer(Modifier.size(12.dp))
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
-                            "Battery optimization",
+                            stringResource(R.string.battery_optimization_title),
                             style = MaterialTheme.typography.bodyLarge
                         )
+                        val pm = context.getSystemService(android.content.Context.POWER_SERVICE) as android.os.PowerManager
+                        val isIgnoring = pm.isIgnoringBatteryOptimizations(context.packageName)
                         Text(
-                            "Disable to prevent the app from being killed",
+                            if (isIgnoring) stringResource(R.string.battery_optimization_disabled) else stringResource(R.string.battery_optimization_enabled),
                             style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                            color = if (isIgnoring) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error
                         )
                     }
                     Icon(
@@ -311,6 +316,20 @@ fun SettingsScreen(
                         tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
+            }
+
+            OutlinedButton(
+                onClick = { throw RuntimeException("Test crash from settings") },
+                colors = ButtonDefaults.outlinedButtonColors(
+                    contentColor = MaterialTheme.colorScheme.error
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp)
+            ) {
+                Icon(Icons.Default.BugReport, contentDescription = null)
+                Spacer(Modifier.width(8.dp))
+                Text(stringResource(R.string.crash_test_button))
             }
 
             Text(

@@ -1,34 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutin</string>
-    <string name="no_routines">Inga routines än</string>
-    <string name="tap_to_add">Tryck på + för att skapa din första routine</string>
-    <string name="add_routine">Lägg till routine</string>
+    <string name="no_routines">Inga routines Ã¤n</string>
+    <string name="tap_to_add">Tryck pÃ¥ + fÃ¶r att skapa din fÃ¶rsta routine</string>
+    <string name="add_routine">LÃ¤gg till routine</string>
     <string name="new_routine">Ny routine</string>
     <string name="edit_routine">Redigera routine</string>
     <string name="routine_name">Routinens namn</string>
-    <string name="trigger">Utlösare</string>
+    <string name="trigger">UtlÃ¶sare</string>
     <string name="time">Tid</string>
     <string name="location">Plats</string>
-    <string name="actions">Åtgärder</string>
-    <string name="add_action">Lägg till åtgärd</string>
+    <string name="actions">Ã…tgÃ¤rder</string>
+    <string name="add_action">LÃ¤gg till Ã¥tgÃ¤rd</string>
     <string name="save_routine">Spara routine</string>
-    <string name="saving">Sparar…</string>
+    <string name="saving">Spararâ€¦</string>
     <string name="delete">Ta bort</string>
     <string name="cancel">Avbryt</string>
     <string name="save">Spara</string>
 
-    <string name="select_time">Välj tid</string>
-    <string name="repeat_on">Upprepa på</string>
+    <string name="select_time">VÃ¤lj tid</string>
+    <string name="repeat_on">Upprepa pÃ¥</string>
 
 
 
-    <string name="on_enter">Vid inträde</string>
-    <string name="on_exit">Vid utgång</string>
-    <string name="action_type">Åtgärdstyp</string>
-    <string name="edit_action">Redigera åtgärd</string>
+    <string name="on_enter">Vid intrÃ¤de</string>
+    <string name="on_exit">Vid utgÃ¥ng</string>
+    <string name="action_type">Ã…tgÃ¤rdstyp</string>
+    <string name="edit_action">Redigera Ã¥tgÃ¤rd</string>
 <string name="notification_title">Titel</string>
-    <string name="notification_content">Innehåll</string>
+    <string name="notification_content">InnehÃ¥ll</string>
     <string name="auto">Bil</string>
 
     <string name="media">Media</string>
@@ -43,48 +43,48 @@
 
 
 
-    <string name="mon">Mån</string>
+    <string name="mon">MÃ¥n</string>
     <string name="tue">Tis</string>
     <string name="wed">Ons</string>
     <string name="thu">Tors</string>
     <string name="fri">Fre</string>
-    <string name="sat">Lör</string>
-    <string name="sun">Sön</string>
+    <string name="sat">LÃ¶r</string>
+    <string name="sun">SÃ¶n</string>
 
 
 
 
 
 
-    <string name="add_action_dialog">Lägg till åtgärd</string>
+    <string name="add_action_dialog">LÃ¤gg till Ã¥tgÃ¤rd</string>
 
     <string name="back">Tillbaka</string>
-    <string name="dnd_allow_alarms">Tillåt larm</string>
-    <string name="dnd_allow_calls">Tillåt samtal från</string>
+    <string name="dnd_allow_alarms">TillÃ¥t larm</string>
+    <string name="dnd_allow_calls">TillÃ¥t samtal frÃ¥n</string>
     <string name="dnd_allow_contacts">Kontakter</string>
     <string name="dnd_allow_everyone">Alla</string>
-    <string name="dnd_allow_media">Tillåt media</string>
-    <string name="dnd_allow_messages">Tillåt meddelanden från</string>
+    <string name="dnd_allow_media">TillÃ¥t media</string>
+    <string name="dnd_allow_messages">TillÃ¥t meddelanden frÃ¥n</string>
     <string name="dnd_allow_none">Ingen</string>
-    <string name="dnd_allow_starred">Stjärnmärkta kontakter</string>
-    <string name="dnd_allow_system">Tillåt system</string>
+    <string name="dnd_allow_starred">StjÃ¤rnmÃ¤rkta kontakter</string>
+    <string name="dnd_allow_system">TillÃ¥t system</string>
     <string name="dnd_customize">Anpassa avbrott</string>
-    <string name="dnd_mode">Stör ej-läge</string>
-    <string name="foreground_service_active">Övervakningsrutiner i bakgrunden</string>
-    <string name="get_current_location">Få aktuell plats</string>
-    <string name="level_format">Nivå: %d%%</string>
+    <string name="dnd_mode">StÃ¶r ej-lÃ¤ge</string>
+    <string name="foreground_service_active">Ã–vervakningsrutiner i bakgrunden</string>
+    <string name="get_current_location">FÃ¥ aktuell plats</string>
+    <string name="level_format">NivÃ¥: %d%%</string>
 
     <string name="ok">OK</string>
 
 
     <string name="priority">Prioritet</string>
     <string name="priority_default">Standard</string>
-    <string name="priority_high">Hög</string>
-    <string name="priority_low">Låg</string>
+    <string name="priority_high">HÃ¶g</string>
+    <string name="priority_low">LÃ¥g</string>
     <string name="priority_min">Min</string>
     <string name="radius_format">Radie: %d m</string>
     <string name="remove">Ta bort</string>
-    <string name="ringer_mode">Ringsignalläge</string>
+    <string name="ringer_mode">RingsignallÃ¤ge</string>
     <string name="ringer_normal">Normal</string>
     <string name="ringer_silent">Tyst</string>
     <string name="ringer_vibrate">Vibrera</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Ringsignal: %s</string>
     <string name="summary_volume">Volym: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutin</string>
+
+    <string name="battery_optimization_title">Batterioptimering</string>
+    <string name="battery_optimization_summary">Hindrar systemet från att stoppa appen i bakgrunden</string>
+    <string name="battery_optimization_disabled">Inaktiverad — tryck för att ändra</string>
+    <string name="battery_optimization_enabled">Aktiverad</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

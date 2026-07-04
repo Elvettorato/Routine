@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutiini</string>
-    <string name="no_routines">Ei vielä routines</string>
-    <string name="tap_to_add">Napauta + luodaksesi ensimmäisen routine</string>
-    <string name="add_routine">Lisää routine</string>
+    <string name="no_routines">Ei vielÃ¤ routines</string>
+    <string name="tap_to_add">Napauta + luodaksesi ensimmÃ¤isen routine</string>
+    <string name="add_routine">LisÃ¤Ã¤ routine</string>
     <string name="new_routine">Uusi routine</string>
     <string name="edit_routine">Muokkaa routine</string>
     <string name="routine_name">Routinen nimi</string>
@@ -11,9 +11,9 @@
     <string name="time">Aika</string>
     <string name="location">Sijainti</string>
     <string name="actions">Toiminnot</string>
-    <string name="add_action">Lisää toiminto</string>
+    <string name="add_action">LisÃ¤Ã¤ toiminto</string>
     <string name="save_routine">Tallenna routine</string>
-    <string name="saving">Tallennetaan…</string>
+    <string name="saving">Tallennetaanâ€¦</string>
     <string name="delete">Poista</string>
     <string name="cancel">Peruuta</string>
     <string name="save">Tallenna</string>
@@ -28,17 +28,17 @@
     <string name="action_type">Toiminnon tyyppi</string>
     <string name="edit_action">Muokkaa toimintoa</string>
 <string name="notification_title">Otsikko</string>
-    <string name="notification_content">Sisältö</string>
+    <string name="notification_content">SisÃ¤ltÃ¶</string>
     <string name="auto">Auto</string>
 
     <string name="media">Media</string>
-    <string name="ring">Soittoääni</string>
-    <string name="alarm">Hälytys</string>
+    <string name="ring">SoittoÃ¤Ã¤ni</string>
+    <string name="alarm">HÃ¤lytys</string>
     <string name="notification">Ilmoitus</string>
     <string name="dnd_off">Pois</string>
     <string name="dnd_priority">Vain prioriteetti</string>
-    <string name="dnd_total">Täysi hiljaisuus</string>
-    <string name="dnd_alarms">Vain hälytykset</string>
+    <string name="dnd_total">TÃ¤ysi hiljaisuus</string>
+    <string name="dnd_alarms">Vain hÃ¤lytykset</string>
 
 
 
@@ -56,20 +56,20 @@
 
 
 
-    <string name="add_action_dialog">Lisää toiminto</string>
+    <string name="add_action_dialog">LisÃ¤Ã¤ toiminto</string>
 
     <string name="back">Takaisin</string>
-    <string name="dnd_allow_alarms">Salli hälytykset</string>
+    <string name="dnd_allow_alarms">Salli hÃ¤lytykset</string>
     <string name="dnd_allow_calls">Salli puhelut osoitteesta</string>
     <string name="dnd_allow_contacts">Yhteystiedot</string>
     <string name="dnd_allow_everyone">Kaikki</string>
     <string name="dnd_allow_media">Salli media</string>
     <string name="dnd_allow_messages">Salli viestit osoitteesta</string>
     <string name="dnd_allow_none">Ei kukaan</string>
-    <string name="dnd_allow_starred">Tähdellä merkityt yhteystiedot</string>
-    <string name="dnd_allow_system">Salli järjestelmä</string>
-    <string name="dnd_customize">Mukauta keskeytyksiä</string>
-    <string name="dnd_mode">Älä häiritse -tila</string>
+    <string name="dnd_allow_starred">TÃ¤hdellÃ¤ merkityt yhteystiedot</string>
+    <string name="dnd_allow_system">Salli jÃ¤rjestelmÃ¤</string>
+    <string name="dnd_customize">Mukauta keskeytyksiÃ¤</string>
+    <string name="dnd_mode">Ã„lÃ¤ hÃ¤iritse -tila</string>
     <string name="foreground_service_active">Rutiinien valvonta taustalla</string>
     <string name="get_current_location">Hanki nykyinen sijainti</string>
     <string name="level_format">Taso: %d%%</string>
@@ -82,18 +82,29 @@
     <string name="priority_high">Korkea</string>
     <string name="priority_low">Matala</string>
     <string name="priority_min">Min</string>
-    <string name="radius_format">Säde: %d m</string>
+    <string name="radius_format">SÃ¤de: %d m</string>
     <string name="remove">Poistaa</string>
     <string name="ringer_mode">Soittotila</string>
     <string name="ringer_normal">Normaali</string>
     <string name="ringer_silent">Hiljainen</string>
-    <string name="ringer_vibrate">Värinä</string>
+    <string name="ringer_vibrate">VÃ¤rinÃ¤</string>
     <string name="summary_brightness">Kirkkaus: %s</string>
     <string name="summary_dnd">DND: %s</string>
     <string name="summary_notification">Ilmoita: %s</string>
-    <string name="summary_ringer_mode">Soittoääni: %s</string>
+    <string name="summary_ringer_mode">SoittoÃ¤Ã¤ni: %s</string>
     <string name="summary_volume">Vol.: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutiini</string>
+
+    <string name="battery_optimization_title">Akun optimointi</string>
+    <string name="battery_optimization_summary">Estää järjestelmää pysäyttämästä sovellusta taustalla</string>
+    <string name="battery_optimization_disabled">Poissa käytöstä — napauta muuttaaksesi</string>
+    <string name="battery_optimization_enabled">Käytössä</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

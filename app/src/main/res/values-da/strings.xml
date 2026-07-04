@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutine</string>
     <string name="no_routines">Ingen routines endnu</string>
-    <string name="tap_to_add">Tryk på + for at oprette din første routine</string>
-    <string name="add_routine">Tilføj routine</string>
+    <string name="tap_to_add">Tryk pÃ¥ + for at oprette din fÃ¸rste routine</string>
+    <string name="add_routine">TilfÃ¸j routine</string>
     <string name="new_routine">Ny routine</string>
     <string name="edit_routine">Rediger routine</string>
     <string name="routine_name">Routinenavn</string>
-    <string name="trigger">Udløser</string>
+    <string name="trigger">UdlÃ¸ser</string>
     <string name="time">Tid</string>
     <string name="location">Sted</string>
     <string name="actions">Handlinger</string>
-    <string name="add_action">Tilføj handling</string>
+    <string name="add_action">TilfÃ¸j handling</string>
     <string name="save_routine">Gem routine</string>
-    <string name="saving">Gemmer…</string>
+    <string name="saving">Gemmerâ€¦</string>
     <string name="delete">Slet</string>
     <string name="cancel">Annuller</string>
     <string name="save">Gem</string>
 
-    <string name="select_time">Vælg tid</string>
-    <string name="repeat_on">Gentag på</string>
+    <string name="select_time">VÃ¦lg tid</string>
+    <string name="repeat_on">Gentag pÃ¥</string>
 
 
 
@@ -33,12 +33,12 @@
 
     <string name="media">Medier</string>
     <string name="ring">Ringetone</string>
-    <string name="alarm">Vækkeur</string>
+    <string name="alarm">VÃ¦kkeur</string>
     <string name="notification">Notifikation</string>
     <string name="dnd_off">Slukket</string>
     <string name="dnd_priority">Kun prioritet</string>
     <string name="dnd_total">Total stilhed</string>
-    <string name="dnd_alarms">Kun vækkeure</string>
+    <string name="dnd_alarms">Kun vÃ¦kkeure</string>
 
 
 
@@ -48,15 +48,15 @@
     <string name="wed">Ons</string>
     <string name="thu">Tor</string>
     <string name="fri">Fre</string>
-    <string name="sat">Lør</string>
-    <string name="sun">Søn</string>
+    <string name="sat">LÃ¸r</string>
+    <string name="sun">SÃ¸n</string>
 
 
 
 
 
 
-    <string name="add_action_dialog">Tilføj handling</string>
+    <string name="add_action_dialog">TilfÃ¸j handling</string>
 
     <string name="back">Tilbage</string>
     <string name="dnd_allow_alarms">Tillad alarmer</string>
@@ -70,8 +70,8 @@
     <string name="dnd_allow_system">Tillad systemet</string>
     <string name="dnd_customize">Tilpas afbrydelser</string>
     <string name="dnd_mode">Forstyr ikke-tilstand</string>
-    <string name="foreground_service_active">Overvågningsrutiner i baggrunden</string>
-    <string name="get_current_location">Få aktuel placering</string>
+    <string name="foreground_service_active">OvervÃ¥gningsrutiner i baggrunden</string>
+    <string name="get_current_location">FÃ¥ aktuel placering</string>
     <string name="level_format">Niveau: %d%%</string>
 
     <string name="ok">OK</string>
@@ -79,7 +79,7 @@
 
     <string name="priority">Prioritet</string>
     <string name="priority_default">Misligholdelse</string>
-    <string name="priority_high">Høj</string>
+    <string name="priority_high">HÃ¸j</string>
     <string name="priority_low">Lav</string>
     <string name="priority_min">Min</string>
     <string name="radius_format">Radius: %d m</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Ringesignal: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutine</string>
+
+    <string name="battery_optimization_title">Batterioptimering</string>
+    <string name="battery_optimization_summary">Forhindrer systemet i at stoppe appen i baggrunden</string>
+    <string name="battery_optimization_disabled">Deaktiveret — tryk for at ændre</string>
+    <string name="battery_optimization_enabled">Aktiveret</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

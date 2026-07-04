@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rutina</string>
-    <string name="no_routines">Aínda non hai rutinas</string>
-    <string name="tap_to_add">Toca + para crear a túa primeira rutina</string>
+    <string name="no_routines">AÃ­nda non hai rutinas</string>
+    <string name="tap_to_add">Toca + para crear a tÃºa primeira rutina</string>
     <string name="add_routine">Engadir Rutina</string>
     <string name="new_routine">Nova Rutina</string>
     <string name="edit_routine">Editar Rutina</string>
     <string name="routine_name">Nome da Rutina</string>
     <string name="trigger">Disparador</string>
     <string name="time">Hora</string>
-    <string name="location">Localización</string>
-    <string name="actions">Accións</string>
-    <string name="add_action">Engadir Acción</string>
+    <string name="location">LocalizaciÃ³n</string>
+    <string name="actions">AcciÃ³ns</string>
+    <string name="add_action">Engadir AcciÃ³n</string>
     <string name="save_routine">Gardar Rutina</string>
-    <string name="saving">Gardando…</string>
+    <string name="saving">Gardandoâ€¦</string>
     <string name="delete">Eliminar</string>
     <string name="cancel">Cancelar</string>
     <string name="save">Gardar</string>
@@ -24,31 +24,31 @@
 
 
     <string name="on_enter">Ao entrar</string>
-    <string name="on_exit">Ao saír</string>
-    <string name="action_type">Tipo de Acción</string>
-    <string name="edit_action">Editar Acción</string>
-<string name="notification_title">Título</string>
+    <string name="on_exit">Ao saÃ­r</string>
+    <string name="action_type">Tipo de AcciÃ³n</string>
+    <string name="edit_action">Editar AcciÃ³n</string>
+<string name="notification_title">TÃ­tulo</string>
     <string name="notification_content">Contido</string>
-    <string name="auto">Automático</string>
+    <string name="auto">AutomÃ¡tico</string>
 
     <string name="media">Multimedia</string>
     <string name="ring">Timbre</string>
     <string name="alarm">Alarma</string>
-    <string name="notification">Notificación</string>
+    <string name="notification">NotificaciÃ³n</string>
     <string name="dnd_off">Apagado</string>
-    <string name="dnd_priority">Só prioridade</string>
+    <string name="dnd_priority">SÃ³ prioridade</string>
     <string name="dnd_total">Silencio total</string>
-    <string name="dnd_alarms">Só alarmas</string>
+    <string name="dnd_alarms">SÃ³ alarmas</string>
 
 
 
 
     <string name="mon">Lun</string>
     <string name="tue">Mar</string>
-    <string name="wed">Mér</string>
+    <string name="wed">MÃ©r</string>
     <string name="thu">Xov</string>
     <string name="fri">Ven</string>
-    <string name="sat">Sáb</string>
+    <string name="sat">SÃ¡b</string>
     <string name="sun">Dom</string>
 
 
@@ -56,7 +56,7 @@
 
 
 
-    <string name="add_action_dialog">Engadir acción</string>
+    <string name="add_action_dialog">Engadir acciÃ³n</string>
 
     <string name="back">De volta</string>
     <string name="dnd_allow_alarms">Permitir alarmas</string>
@@ -65,13 +65,13 @@
     <string name="dnd_allow_everyone">Todos</string>
     <string name="dnd_allow_media">Permitir medios</string>
     <string name="dnd_allow_messages">Permitir mensaxes de</string>
-    <string name="dnd_allow_none">Ninguén</string>
+    <string name="dnd_allow_none">NinguÃ©n</string>
     <string name="dnd_allow_starred">Contactos destacados</string>
     <string name="dnd_allow_system">Permitir sistema</string>
-    <string name="dnd_customize">Personaliza as interrupcións</string>
+    <string name="dnd_customize">Personaliza as interrupciÃ³ns</string>
     <string name="dnd_mode">Modo Non molestar</string>
     <string name="foreground_service_active">Vixilancia de rutinas en segundo plano</string>
-    <string name="get_current_location">Obter a localización actual</string>
+    <string name="get_current_location">Obter a localizaciÃ³n actual</string>
     <string name="level_format">Nivel: %d%%</string>
 
     <string name="ok">OK</string>
@@ -94,6 +94,17 @@
     <string name="summary_ringer_mode">Timbre: %s</string>
     <string name="summary_volume">Vol: M%d R%d A%d N%d</string>
     <string name="tile_label">Rutina</string>
+
+    <string name="battery_optimization_title">Optimización da batería</string>
+    <string name="battery_optimization_summary">Evita que o sistema deteña a aplicación en segundo plano</string>
+    <string name="battery_optimization_disabled">Desactivado — toca para cambiar</string>
+    <string name="battery_optimization_enabled">Activado</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 

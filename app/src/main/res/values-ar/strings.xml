@@ -1,99 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">روتين</string>
-    <string name="no_routines">لا توجد روتينات بعد</string>
-    <string name="tap_to_add">اضغط + لإنشاء أول روتين لك</string>
-    <string name="add_routine">إضافة روتين</string>
-    <string name="new_routine">روتين جديد</string>
-    <string name="edit_routine">تعديل الروتين</string>
-    <string name="routine_name">اسم الروتين</string>
-    <string name="trigger">مُحفّز</string>
-    <string name="time">الوقت</string>
-    <string name="location">الموقع</string>
-    <string name="actions">الإجراءات</string>
-    <string name="add_action">إضافة إجراء</string>
-    <string name="save_routine">حفظ الروتين</string>
-    <string name="saving">جارٍ الحفظ…</string>
-    <string name="delete">حذف</string>
-    <string name="cancel">إلغاء</string>
-    <string name="save">حفظ</string>
+    <string name="app_name">Ø±ÙˆØªÙŠÙ†</string>
+    <string name="no_routines">Ù„Ø§ ØªÙˆØ¬Ø¯ Ø±ÙˆØªÙŠÙ†Ø§Øª Ø¨Ø¹Ø¯</string>
+    <string name="tap_to_add">Ø§Ø¶ØºØ· + Ù„Ø¥Ù†Ø´Ø§Ø¡ Ø£ÙˆÙ„ Ø±ÙˆØªÙŠÙ† Ù„Ùƒ</string>
+    <string name="add_routine">Ø¥Ø¶Ø§ÙØ© Ø±ÙˆØªÙŠÙ†</string>
+    <string name="new_routine">Ø±ÙˆØªÙŠÙ† Ø¬Ø¯ÙŠØ¯</string>
+    <string name="edit_routine">ØªØ¹Ø¯ÙŠÙ„ Ø§Ù„Ø±ÙˆØªÙŠÙ†</string>
+    <string name="routine_name">Ø§Ø³Ù… Ø§Ù„Ø±ÙˆØªÙŠÙ†</string>
+    <string name="trigger">Ù…ÙØ­ÙÙ‘Ø²</string>
+    <string name="time">Ø§Ù„ÙˆÙ‚Øª</string>
+    <string name="location">Ø§Ù„Ù…ÙˆÙ‚Ø¹</string>
+    <string name="actions">Ø§Ù„Ø¥Ø¬Ø±Ø§Ø¡Ø§Øª</string>
+    <string name="add_action">Ø¥Ø¶Ø§ÙØ© Ø¥Ø¬Ø±Ø§Ø¡</string>
+    <string name="save_routine">Ø­ÙØ¸ Ø§Ù„Ø±ÙˆØªÙŠÙ†</string>
+    <string name="saving">Ø¬Ø§Ø±Ù Ø§Ù„Ø­ÙØ¸â€¦</string>
+    <string name="delete">Ø­Ø°Ù</string>
+    <string name="cancel">Ø¥Ù„ØºØ§Ø¡</string>
+    <string name="save">Ø­ÙØ¸</string>
 
-    <string name="select_time">اختيار الوقت</string>
-    <string name="repeat_on">التكرار في</string>
-
-
-
-    <string name="on_enter">عند الدخول</string>
-    <string name="on_exit">عند الخروج</string>
-    <string name="action_type">نوع الإجراء</string>
-    <string name="edit_action">تعديل الإجراء</string>
-<string name="notification_title">العنوان</string>
-    <string name="notification_content">المحتوى</string>
-    <string name="auto">تلقائي</string>
-
-    <string name="media">وسائط</string>
-    <string name="ring">نغمة</string>
-    <string name="alarm">منبه</string>
-    <string name="notification">إشعار</string>
-    <string name="dnd_off">إيقاف</string>
-    <string name="dnd_priority">الأولوية فقط</string>
-    <string name="dnd_total">صمت تام</string>
-    <string name="dnd_alarms">المنبهات فقط</string>
+    <string name="select_time">Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„ÙˆÙ‚Øª</string>
+    <string name="repeat_on">Ø§Ù„ØªÙƒØ±Ø§Ø± ÙÙŠ</string>
 
 
 
+    <string name="on_enter">Ø¹Ù†Ø¯ Ø§Ù„Ø¯Ø®ÙˆÙ„</string>
+    <string name="on_exit">Ø¹Ù†Ø¯ Ø§Ù„Ø®Ø±ÙˆØ¬</string>
+    <string name="action_type">Ù†ÙˆØ¹ Ø§Ù„Ø¥Ø¬Ø±Ø§Ø¡</string>
+    <string name="edit_action">ØªØ¹Ø¯ÙŠÙ„ Ø§Ù„Ø¥Ø¬Ø±Ø§Ø¡</string>
+<string name="notification_title">Ø§Ù„Ø¹Ù†ÙˆØ§Ù†</string>
+    <string name="notification_content">Ø§Ù„Ù…Ø­ØªÙˆÙ‰</string>
+    <string name="auto">ØªÙ„Ù‚Ø§Ø¦ÙŠ</string>
 
-    <string name="mon">إثن</string>
-    <string name="tue">ثلث</string>
-    <string name="wed">أرب</string>
-    <string name="thu">خميس</string>
-    <string name="fri">جمعة</string>
-    <string name="sat">سبت</string>
-    <string name="sun">أحد</string>
+    <string name="media">ÙˆØ³Ø§Ø¦Ø·</string>
+    <string name="ring">Ù†ØºÙ…Ø©</string>
+    <string name="alarm">Ù…Ù†Ø¨Ù‡</string>
+    <string name="notification">Ø¥Ø´Ø¹Ø§Ø±</string>
+    <string name="dnd_off">Ø¥ÙŠÙ‚Ø§Ù</string>
+    <string name="dnd_priority">Ø§Ù„Ø£ÙˆÙ„ÙˆÙŠØ© ÙÙ‚Ø·</string>
+    <string name="dnd_total">ØµÙ…Øª ØªØ§Ù…</string>
+    <string name="dnd_alarms">Ø§Ù„Ù…Ù†Ø¨Ù‡Ø§Øª ÙÙ‚Ø·</string>
 
 
 
 
+    <string name="mon">Ø¥Ø«Ù†</string>
+    <string name="tue">Ø«Ù„Ø«</string>
+    <string name="wed">Ø£Ø±Ø¨</string>
+    <string name="thu">Ø®Ù…ÙŠØ³</string>
+    <string name="fri">Ø¬Ù…Ø¹Ø©</string>
+    <string name="sat">Ø³Ø¨Øª</string>
+    <string name="sun">Ø£Ø­Ø¯</string>
 
 
-    <string name="add_action_dialog">أضف الإجراء</string>
-
-    <string name="back">خلف</string>
-    <string name="dnd_allow_alarms">السماح بالإنذارات</string>
-    <string name="dnd_allow_calls">السماح بالمكالمات من</string>
-    <string name="dnd_allow_contacts">اتصالات</string>
-    <string name="dnd_allow_everyone">الجميع</string>
-    <string name="dnd_allow_media">السماح للوسائط</string>
-    <string name="dnd_allow_messages">السماح بالرسائل من</string>
-    <string name="dnd_allow_none">لا أحد</string>
-    <string name="dnd_allow_starred">جهات الاتصال المميزة بنجمة</string>
-    <string name="dnd_allow_system">السماح للنظام</string>
-    <string name="dnd_customize">تخصيص الانقطاعات</string>
-    <string name="dnd_mode">وضع عدم الإزعاج</string>
-    <string name="foreground_service_active">إجراءات الرصد في الخلفية</string>
-    <string name="get_current_location">احصل على الموقع الحالي</string>
-    <string name="level_format">المستوى: %d%%</string>
-
-    <string name="ok">نعم</string>
 
 
-    <string name="priority">أولوية</string>
-    <string name="priority_default">تقصير</string>
-    <string name="priority_high">عالي</string>
-    <string name="priority_low">قليل</string>
-    <string name="priority_min">دقيقة</string>
-    <string name="radius_format">نصف القطر: %d م</string>
-    <string name="remove">يزيل</string>
-    <string name="ringer_mode">وضع الرنين</string>
-    <string name="ringer_normal">طبيعي</string>
-    <string name="ringer_silent">صامت</string>
-    <string name="ringer_vibrate">تذبذب</string>
-    <string name="summary_brightness">السطوع: %s</string>
-    <string name="summary_dnd">عدم الإزعاج: %s</string>
-    <string name="summary_notification">إعلام: %s</string>
-    <string name="summary_ringer_mode">الرنين: %s</string>
-    <string name="summary_volume">المجلد: م%d ص%d أ%d ن%d</string>
-    <string name="tile_label">روتين</string>
+
+
+    <string name="add_action_dialog">Ø£Ø¶Ù Ø§Ù„Ø¥Ø¬Ø±Ø§Ø¡</string>
+
+    <string name="back">Ø®Ù„Ù</string>
+    <string name="dnd_allow_alarms">Ø§Ù„Ø³Ù…Ø§Ø­ Ø¨Ø§Ù„Ø¥Ù†Ø°Ø§Ø±Ø§Øª</string>
+    <string name="dnd_allow_calls">Ø§Ù„Ø³Ù…Ø§Ø­ Ø¨Ø§Ù„Ù…ÙƒØ§Ù„Ù…Ø§Øª Ù…Ù†</string>
+    <string name="dnd_allow_contacts">Ø§ØªØµØ§Ù„Ø§Øª</string>
+    <string name="dnd_allow_everyone">Ø§Ù„Ø¬Ù…ÙŠØ¹</string>
+    <string name="dnd_allow_media">Ø§Ù„Ø³Ù…Ø§Ø­ Ù„Ù„ÙˆØ³Ø§Ø¦Ø·</string>
+    <string name="dnd_allow_messages">Ø§Ù„Ø³Ù…Ø§Ø­ Ø¨Ø§Ù„Ø±Ø³Ø§Ø¦Ù„ Ù…Ù†</string>
+    <string name="dnd_allow_none">Ù„Ø§ Ø£Ø­Ø¯</string>
+    <string name="dnd_allow_starred">Ø¬Ù‡Ø§Øª Ø§Ù„Ø§ØªØµØ§Ù„ Ø§Ù„Ù…Ù…ÙŠØ²Ø© Ø¨Ù†Ø¬Ù…Ø©</string>
+    <string name="dnd_allow_system">Ø§Ù„Ø³Ù…Ø§Ø­ Ù„Ù„Ù†Ø¸Ø§Ù…</string>
+    <string name="dnd_customize">ØªØ®ØµÙŠØµ Ø§Ù„Ø§Ù†Ù‚Ø·Ø§Ø¹Ø§Øª</string>
+    <string name="dnd_mode">ÙˆØ¶Ø¹ Ø¹Ø¯Ù… Ø§Ù„Ø¥Ø²Ø¹Ø§Ø¬</string>
+    <string name="foreground_service_active">Ø¥Ø¬Ø±Ø§Ø¡Ø§Øª Ø§Ù„Ø±ØµØ¯ ÙÙŠ Ø§Ù„Ø®Ù„ÙÙŠØ©</string>
+    <string name="get_current_location">Ø§Ø­ØµÙ„ Ø¹Ù„Ù‰ Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø§Ù„Ø­Ø§Ù„ÙŠ</string>
+    <string name="level_format">Ø§Ù„Ù…Ø³ØªÙˆÙ‰: %d%%</string>
+
+    <string name="ok">Ù†Ø¹Ù…</string>
+
+
+    <string name="priority">Ø£ÙˆÙ„ÙˆÙŠØ©</string>
+    <string name="priority_default">ØªÙ‚ØµÙŠØ±</string>
+    <string name="priority_high">Ø¹Ø§Ù„ÙŠ</string>
+    <string name="priority_low">Ù‚Ù„ÙŠÙ„</string>
+    <string name="priority_min">Ø¯Ù‚ÙŠÙ‚Ø©</string>
+    <string name="radius_format">Ù†ØµÙ Ø§Ù„Ù‚Ø·Ø±: %d Ù…</string>
+    <string name="remove">ÙŠØ²ÙŠÙ„</string>
+    <string name="ringer_mode">ÙˆØ¶Ø¹ Ø§Ù„Ø±Ù†ÙŠÙ†</string>
+    <string name="ringer_normal">Ø·Ø¨ÙŠØ¹ÙŠ</string>
+    <string name="ringer_silent">ØµØ§Ù…Øª</string>
+    <string name="ringer_vibrate">ØªØ°Ø¨Ø°Ø¨</string>
+    <string name="summary_brightness">Ø§Ù„Ø³Ø·ÙˆØ¹: %s</string>
+    <string name="summary_dnd">Ø¹Ø¯Ù… Ø§Ù„Ø¥Ø²Ø¹Ø§Ø¬: %s</string>
+    <string name="summary_notification">Ø¥Ø¹Ù„Ø§Ù…: %s</string>
+    <string name="summary_ringer_mode">Ø§Ù„Ø±Ù†ÙŠÙ†: %s</string>
+    <string name="summary_volume">Ø§Ù„Ù…Ø¬Ù„Ø¯: Ù…%d Øµ%d Ø£%d Ù†%d</string>
+    <string name="tile_label">Ø±ÙˆØªÙŠÙ†</string>
+
+    <string name="battery_optimization_title">تحسين البطارية</string>
+    <string name="battery_optimization_summary">يمنع النظام من إيقاف التطبيق في الخلفية</string>
+    <string name="battery_optimization_disabled">معطل — اضغط للتغيير</string>
+    <string name="battery_optimization_enabled">مفعل</string>
+
+    <string name="crash_report_title">Crash Report</string>
+    <string name="crash_notification_title">Routine crashed</string>
+    <string name="crash_no_logs">No crash logs found</string>
+    <string name="crash_share">Share crash log</string>
+    <string name="crash_test_button">Test crash handler</string>
 
 </resources>
 
