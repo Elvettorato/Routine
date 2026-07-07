@@ -106,6 +106,7 @@
     <string name="crash_share">Share crash log</string>
     <string name="crash_test_button">Test crash handler</string>
 
+    <string name="notification_permission_title">Notifications</string>
 </resources>
 
 
