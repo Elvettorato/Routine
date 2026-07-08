@@ -68,9 +68,9 @@
 
         <service
             android:name=".service.RoutineForegroundService"
-            android:foregroundServiceType="location|dataSync"
+            android:foregroundServiceType="location"
             android:exported="false" />
-
+    
         <service
             android:name=".service.RoutineTileService"
             android:exported="true"
